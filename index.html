@@ -2132,7 +2132,110 @@
             will-change: background-position;
         }
 
-        /* Simple Video Modal Styles */
+        /* Inline Video Player Styles */
+        .video-player-inline {
+            display: none;
+            position: relative;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .video-player-inline.active {
+            display: block;
+        }
+
+        .video-player-inline video {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .video-controls-overlay {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+
+        .video-control-btn {
+            background: rgba(0, 0, 0, 0.7);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .video-control-btn:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.1);
+        }
+
+        .video-control-btn svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* Hide thumbnail when video is playing */
+        .video-container.playing .video-thumbnail {
+            display: none;
+        }
+
+        /* Fullscreen video styles */
+        .video-player-inline:-webkit-full-screen {
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .video-player-inline:fullscreen {
+            max-height: 100vh;
+            border-radius: 0;
+        }
+
+        .video-player-inline:-webkit-full-screen video {
+            max-height: 100vh;
+        }
+
+        .video-player-inline:fullscreen video {
+            max-height: 100vh;
+        }
+
+        /* Loading spinner for inline player */
+        .inline-loading {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: #2EA6D4;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            display: none;
+        }
+
+        .video-player-inline.loading .inline-loading {
+            display: block;
+        }
+
+        /* Adjust video info spacing when video is playing */
+        .video-container.playing + .video-info {
+            margin-top: -5px;
+        }
+
+        /* Simple Video Modal Styles (keeping as backup) */
         .video-modal {
             position: fixed;
             top: 0;
@@ -2999,7 +3102,111 @@
             }
         };
 
-        // Play video function
+        // Play video inline function
+        function playVideoInline(videoId) {
+            const container = document.querySelector(`[data-video-id="${videoId}"]`);
+            const config = videoConfig[videoId];
+            
+            // Check if inline player already exists
+            let inlinePlayer = container.querySelector('.video-player-inline');
+            
+            if (!inlinePlayer) {
+                // Create inline player
+                inlinePlayer = document.createElement('div');
+                inlinePlayer.className = 'video-player-inline';
+                inlinePlayer.innerHTML = `
+                    <div class="inline-loading"></div>
+                    <video controls>
+                        <source src="${config.directUrl}" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-controls-overlay">
+                        <button class="video-control-btn" onclick="toggleFullscreen(${videoId})" title="Fullscreen">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+                            </svg>
+                        </button>
+                        <button class="video-control-btn" onclick="closeInlineVideo(${videoId})" title="Close">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                            </svg>
+                        </button>
+                    </div>
+                `;
+                
+                // Insert player at the beginning of container
+                container.insertBefore(inlinePlayer, container.firstChild);
+                
+                // Get video element
+                const video = inlinePlayer.querySelector('video');
+                
+                // Add loading class
+                inlinePlayer.classList.add('loading');
+                
+                // Handle video load
+                video.addEventListener('loadeddata', function() {
+                    inlinePlayer.classList.remove('loading');
+                });
+                
+                // Handle video end
+                video.addEventListener('ended', function() {
+                    // Optionally close the video when it ends
+                    // closeInlineVideo(videoId);
+                });
+            }
+            
+            // Show player and hide thumbnail
+            inlinePlayer.classList.add('active');
+            container.classList.add('playing');
+            
+            // Play video
+            const video = inlinePlayer.querySelector('video');
+            video.play().catch(e => console.log('Autoplay prevented:', e));
+        }
+
+        // Close inline video
+        function closeInlineVideo(videoId) {
+            const container = document.querySelector(`[data-video-id="${videoId}"]`);
+            const inlinePlayer = container.querySelector('.video-player-inline');
+            const video = inlinePlayer.querySelector('video');
+            
+            // Pause and reset video
+            video.pause();
+            video.currentTime = 0;
+            
+            // Hide player and show thumbnail
+            inlinePlayer.classList.remove('active');
+            container.classList.remove('playing');
+        }
+
+        // Toggle fullscreen
+        function toggleFullscreen(videoId) {
+            const container = document.querySelector(`[data-video-id="${videoId}"]`);
+            const inlinePlayer = container.querySelector('.video-player-inline');
+            const video = inlinePlayer.querySelector('video');
+            
+            if (!document.fullscreenElement) {
+                // Enter fullscreen
+                if (video.requestFullscreen) {
+                    video.requestFullscreen();
+                } else if (video.webkitRequestFullscreen) {
+                    video.webkitRequestFullscreen();
+                } else if (video.msRequestFullscreen) {
+                    video.msRequestFullscreen();
+                }
+            } else {
+                // Exit fullscreen
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                }
+            }
+        }
+
+        // Play video function (keeping modal as backup)
         function playVideo(videoId) {
             const config = videoConfig[videoId];
             const modal = document.getElementById('videoModal');
@@ -3211,27 +3418,31 @@
 
         // Video Testimonials Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Update click handlers - add this after your page loads
+            // Update click handlers for inline playback
             document.querySelectorAll('.video-container[data-video-id]').forEach(container => {
-                // Remove any existing click handlers first
                 const newContainer = container.cloneNode(true);
                 container.parentNode.replaceChild(newContainer, container);
                 
-                // Add new click handler
-                newContainer.addEventListener('click', function() {
+                newContainer.addEventListener('click', function(e) {
+                    // Don't trigger if clicking on controls
+                    if (e.target.closest('.video-controls-overlay')) return;
+                    
                     const videoId = this.getAttribute('data-video-id');
-                    playVideo(videoId);
+                    
+                    // Check if video is already playing
+                    if (!this.classList.contains('playing')) {
+                        playVideoInline(videoId);
+                    }
                 });
             });
             
-            // Close on escape key
+            // Keep modal close functionality
             document.addEventListener('keydown', function(e) {
                 if (e.key === 'Escape') {
                     closeVideo();
                 }
             });
             
-            // Close on background click
             document.getElementById('videoModal').addEventListener('click', function(e) {
                 if (e.target === this) {
                     closeVideo();

@@ -1542,7 +1542,12 @@
             transition: all 0.3s ease;
         }
 
-        .video-thumbnail::before {
+        .video-thumbnail.has-poster {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-thumbnail::after {
             content: '';
             position: absolute;
             top: 0;
@@ -2125,6 +2130,56 @@
         .section-header h2 .highlight,
         .founder-info em {
             will-change: background-position;
+        }
+
+        /* Simple Video Modal Styles */
+        .video-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+        }
+
+        .video-modal.active {
+            display: flex;
+        }
+
+        .video-modal-content {
+            position: relative;
+            width: 90%;
+            max-width: 900px;
+        }
+
+        .video-modal-content.portrait {
+            max-width: 500px;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+
+        .close-modal:hover {
+            transform: scale(1.1);
+        }
+
+        .modal-video {
+            width: 100%;
+            max-height: 90vh;
+            border-radius: 12px;
         }
 
         /* Responsive Design */
@@ -2910,7 +2965,85 @@
     <div class="cursor-follower"></div>
     <div class="cursor-dot"></div>
 
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content" id="modalContent">
+            <button class="close-modal" onclick="closeVideo()">&times;</button>
+            <video id="modalVideo" class="modal-video" controls>
+                <source src="" type="video/mp4">
+                <source src="" type="video/quicktime">
+            </video>
+        </div>
+    </div>
+
     <script>
+        // Video configuration with your exact filenames
+        const videoConfig = {
+            1: {
+                directUrl: '/videos/Mauro Testimonial.MP4',
+                orientation: 'portrait',
+                name: 'Mauro',
+                format: 'mp4'
+            },
+            2: {
+                directUrl: '/videos/Dan Testimonial (1).mov',
+                orientation: 'portrait', 
+                name: 'Dan',
+                format: 'mov'
+            },
+            3: {
+                directUrl: '/videos/JaiEditedTestimonial.mp4',
+                orientation: 'portrait', // Change to 'landscape' if needed
+                name: 'Jai',
+                format: 'mp4'
+            }
+        };
+
+        // Play video function
+        function playVideo(videoId) {
+            const config = videoConfig[videoId];
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const modalContent = document.getElementById('modalContent');
+            
+            // Set orientation class
+            modalContent.className = `video-modal-content ${config.orientation}`;
+            
+            // Set video source based on format
+            if (config.format === 'mov') {
+                video.innerHTML = `
+                    <source src="${config.directUrl}" type="video/quicktime">
+                    <source src="${config.directUrl}" type="video/mp4">
+                    Your browser does not support the video tag.
+                `;
+            } else {
+                video.innerHTML = `
+                    <source src="${config.directUrl}" type="video/mp4">
+                    Your browser does not support the video tag.
+                `;
+            }
+            
+            // Show modal
+            modal.classList.add('active');
+            
+            // Load and try to play
+            video.load();
+            video.play().catch(e => {
+                console.log('Autoplay prevented or format issue:', e);
+                // Video will still show with controls even if autoplay fails
+            });
+        }
+
+        // Close video function
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            
+            video.pause();
+            video.src = '';
+            modal.classList.remove('active');
+        }
+
         // Parallax effect for orbs
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
@@ -3078,20 +3211,31 @@
 
         // Video Testimonials Functionality
         document.addEventListener('DOMContentLoaded', function() {
-            // Add click handlers to video testimonials
-            const videoContainers = document.querySelectorAll('.video-container[data-video-id]');
-            
-            videoContainers.forEach(container => {
-                container.addEventListener('click', function() {
+            // Update click handlers - add this after your page loads
+            document.querySelectorAll('.video-container[data-video-id]').forEach(container => {
+                // Remove any existing click handlers first
+                const newContainer = container.cloneNode(true);
+                container.parentNode.replaceChild(newContainer, container);
+                
+                // Add new click handler
+                newContainer.addEventListener('click', function() {
                     const videoId = this.getAttribute('data-video-id');
-                    
-                    // Here you would implement your video player logic
-                    // For example, open a modal with the video or redirect to video page
-                    alert(`Video ${videoId} would play here. Integrate with your video platform (YouTube, Vimeo, Wistia, etc.)`);
-                    
-                    // Example implementation with a modal:
-                    // openVideoModal(videoId);
+                    playVideo(videoId);
                 });
+            });
+            
+            // Close on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeVideo();
+                }
+            });
+            
+            // Close on background click
+            document.getElementById('videoModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeVideo();
+                }
             });
             
             // Read More functionality for testimonials
@@ -3127,32 +3271,6 @@
                 });
             });
         });
-
-        // Example function to open video in modal (implement based on your needs)
-        function openVideoModal(videoId) {
-            // Create modal
-            const modal = document.createElement('div');
-            modal.className = 'video-modal';
-            modal.innerHTML = `
-                <div class="video-modal-content">
-                    <span class="video-modal-close">&times;</span>
-                    <iframe src="YOUR_VIDEO_URL_${videoId}" frameborder="0" allowfullscreen></iframe>
-                </div>
-            `;
-            
-            document.body.appendChild(modal);
-            
-            // Close modal functionality
-            modal.querySelector('.video-modal-close').addEventListener('click', function() {
-                modal.remove();
-            });
-            
-            modal.addEventListener('click', function(e) {
-                if (e.target === modal) {
-                    modal.remove();
-                }
-            });
-        }
 
         // Number counter animation
         function animateValue(obj, start, end, duration) {

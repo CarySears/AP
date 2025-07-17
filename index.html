@@ -1421,6 +1421,18 @@
             padding-top: 60px;
         }
 
+        .video-testimonials.later-testimonials {
+            background: linear-gradient(
+                90deg,
+                #fffbf9 0%,
+                #fffaf8 25%,
+                #fffbf9 50%,
+                #fffcfa 75%,
+                #fffbf9 100%
+            );
+            padding: 60px 0 80px;
+        }
+
 
 
         .video-testimonials::before {
@@ -1448,37 +1460,42 @@
         }
 
         /* Fix container to ensure grid works properly */
-        .early-testimonials .container {
+        .early-testimonials .container,
+        .later-testimonials .container {
             display: block !important;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
-        /* Early testimonials specific 3-column layout */
+        /* Early testimonials specific 2-column layout */
         .early-testimonials .video-testimonials-grid {
             display: grid !important;
-            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
-            max-width: 1200px;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            max-width: 1000px;
+            gap: 2rem;
+            margin: 3rem auto 0;
+        }
+
+        /* Later testimonials specific 2-column layout */
+        .later-testimonials .video-testimonials-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            max-width: 1000px;
             gap: 2rem;
             margin: 3rem auto 0;
         }
 
         /* Ensure cards take full width of their grid cell */
-        .early-testimonials .video-testimonial-card {
+        .early-testimonials .video-testimonial-card,
+        .later-testimonials .video-testimonial-card {
             width: 100%;
             max-width: 100%;
         }
 
-        @media (max-width: 1200px) {
-            .early-testimonials .video-testimonials-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                max-width: 1000px;
-            }
-        }
-
         @media (max-width: 768px) {
-            .early-testimonials .video-testimonials-grid {
+            .early-testimonials .video-testimonials-grid,
+            .later-testimonials .video-testimonials-grid {
                 grid-template-columns: 1fr;
                 max-width: 600px;
             }
@@ -2607,23 +2624,7 @@
                     </div>
                 </div>
 
-                <!-- Video 3 - Coming Soon -->
-                <div class="video-testimonial-card coming-soon">
-                    <div class="video-container">
-                        <div class="video-thumbnail coming-soon-thumbnail">
-                            <div class="coming-soon-content">
-                                <span class="coming-soon-icon">🎬</span>
-                                <p>New Success Story</p>
-                                <p class="coming-soon-date">Coming Soon</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="video-info">
-                        <h4>Your Practice Here?</h4>
-                        <p class="video-role">Join our success stories</p>
-                        <p class="video-result">📞 <a href="tel:555-123-4567" style="color: #2EA6D4;">Call 555-123-4567</a></p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -2775,7 +2776,78 @@
         </div>
     </section>
 
+    <!-- Later Video Testimonials Section -->
+    <section class="video-testimonials later-testimonials animate-on-scroll" id="more-testimonials">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🚀 More Success Stories</div>
+                <h2>Additional <span class="highlight">Client Results</span></h2>
+                <p>See how our psychology-driven approach transforms businesses</p>
+            </div>
+            
+            <div class="video-testimonials-grid">
+                <!-- Video 3 - Working Video -->
+                <div class="video-testimonial-card">
+                    <div class="video-container" data-video-id="3">
+                        <div class="video-thumbnail">
+                            <div class="video-play-button">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="white" fill-opacity="0.9"/>
+                                    <path d="M24 20L40 30L24 40V20Z" fill="#2EA6D4"/>
+                                </svg>
+                            </div>
+                            <div class="video-duration">1:58</div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Transform Coaching Academy</h4>
+                        <p class="video-role">Executive Coaching</p>
+                        <p class="video-result">📈 4x increase in qualified leads</p>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p class="quote-preview">
+                            I wanted to transform more lives without burning out. Now perfectly-matched students find us automatically...
+                        </p>
+                        <button class="read-more-btn" data-testimonial="3">
+                            Read Full Story
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12L12 8L8 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="full-testimonial" id="testimonial-3">
+                            <div class="full-testimonial-content">
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="full-testimonial-text">
+                                    "I wanted to transform more lives without burning out. Now perfectly-matched students find us automatically. Their behavioral science approach to our marketing means we attract executives who are ready for deep transformation work, not just surface-level coaching.
+                                    <br><br>
+                                    The AI nurturing sequence they built is incredible - it shares client success stories, addresses common fears about coaching, and builds trust over weeks. By the time prospects book a call, they're already sold on working with us. Our close rate went from 20% to 75%, and I'm working with clients who truly value the transformation process."
+                                </p>
+                                <div class="testimonial-result-badge">✅ Result: 4x qualified leads + 75% close rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
+                <!-- Video 4 - Coming Soon -->
+                <div class="video-testimonial-card coming-soon">
+                    <div class="video-container">
+                        <div class="video-thumbnail coming-soon-thumbnail">
+                            <div class="coming-soon-content">
+                                <span class="coming-soon-icon">🎬</span>
+                                <p>New Success Story</p>
+                                <p class="coming-soon-date">Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Your Practice Here?</h4>
+                        <p class="video-role">Join our success stories</p>
+                        <p class="video-result">📞 <a href="tel:555-123-4567" style="color: #2EA6D4;">Call 555-123-4567</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Who We Serve Section -->
     <section class="who-we-serve animate-on-scroll">

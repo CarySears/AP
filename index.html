@@ -1455,11 +1455,11 @@
             padding: 0 20px;
         }
 
-        /* Early testimonials specific 2-column layout */
+        /* Early testimonials specific 3-column layout */
         .early-testimonials .video-testimonials-grid {
             display: grid !important;
-            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-            max-width: 1000px;
+            grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+            max-width: 1200px;
             gap: 2rem;
             margin: 3rem auto 0;
         }
@@ -1470,9 +1470,17 @@
             max-width: 100%;
         }
 
-        @media (max-width: 900px) {
+        @media (max-width: 1200px) {
+            .early-testimonials .video-testimonials-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                max-width: 1000px;
+            }
+        }
+
+        @media (max-width: 768px) {
             .early-testimonials .video-testimonials-grid {
                 grid-template-columns: 1fr;
+                max-width: 600px;
             }
         }
 
@@ -1690,6 +1698,40 @@
         }
 
 
+
+        /* Coming Soon Card */
+        .video-testimonial-card.coming-soon {
+            border: 2px dashed #e5e7eb;
+            background: linear-gradient(135deg, #fffbf9, #fffcfa);
+        }
+
+        .coming-soon-thumbnail {
+            background: linear-gradient(135deg, #f9f5f3, #f5f1ee);
+        }
+
+        .coming-soon-content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .coming-soon-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            filter: grayscale(50%);
+        }
+
+        .coming-soon-content p {
+            color: #6b7280;
+            font-weight: 500;
+            margin: 0.25rem 0;
+        }
+
+        .coming-soon-date {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
 
         .video-testimonials-cta {
             text-align: center;
@@ -2562,6 +2604,24 @@
                                 <div class="testimonial-result-badge">✅ Result: 67 five-star reviews + 40% increase in new patients</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 - Coming Soon -->
+                <div class="video-testimonial-card coming-soon">
+                    <div class="video-container">
+                        <div class="video-thumbnail coming-soon-thumbnail">
+                            <div class="coming-soon-content">
+                                <span class="coming-soon-icon">🎬</span>
+                                <p>New Success Story</p>
+                                <p class="coming-soon-date">Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Your Practice Here?</h4>
+                        <p class="video-role">Join our success stories</p>
+                        <p class="video-result">📞 <a href="tel:555-123-4567" style="color: #2EA6D4;">Call 555-123-4567</a></p>
                     </div>
                 </div>
             </div>

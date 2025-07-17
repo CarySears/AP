@@ -3125,18 +3125,12 @@
         // Simple play video function - modal only
         function playVideo(videoId) {
             const config = videoConfig[videoId];
-            if (!config) {
-                console.log('No video config found for ID:', videoId);
-                return;
-            }
+            if (!config) return;
             
             const modal = document.getElementById('videoModal');
             const video = document.getElementById('modalVideo');
             
-            if (!modal || !video) {
-                console.log('Video modal elements not found');
-                return;
-            }
+            if (!modal || !video) return;
             
             // Set video source
             video.src = config.url;
@@ -3147,8 +3141,7 @@
             // Load and play video
             video.load();
             video.play().catch(e => {
-                console.log('Video play failed:', e);
-                // Still show modal even if autoplay fails
+                // Video will still show with controls even if autoplay fails
             });
         }
 
@@ -3165,16 +3158,9 @@
 
         // Video Testimonials Click Handlers
         document.addEventListener('DOMContentLoaded', function() {
-            console.log('Setting up video click handlers...');
-            const videoContainers = document.querySelectorAll('.video-container[data-video-id]');
-            console.log('Found video containers:', videoContainers.length);
-            
-            videoContainers.forEach(container => {
-                const videoId = container.getAttribute('data-video-id');
-                console.log('Setting up handler for video ID:', videoId);
-                
+            document.querySelectorAll('.video-container[data-video-id]').forEach(container => {
                 container.addEventListener('click', function() {
-                    console.log('Video container clicked, ID:', videoId);
+                    const videoId = this.getAttribute('data-video-id');
                     playVideo(videoId);
                 });
             });
@@ -3192,26 +3178,6 @@
                     closeVideo();
                 }
             });
-            
-            // Test video functionality - temporary
-            console.log('Video system initialized');
-            console.log('Video config:', videoConfig);
-            
-            // Add a test button temporarily
-            const testButton = document.createElement('button');
-            testButton.textContent = 'Test Video 1';
-            testButton.style.position = 'fixed';
-            testButton.style.top = '10px';
-            testButton.style.right = '10px';
-            testButton.style.zIndex = '9999';
-            testButton.style.background = 'red';
-            testButton.style.color = 'white';
-            testButton.style.padding = '10px';
-            testButton.onclick = function() {
-                console.log('Test button clicked');
-                playVideo('1');
-            };
-            document.body.appendChild(testButton);
         });
 
 

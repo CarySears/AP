@@ -3095,10 +3095,10 @@
     <div class="cursor-dot"></div>
 
     <!-- Video Modal -->
-    <div class="video-modal" id="videoModal">
-        <div class="video-modal-content" id="modalContent">
-            <button class="close-modal" onclick="closeVideo()">&times;</button>
-            <video id="modalVideo" class="modal-video" controls>
+    <div class="video-modal" id="videoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center;">
+        <div class="video-modal-content" style="position: relative; max-width: 90%; max-height: 90%; background: black; border-radius: 10px; overflow: hidden;">
+            <button class="close-modal" onclick="closeVideo()" style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; z-index: 10001;">&times;</button>
+            <video id="modalVideo" class="modal-video" controls style="width: 100%; height: 100%; max-width: 800px; max-height: 600px;">
                 <source src="" type="video/mp4">
                 <source src="" type="video/quicktime">
             </video>
@@ -3106,176 +3106,75 @@
     </div>
 
     <script>
-        // Video configuration with your exact filenames
+        // Simple video configuration
         const videoConfig = {
             1: {
-                directUrl: '/videos/Mauro Testimonial.MP4',
-                orientation: 'portrait',
-                name: 'Mauro',
-                format: 'mp4'
+                url: '/videos/Mauro Testimonial.MP4',
+                name: 'Mauro'
             },
             2: {
-                directUrl: 'https://storage.googleapis.com/msgsndr/yOkUSQmv7D3J1n6pmgAL/media/686c732dd55cfe6294cd77a4.mp4',
-                orientation: 'portrait', 
-                name: 'Dan',
-                format: 'mp4'
+                url: 'https://storage.googleapis.com/msgsndr/yOkUSQmv7D3J1n6pmgAL/media/686c732dd55cfe6294cd77a4.mp4',
+                name: 'Dan'
             },
             3: {
-                directUrl: '/videos/JaiEditedTestimonial.mp4',
-                orientation: 'landscape',
-                name: 'Jai',
-                format: 'mp4'
+                url: '/videos/JaiEditedTestimonial.mp4',
+                name: 'Jai'
             }
         };
 
-        // Play video inline function
-        function playVideoInline(videoId) {
-            const container = document.querySelector(`[data-video-id="${videoId}"]`);
-            const config = videoConfig[videoId];
-            
-            // Check if inline player already exists
-            let inlinePlayer = container.querySelector('.video-player-inline');
-            
-            if (!inlinePlayer) {
-                // Create inline player
-                inlinePlayer = document.createElement('div');
-                inlinePlayer.className = 'video-player-inline';
-                inlinePlayer.innerHTML = `
-                    <div class="inline-loading"></div>
-                    <video controls>
-                        <source src="${config.directUrl}" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                    <div class="video-controls-overlay">
-                        <button class="video-control-btn" onclick="toggleFullscreen(${videoId})" title="Fullscreen">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
-                            </svg>
-                        </button>
-                        <button class="video-control-btn" onclick="closeInlineVideo(${videoId})" title="Close">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                            </svg>
-                        </button>
-                    </div>
-                `;
-                
-                // Insert player at the beginning of container
-                container.insertBefore(inlinePlayer, container.firstChild);
-                
-                // Get video element
-                const video = inlinePlayer.querySelector('video');
-                
-                // Add loading class
-                inlinePlayer.classList.add('loading');
-                
-                // Handle video load
-                video.addEventListener('loadeddata', function() {
-                    inlinePlayer.classList.remove('loading');
-                });
-                
-                // Handle video end
-                video.addEventListener('ended', function() {
-                    // Optionally close the video when it ends
-                    // closeInlineVideo(videoId);
-                });
-            }
-            
-            // Show player and hide thumbnail
-            inlinePlayer.classList.add('active');
-            container.classList.add('playing');
-            
-            // Play video
-            const video = inlinePlayer.querySelector('video');
-            video.play().catch(e => console.log('Autoplay prevented:', e));
-        }
-
-        // Close inline video
-        function closeInlineVideo(videoId) {
-            const container = document.querySelector(`[data-video-id="${videoId}"]`);
-            const inlinePlayer = container.querySelector('.video-player-inline');
-            const video = inlinePlayer.querySelector('video');
-            
-            // Pause and reset video
-            video.pause();
-            video.currentTime = 0;
-            
-            // Hide player and show thumbnail
-            inlinePlayer.classList.remove('active');
-            container.classList.remove('playing');
-        }
-
-        // Toggle fullscreen
-        function toggleFullscreen(videoId) {
-            const container = document.querySelector(`[data-video-id="${videoId}"]`);
-            const inlinePlayer = container.querySelector('.video-player-inline');
-            const video = inlinePlayer.querySelector('video');
-            
-            if (!document.fullscreenElement) {
-                // Enter fullscreen
-                if (video.requestFullscreen) {
-                    video.requestFullscreen();
-                } else if (video.webkitRequestFullscreen) {
-                    video.webkitRequestFullscreen();
-                } else if (video.msRequestFullscreen) {
-                    video.msRequestFullscreen();
-                }
-            } else {
-                // Exit fullscreen
-                if (document.exitFullscreen) {
-                    document.exitFullscreen();
-                } else if (document.webkitExitFullscreen) {
-                    document.webkitExitFullscreen();
-                } else if (document.msExitFullscreen) {
-                    document.msExitFullscreen();
-                }
-            }
-        }
-
-        // Play video function (keeping modal as backup)
+        // Simple play video function - modal only
         function playVideo(videoId) {
             const config = videoConfig[videoId];
-            const modal = document.getElementById('videoModal');
-            const video = document.getElementById('modalVideo');
-            const modalContent = document.getElementById('modalContent');
+            if (!config) return;
             
-            // Set orientation class
-            modalContent.className = `video-modal-content ${config.orientation}`;
-            
-            // Set video source based on format
-            if (config.format === 'mov') {
-                video.innerHTML = `
-                    <source src="${config.directUrl}" type="video/quicktime">
-                    <source src="${config.directUrl}" type="video/mp4">
-                    Your browser does not support the video tag.
-                `;
-            } else {
-                video.innerHTML = `
-                    <source src="${config.directUrl}" type="video/mp4">
-                    Your browser does not support the video tag.
-                `;
-            }
+            // Set video source
+            video.src = config.url;
             
             // Show modal
-            modal.classList.add('active');
+            modal.style.display = 'flex';
             
-            // Load and try to play
-            video.load();
+            // Play video
             video.play().catch(e => {
-                console.log('Autoplay prevented or format issue:', e);
-                // Video will still show with controls even if autoplay fails
+                console.log('Video play failed:', e);
             });
         }
 
-        // Close video function
+        // Close video modal
         function closeVideo() {
             const modal = document.getElementById('videoModal');
             const video = document.getElementById('modalVideo');
             
             video.pause();
+            video.currentTime = 0;
             video.src = '';
-            modal.classList.remove('active');
+            modal.style.display = 'none';
         }
+
+        // Video Testimonials Click Handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.video-container[data-video-id]').forEach(container => {
+                container.addEventListener('click', function() {
+                    const videoId = this.getAttribute('data-video-id');
+                    playVideo(videoId);
+                });
+            });
+            
+            // Close modal on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeVideo();
+                }
+            });
+            
+            // Close modal on background click
+            document.getElementById('videoModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeVideo();
+                }
+            });
+        });
+
+
 
         // Parallax effect for orbs
         window.addEventListener('scroll', () => {
@@ -3442,40 +3341,8 @@
             }
         });
 
-        // Video Testimonials Functionality
+        // Read More functionality for testimonials
         document.addEventListener('DOMContentLoaded', function() {
-            // Update click handlers for inline playback
-            document.querySelectorAll('.video-container[data-video-id]').forEach(container => {
-                const newContainer = container.cloneNode(true);
-                container.parentNode.replaceChild(newContainer, container);
-                
-                newContainer.addEventListener('click', function(e) {
-                    // Don't trigger if clicking on controls
-                    if (e.target.closest('.video-controls-overlay')) return;
-                    
-                    const videoId = this.getAttribute('data-video-id');
-                    
-                    // Check if video is already playing
-                    if (!this.classList.contains('playing')) {
-                        playVideoInline(videoId);
-                    }
-                });
-            });
-            
-            // Keep modal close functionality
-            document.addEventListener('keydown', function(e) {
-                if (e.key === 'Escape') {
-                    closeVideo();
-                }
-            });
-            
-            document.getElementById('videoModal').addEventListener('click', function(e) {
-                if (e.target === this) {
-                    closeVideo();
-                }
-            });
-            
-            // Read More functionality for testimonials
             const readMoreBtns = document.querySelectorAll('.read-more-btn');
             
             readMoreBtns.forEach(btn => {

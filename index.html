@@ -585,8 +585,8 @@
             opacity: 0.9;
         }
 
-        /* Quiz Section - Glass Morphism Enhancement */
-        .hero-quiz {
+        /* Demo Section - Glass Morphism Enhancement */
+        .hero-demo {
             background: rgba(255, 255, 255, 0.75);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
@@ -600,23 +600,23 @@
             transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .hero-quiz:hover {
+        .hero-demo:hover {
             transform: translateY(-5px);
             box-shadow: 0 30px 40px -5px rgba(0, 0, 0, 0.15);
         }
 
-        .quiz-header {
+        .demo-header {
             text-align: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
-        .quiz-header h2 {
+        .demo-header h2 {
             font-size: 1.75rem;
             color: #1f2937;
             margin-bottom: 0.5rem;
         }
 
-        .quiz-header h2 .highlight {
+        .demo-header h2 .highlight {
             background: linear-gradient(
                 90deg,
                 #2EA6D4 0%,
@@ -634,33 +634,75 @@
             opacity: 0.95;
         }
 
-        .quiz-timer {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
+        .demo-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .demo-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-option {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .demo-option:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-option h3 {
+            font-size: 1.1rem;
+            color: #1f2937;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .demo-option p {
             color: #666;
             font-size: 0.875rem;
-            background: linear-gradient(135deg, rgba(255, 154, 86, 0.08), rgba(255, 154, 86, 0.05));
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            margin-top: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .video-preview {
             background: #1a1a1a;
             border-radius: 12px;
-            height: 280px;
+            height: 140px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             position: relative;
             overflow: hidden;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .video-preview:hover {
+        .call-preview {
+            background: linear-gradient(135deg, #2EA6D4, #1B75BB);
+            border-radius: 12px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .video-preview:hover, .call-preview:hover {
             transform: scale(1.01);
         }
 
@@ -675,20 +717,25 @@
             pointer-events: none;
         }
 
-        .play-button {
-            width: 80px;
-            height: 80px;
+        .play-button, .phone-icon {
+            width: 60px;
+            height: 60px;
             background: linear-gradient(135deg, #2EA6D4, #1B75BB);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 2rem;
+            font-size: 1.5rem;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             animation: pulse 4s infinite;
             position: relative;
+        }
+
+        .phone-icon {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
         }
 
         .play-button::before {
@@ -713,12 +760,12 @@
             transform: scale(1.05);
         }
 
-        .quiz-benefits {
+        .demo-benefits {
             list-style: none;
             margin-bottom: 1.5rem;
         }
 
-        .quiz-benefits li {
+        .demo-benefits li {
             padding: 0.5rem 0;
             color: #555;
             display: flex;
@@ -730,14 +777,14 @@
             transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .quiz-benefits li:hover {
+        .demo-benefits li:hover {
             transform: translateX(5px);
             color: #2EA6D4;
         }
 
-        .quiz-benefits li:nth-child(1) { animation-delay: 1s; }
-        .quiz-benefits li:nth-child(2) { animation-delay: 1.2s; }
-        .quiz-benefits li:nth-child(3) { animation-delay: 1.4s; }
+        .demo-benefits li:nth-child(1) { animation-delay: 1s; }
+        .demo-benefits li:nth-child(2) { animation-delay: 1.2s; }
+        .demo-benefits li:nth-child(3) { animation-delay: 1.4s; }
 
         .check-icon {
             color: #10b981;
@@ -745,23 +792,26 @@
             animation: checkmarkPop 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
-        .start-quiz-btn {
+        .demo-btn {
             width: 100%;
-            padding: 1rem 2rem;
+            padding: 0.75rem 1.5rem;
             background: linear-gradient(135deg, #2EA6D4, #1B75BB);
             border: none;
             border-radius: 50px;
             color: white;
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 30px rgba(46, 166, 212, 0.2);
+            box-shadow: 0 8px 20px rgba(46, 166, 212, 0.2);
             position: relative;
             overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
         }
 
-        .start-quiz-btn::after {
+        .demo-btn::after {
             content: '';
             position: absolute;
             top: -50%;
@@ -778,12 +828,23 @@
             animation: shimmerButton 6s ease-in-out infinite;
         }
 
-        .start-quiz-btn:hover {
+        .demo-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 15px 40px rgba(46, 166, 212, 0.3);
+            box-shadow: 0 12px 30px rgba(46, 166, 212, 0.3);
+            text-decoration: none;
+            color: white;
         }
 
-        .quiz-footer {
+        .call-demo-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        .call-demo-btn:hover {
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .demo-footer {
             text-align: center;
             margin-top: 1rem;
             font-size: 0.875rem;
@@ -1392,18 +1453,7 @@
             color: #666;
         }
 
-        .accuracy-badge {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: linear-gradient(135deg, #10b981, #059669);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            font-weight: 600;
-            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.3);
-            animation: subtleBounce 4s ease-in-out infinite;
-        }
+
 
         /* Video Testimonials Section Styles - Glass Enhancement */
         .video-testimonials {
@@ -2284,7 +2334,7 @@
             /* Slower animations on mobile for battery efficiency */
             .tagline,
             .highlight,
-            .quiz-header h2 .highlight,
+            .demo-header h2 .highlight,
             .section-header h2 .highlight {
                 animation-duration: 20s;
             }
@@ -2435,29 +2485,44 @@
                     </p>
                 </div>
                 
-                <!-- Interactive Quiz (Replaces Dashboard) -->
-                <div class="hero-quiz">
-                    <div class="quiz-header">
-                        <h2>Get Your <span class="highlight">Free Marketing Audit</span></h2>
-                        <div class="quiz-timer">
-                            <span>📊</span>
-                            <span>Personalized AI + Marketing Audit</span>
+                <!-- Demo Section -->
+                <div class="hero-demo">
+                    <div class="demo-header">
+                        <h2>See Our <span class="highlight">AI in Action</span></h2>
+                        <p class="demo-subtitle">Choose how you'd like to experience our demo</p>
+                    </div>
+                    
+                    <!-- Demo Options -->
+                    <div class="demo-options">
+                        <!-- Video Demo Option -->
+                        <div class="demo-option video-option">
+                            <div class="video-preview">
+                                <div class="play-button">▶️</div>
+                            </div>
+                            <h3>Watch Demo Video</h3>
+                            <p>See a recorded walkthrough of our AI system in action</p>
+                            <button class="demo-btn video-demo-btn">Watch Demo</button>
+                        </div>
+                        
+                        <!-- Live Demo Option -->
+                        <div class="demo-option call-option">
+                            <div class="call-preview">
+                                <div class="phone-icon">📞</div>
+                            </div>
+                            <h3>Live Demo Call</h3>
+                            <p>Speak with our AI and team live to see how it works</p>
+                            <a href="tel:555-123-4567" class="demo-btn call-demo-btn">Call 555-123-4567</a>
                         </div>
                     </div>
                     
-                    <div class="video-preview">
-                        <div class="play-button">▶️</div>
-                    </div>
-                    
-                    <ul class="quiz-benefits">
+                    <!-- Benefits List -->
+                    <ul class="demo-benefits">
                         <li><span class="check-icon">✨</span> Uncover where leads are slipping through the cracks</li>
                         <li><span class="check-icon">✨</span> See how to plug them with human-centered automation</li>
                         <li><span class="check-icon">✨</span> No cost, no pressure strategy session</li>
                     </ul>
                     
-                    <button class="start-quiz-btn">Book My Free Audit</button>
-                    
-                    <p class="quiz-footer">Ready to see what's possible for your business?</p>
+                    <p class="demo-footer">Ready to see what's possible for your business?</p>
                 </div>
             </div>
         </div>
@@ -2962,9 +3027,7 @@
                     We'll uncover where leads are slipping through the cracks and show you how to plug them with human-centered automation that works.
                 </p>
                 
-                <div class="accuracy-badge">
-                    Proven Systems That Pay For Themselves
-                </div>
+
             </div>
         </div>
     </section>
@@ -3235,7 +3298,7 @@
             animateCursor();
 
             // Add hover effects
-            const interactiveElements = document.querySelectorAll('a, button, .service-cta, .btn-primary, .btn-secondary, .video-container, .start-quiz-btn, .demo-btn, input, textarea');
+            const interactiveElements = document.querySelectorAll('a, button, .service-cta, .btn-primary, .btn-secondary, .video-container, .demo-btn, input, textarea');
             const serviceCards = document.querySelectorAll('.service-tier');
             
             interactiveElements.forEach(el => {
@@ -3333,21 +3396,25 @@
             });
         });
 
-        // Quiz functionality
-        document.querySelectorAll('.start-quiz-btn, .video-preview').forEach(element => {
+        // Demo functionality
+        document.querySelectorAll('.video-demo-btn, .video-preview').forEach(element => {
             element.addEventListener('click', function() {
-                // Redirect to contact section for booking
+                // For now, redirect to contact section for booking
+                // TODO: Implement video modal or player
                 window.location.href = '#contact';
             });
         });
 
-        // Demo functionality
-        document.querySelector('.demo-btn:last-child').addEventListener('click', function(e) {
-            if (!this.href.includes('tel:')) {
-                e.preventDefault();
-                alert('Video demo would play here');
-            }
+        // Call demo button functionality
+        document.querySelectorAll('.call-demo-btn').forEach(element => {
+            element.addEventListener('click', function(e) {
+                // Let the tel: link work normally for calling
+                // The href="tel:555-123-4567" will handle the phone call
+                console.log('Initiating call demo');
+            });
         });
+
+
 
         // Read More functionality for testimonials
         document.addEventListener('DOMContentLoaded', function() {

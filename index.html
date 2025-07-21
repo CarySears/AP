@@ -1591,10 +1591,12 @@
 
         .video-testimonials-grid {
             display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 2rem;
             margin-top: 3rem;
             margin-left: auto;
             margin-right: auto;
+            max-width: 1000px;
         }
 
         .video-testimonials .container {
@@ -2478,10 +2480,10 @@
                 grid-template-columns: 1fr;
             }
 
-            .early-testimonials .video-testimonials-grid,
-            .later-testimonials .video-testimonials-grid {
+            .video-testimonials-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+                max-width: 600px;
             }
             
             .video-thumbnail {

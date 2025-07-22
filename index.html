@@ -128,7 +128,7 @@
             }
         }
 
-        /* Custom Scrollbar Styling - Initial state, dynamically updated via JS */
+        /* Clean Professional Scrollbar */
         ::-webkit-scrollbar {
             width: 12px;
             background: #f8fafc;
@@ -141,24 +141,22 @@
         }
 
         ::-webkit-scrollbar-thumb {
-            background: linear-gradient(180deg, #2EA6D4 0%, #79C5C7 25%, #FF9A56 50%, #B565A7 75%, #1B75BB 100%);
+            background: #2EA6D4;
             border-radius: 10px;
             border: 2px solid #f1f5f9;
-            background-size: 100% 200%;
-            transition: all 0.5s ease;
+            transition: background 0.2s ease;
         }
 
         ::-webkit-scrollbar-thumb:hover {
-            background-size: 100% 100%;
+            background: #1B75BB;
             border-color: #e5e7eb;
-            box-shadow: 0 0 15px rgba(46, 166, 212, 0.4);
         }
 
         ::-webkit-scrollbar-thumb:active {
-            background: linear-gradient(180deg, #1B75BB 0%, #2EA6D4 50%, #79C5C7 100%);
+            background: #79C5C7;
         }
 
-        /* Firefox Scrollbar Support - Dynamically updated */
+        /* Firefox Scrollbar Support */
         * {
             scrollbar-width: thin;
             scrollbar-color: #2EA6D4 #f1f5f9;
@@ -3532,117 +3530,7 @@
             window.requestAnimationFrame(step);
         }
 
-        // Dynamic Scrollbar Gradient
-        function updateScrollbarGradient() {
-            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            
-            // Smooth color transition based on scroll position
-            // Color journey through the page:
-            // Top (Hero) - Cool blues (#2EA6D4, #79C5C7, #1B75BB)
-            // Early sections - Transition to teals (#79C5C7, #00A79D)
-            // Middle (Services) - Warm colors (#FF9A56, #B565A7)
-            // Bottom (Footer) - Return to brand blues
-            
-            let gradient;
-            const position = scrollPercentage / 100;
-            
-            // Define color stops for smooth transitions
-            if (position < 0.25) {
-                // Top quarter - Cool blues
-                const localPos = position * 4;
-                gradient = `linear-gradient(180deg, 
-                    #2EA6D4 0%, 
-                    #79C5C7 ${50 + localPos * 25}%, 
-                    #1B75BB 100%)`;
-            } else if (position < 0.5) {
-                // Second quarter - Transition to teals
-                const localPos = (position - 0.25) * 4;
-                gradient = `linear-gradient(180deg, 
-                    #79C5C7 0%, 
-                    #00A79D ${30 + localPos * 20}%, 
-                    #2EA6D4 100%)`;
-            } else if (position < 0.75) {
-                // Third quarter - Warm transition
-                const localPos = (position - 0.5) * 4;
-                gradient = `linear-gradient(180deg, 
-                    #00A79D 0%, 
-                    #FF9A56 ${40 + localPos * 20}%, 
-                    #B565A7 100%)`;
-            } else {
-                // Final quarter - Return to brand blues
-                const localPos = (position - 0.75) * 4;
-                gradient = `linear-gradient(180deg, 
-                    #B565A7 0%, 
-                    #1B75BB ${30 + localPos * 30}%, 
-                    #2EA6D4 100%)`;
-            }
-            
-            // Apply gradient with smooth transition
-            const styleId = 'dynamic-scrollbar-style';
-            let styleElement = document.getElementById(styleId);
-            
-            if (!styleElement) {
-                styleElement = document.createElement('style');
-                styleElement.id = styleId;
-                document.head.appendChild(styleElement);
-            }
-            
-            // Add subtle glow color that matches current gradient position
-            const glowColor = position < 0.25 ? 'rgba(46, 166, 212, 0.5)' :
-                             position < 0.5 ? 'rgba(121, 197, 199, 0.5)' :
-                             position < 0.75 ? 'rgba(255, 154, 86, 0.5)' :
-                             'rgba(181, 101, 167, 0.5)';
-            
-            styleElement.textContent = `
-                ::-webkit-scrollbar-thumb {
-                    background: ${gradient};
-                    border-radius: 10px;
-                    border: 2px solid #f1f5f9;
-                    transition: background 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-                }
-                
-                ::-webkit-scrollbar-thumb:hover {
-                    background: ${gradient};
-                    border-color: #e5e7eb;
-                    box-shadow: 0 0 20px ${glowColor};
-                    filter: brightness(1.15) saturate(1.2);
-                    transition: all 0.3s ease;
-                }
-                
-                ::-webkit-scrollbar-thumb:active {
-                    filter: brightness(0.9);
-                }
-                
-                /* Firefox fallback - single color based on position */
-                * {
-                    scrollbar-width: thin;
-                    scrollbar-color: ${
-                        position < 0.25 ? '#2EA6D4' :
-                        position < 0.5 ? '#79C5C7' :
-                        position < 0.75 ? '#FF9A56' :
-                        '#B565A7'
-                    } #f1f5f9;
-                }
-            `;
-        }
 
-        // Initialize scrollbar gradient
-        updateScrollbarGradient();
-
-        // Update on scroll with throttling for performance
-        let scrollTimeout;
-        window.addEventListener('scroll', () => {
-            if (scrollTimeout) {
-                window.cancelAnimationFrame(scrollTimeout);
-            }
-            scrollTimeout = window.requestAnimationFrame(() => {
-                updateScrollbarGradient();
-            });
-        });
-
-        // Also update on window resize
-        window.addEventListener('resize', () => {
-            updateScrollbarGradient();
         });
 
         // Animate result metrics when they come into view

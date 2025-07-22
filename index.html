@@ -383,6 +383,73 @@
             color: #2EA6D4;
         }
 
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 12px;
+            padding: 0.75rem 0;
+            margin-top: 0.5rem;
+            min-width: 280px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(46, 166, 212, 0.1);
+            color: #2EA6D4;
+            transform: translateX(5px);
+        }
+
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
         .header-actions {
             display: flex;
             gap: 1rem;
@@ -2599,7 +2666,15 @@
                     <img src="logotrans.png" alt="ActionPotential.AI" class="logo-image">
                 </div>
                 <ul class="nav-links">
-                    <li><a href="#services">Services</a></li>
+                    <li class="dropdown">
+                        <a href="#services">Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#ai-voice-front-desk">AI Voice Front Desk</a></li>
+                            <li><a href="#patient-experience-system">Patient Experience System</a></li>
+                            <li><a href="#full-funnel-marketing">Full-funnel Behavior Based Marketing</a></li>
+                            <li><a href="#aeo">Answer Engine Optimization (AEO)</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#demo">Demo</a></li>
                     <li><a href="#client-success">Success Stories</a></li>
                     <li><a href="#contact">Contact</a></li>

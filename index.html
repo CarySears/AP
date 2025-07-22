@@ -3448,6 +3448,10 @@
             3: {
                 url: '/videos/JaiEditedTestimonial.mp4',
                 name: 'Jai'
+            },
+            'demo': {
+                url: '/videos/Voice AI Demo 1 .mp4',
+                name: 'Voice AI Demo'
             }
         };
 
@@ -3661,11 +3665,10 @@
         });
 
         // Demo functionality
-        document.querySelectorAll('.video-demo-btn, .video-preview').forEach(element => {
+        document.querySelectorAll('.video-demo-btn, .video-preview, .video-option').forEach(element => {
             element.addEventListener('click', function() {
-                // For now, redirect to contact section for booking
-                // TODO: Implement video modal or player
-                window.location.href = '#contact';
+                // Play the Voice AI Demo video
+                playVideo('demo');
             });
         });
 

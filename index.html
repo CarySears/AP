@@ -496,6 +496,121 @@
             box-shadow: 0 8px 25px rgba(46, 166, 212, 0.4);
         }
 
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #374151;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 100px 2rem 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links a {
+            color: #374151;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: block;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(55, 65, 81, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #2EA6D4;
+        }
+
+        .mobile-dropdown-menu {
+            padding-left: 1rem;
+            margin-top: 1rem;
+        }
+
+        .mobile-dropdown-menu li {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-dropdown-menu a {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .mobile-header-actions {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-header-actions .log-in {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            text-align: center;
+            border: 2px solid #2EA6D4;
+            border-radius: 50px;
+            color: #2EA6D4;
+        }
+
+        .mobile-header-actions .get-started {
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
         /* Enhanced Hero Section with Multi-Color Approach - Now Asymmetric */
         .hero {
             background: linear-gradient(
@@ -2422,8 +2537,17 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .nav-links {
+            .nav-links,
+            .header-actions {
                 display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
             }
 
             .hero-content {
@@ -2589,9 +2713,45 @@
                     <a href="https://app.actionpotential.ai/" class="log-in">Client Login</a>
                     <a href="#start" class="get-started">Book Strategy Call</a>
                 </div>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li>
+                <a href="#services">Services</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="#ai-voice-front-desk">AI Voice Front Desk</a></li>
+                    <li><a href="#patient-experience-system">Patient Experience System</a></li>
+                    <li><a href="#full-funnel-marketing">Full-funnel Behavior Based Marketing</a></li>
+                    <li><a href="#aeo">Answer Engine Optimization (AEO)</a></li>
+                </ul>
+            </li>
+            <li><a href="#demo">Demo</a></li>
+            <li>
+                <a href="#who-we-serve">Industries</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="#mental-health-professionals">Mental Health Professionals</a></li>
+                    <li><a href="#neurology-brain-health">Neurology & Brain Health Practices</a></li>
+                    <li><a href="#credentialed-coaches">Credentialed Health & Wellness Coaches</a></li>
+                </ul>
+            </li>
+            <li><a href="#client-success">Success Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="mobile-header-actions">
+            <a href="https://app.actionpotential.ai/" class="log-in">Client Login</a>
+            <a href="#start" class="get-started">Book Strategy Call</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -3561,6 +3721,51 @@
 
         document.querySelectorAll('.result-metric').forEach(el => {
             metricObserver.observe(el);
+        });
+    </script>
+
+    <script>
+        // Mobile Menu Toggle Function
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+            
+            // Prevent body scroll when menu is open
+            if (mobileMenu.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        }
+
+        // Close mobile menu when clicking on a link
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-header-actions a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const hamburger = document.querySelector('.hamburger');
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const hamburger = document.querySelector('.hamburger');
+                const mobileMenu = document.getElementById('mobileMenu');
+                
+                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            });
         });
     </script>
 </body>

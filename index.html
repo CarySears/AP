@@ -538,15 +538,49 @@
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             z-index: 1000;
-            padding: 100px 2rem 2rem;
+            padding: 2rem;
             opacity: 0;
             visibility: hidden;
             transition: all 0.3s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
         }
 
         .mobile-menu.active {
             opacity: 1;
             visibility: visible;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 1px solid rgba(55, 65, 81, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .mobile-menu-close {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(55, 65, 81, 0.1);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(55, 65, 81, 0.2);
+            transform: scale(1.1);
+        }
+
+        .mobile-menu-close span {
+            font-size: 1.5rem;
+            color: #374151;
+            font-weight: 300;
         }
 
         .mobile-nav-links {
@@ -2724,6 +2758,11 @@
 
     <!-- Mobile Menu Overlay -->
     <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <span>✕</span>
+            </div>
+        </div>
         <ul class="mobile-nav-links">
             <li>
                 <a href="#services">Services</a>
@@ -3732,13 +3771,6 @@
             
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
-            
-            // Prevent body scroll when menu is open
-            if (mobileMenu.classList.contains('active')) {
-                document.body.style.overflow = 'hidden';
-            } else {
-                document.body.style.overflow = '';
-            }
         }
 
         // Close mobile menu when clicking on a link
@@ -3751,7 +3783,6 @@
                     
                     hamburger.classList.remove('active');
                     mobileMenu.classList.remove('active');
-                    document.body.style.overflow = '';
                 });
             });
 
@@ -3763,7 +3794,6 @@
                 if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
                     hamburger.classList.remove('active');
                     mobileMenu.classList.remove('active');
-                    document.body.style.overflow = '';
                 }
             });
         });

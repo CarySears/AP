@@ -668,7 +668,7 @@
             display: grid;
             grid-template-columns: 1.2fr 1fr;
             gap: 4rem;
-            align-items: start;
+            align-items: center;
             position: relative;
             z-index: 2;
         }
@@ -2862,12 +2862,8 @@
                     
                     
                     <p class="demo-footer">Ready to see what's possible for your practice?</p>
-                    <div class="demo-cta" id="book-calendar">
-                        <!-- Embedded Calendar Widget -->
-                        <div style="margin-bottom: 1.5rem; background: rgba(255, 255, 255, 0.95); border-radius: 16px; padding: 1rem; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);">
-                            <iframe src="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" style="width: 100%;border:none;overflow: hidden;height: 450px;" scrolling="no" id="ksD7NPYqg5JoFugUIJnm_1753301135350"></iframe>
-                        </div>
-                        <script src="https://link.actionpotential.ai/js/form_embed.js" type="text/javascript"></script>
+                    <div class="demo-cta">
+                        <a href="#book-calendar" class="btn-primary">📅 Book Your Strategy Call</a>
                     </div>
                 </div>
             </div>
@@ -3366,6 +3362,26 @@
             </div>
         </div>
     </section>
+
+    <!-- Final Booking Calendar Section -->
+    <section class="final-booking animate-on-scroll" id="book-calendar" style="padding: 80px 0; background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">Ready to Transform Your Practice?</h2>
+                <p style="font-size: 1.25rem; color: #6b7280; max-width: 600px; margin: 0 auto;">Schedule your free strategy call below. We'll create a custom growth plan for your practice in just 30 minutes.</p>
+            </div>
+            
+            <!-- Calendar Widget Container -->
+            <div style="max-width: 800px; margin: 0 auto; background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.8);">
+                <iframe src="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" style="width: 100%; border: none; overflow: hidden; height: 600px; border-radius: 16px;" scrolling="no" id="ksD7NPYqg5JoFugUIJnm_1753301135350"></iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #9ca3af; font-size: 0.95rem;">🔒 HIPAA Compliant • 📞 No Sales Pressure • ⚡ Immediate Value</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://link.actionpotential.ai/js/form_embed.js" type="text/javascript"></script>
 
     <!-- Footer CTA -->
     <section class="footer-cta animate-on-scroll">

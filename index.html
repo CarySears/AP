@@ -3,570 +3,3846 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friendly Paws - Premier Pet Sitting & Boarding | Riverdale, NY</title>
-    <meta name="description" content="Trusted pet sitting and boarding in Riverdale, NY. 30+ years experience, 129 five-star reviews, 24/7 care. Your pet's home away from home.">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <title>ActionPotential.AI - Full-Service Marketing. Powered by Psychology. Scaled by AI.</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #374151;
+            margin: 0;
+            padding: 0;
+            background: #fffbf9;
+            overflow-x: hidden;
+        }
+
+        /* Ultra-subtle mesh gradient background */
+        .mesh-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #fffbf9;
+            z-index: -3;
+        }
+
+        .mesh-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(255, 154, 86, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 80% 60%, rgba(46, 166, 212, 0.02) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(121, 197, 199, 0.02) 0%, transparent 50%);
+            animation: meshShift 30s ease-in-out infinite;
+        }
+
+        @keyframes meshShift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(-5%, -5%) scale(1.05); }
+            66% { transform: translate(5%, 5%) scale(0.95); }
+        }
+
+        /* Floating orbs */
+        .floating-orbs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.1;
+            animation: float 20s ease-in-out infinite;
+            will-change: transform;
+        }
+
+        .orb1 {
+            width: 600px;
+            height: 600px;
+            background: #2EA6D4;
+            top: -200px;
+            left: -200px;
+            animation-duration: 25s;
+        }
+
+        .orb2 {
+            width: 500px;
+            height: 500px;
+            background: #FF9A56;
+            bottom: -150px;
+            right: -150px;
+            animation-duration: 30s;
+            animation-delay: -5s;
+        }
+
+        .orb3 {
+            width: 550px;
+            height: 550px;
+            background: #79C5C7;
+            top: 30%;
+            left: 50%;
+            animation-duration: 35s;
+            animation-delay: -10s;
+        }
+
+        .orb4 {
+            width: 450px;
+            height: 450px;
+            background: #B565A7;
+            top: 10%;
+            right: 10%;
+            animation-duration: 28s;
+            animation-delay: -15s;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            25% {
+                transform: translate(30px, -50px) scale(1.1);
+            }
+            50% {
+                transform: translate(-20px, 30px) scale(0.9);
+            }
+            75% {
+                transform: translate(-40px, -20px) scale(1.05);
+            }
+        }
+
+        /* Clean Professional Scrollbar */
+        ::-webkit-scrollbar {
+            width: 12px;
+            background: #f8fafc;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+            border-radius: 10px;
+            margin: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #2EA6D4;
+            border-radius: 10px;
+            border: 2px solid #f1f5f9;
+            transition: background 0.2s ease;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #1B75BB;
+            border-color: #e5e7eb;
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: #79C5C7;
+        }
+
+        /* Firefox Scrollbar Support */
+        * {
+            scrollbar-width: thin;
+            scrollbar-color: #2EA6D4 #f1f5f9;
+        }
+
+        /* Selection color to match brand */
+        ::selection {
+            background: rgba(46, 166, 212, 0.2);
+            color: #1f2937;
+        }
+
+        ::-moz-selection {
+            background: rgba(46, 166, 212, 0.2);
+            color: #1f2937;
+        }
+
+        /* Animations Keyframes */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes subtleGradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes gradientFlow {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes shimmerText {
+            0% {
+                background-position: -200% center;
+            }
+            100% {
+                background-position: 200% center;
+            }
+        }
+
+        @keyframes subtleShimmer {
+            0% {
+                background-position: 0% center;
+                opacity: 0.9;
+            }
+            50% {
+                opacity: 1;
+            }
+            100% {
+                background-position: 100% center;
+                opacity: 0.9;
+            }
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.9; }
+        }
+
+        @keyframes subtleBounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-3px); }
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+
+        @keyframes shimmerButton {
+            0% { transform: translateX(-200%) rotate(45deg); }
+            100% { transform: translateX(200%) rotate(45deg); }
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(46, 166, 212, 0.7); }
+            70% { box-shadow: 0 0 0 20px rgba(46, 166, 212, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(46, 166, 212, 0); }
+        }
+
+        @keyframes checkmarkPop {
+            0% { transform: scale(0.8) rotate(-90deg); opacity: 0; }
+            50% { transform: scale(1.05) rotate(10deg); opacity: 1; }
+            100% { transform: scale(1) rotate(0); opacity: 1; }
+        }
+
+        @keyframes typewriter {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Scroll Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .animate-on-scroll.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Enhanced Header - Glass Morphism Added */
+        header {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 30px rgba(0,0,0,0.08);
+            position: fixed;
+            width: 100%;
+            top: -15px;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(46, 166, 212, 0.1);
+            margin: 0;
+            padding: 0;
+            animation: slideDown 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+                opacity: 0.5;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 0 0 20px 0;
+            min-height: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .logo-image {
+            height: 60px;
+            width: auto;
+            transition: transform 0.3s ease;
+            margin-right: 0.5rem;
+            transform: translateY(12px);
+        }
+
+        .logo-image:hover {
+            transform: translateY(12px) scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+            margin: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #6b7280;
+            font-weight: 500;
+            font-size: 14px;
+            transition: color 0.3s;
+            line-height: 1;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2EA6D4;
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-links a:hover {
+            color: #2EA6D4;
+        }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 12px;
+            padding: 0.75rem 0;
+            margin-top: 0.5rem;
+            min-width: 280px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .dropdown-menu li {
+            list-style: none;
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: #374151;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.2s ease;
+            border-radius: 8px;
+            margin: 0 0.5rem;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(46, 166, 212, 0.1);
+            color: #2EA6D4;
+            transform: translateX(5px);
+        }
+
+        .dropdown-menu a::after {
+            display: none;
+        }
+
+        .dropdown-arrow {
+            font-size: 10px;
+            margin-left: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .log-in {
+            color: #6b7280;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        .get-started {
+            background: linear-gradient(135deg, #2EA6D4, #00A79D);
+            color: white;
+            padding: 7px 36px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 15px rgba(46, 166, 212, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .get-started::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .get-started:hover::before {
+            left: 100%;
+        }
+
+        .get-started:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 166, 212, 0.4);
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 10px;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: #374151;
+            margin: 3px 0;
+            transition: all 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            z-index: 1000;
+            padding: 2rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .mobile-menu.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .mobile-menu-header {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 1rem 0 2rem 0;
+            border-bottom: 1px solid rgba(55, 65, 81, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        .mobile-menu-close {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(55, 65, 81, 0.1);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu-close:hover {
+            background: rgba(55, 65, 81, 0.2);
+            transform: scale(1.1);
+        }
+
+        .mobile-menu-close span {
+            font-size: 1.5rem;
+            color: #374151;
+            font-weight: 300;
+        }
+
+        .mobile-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .mobile-nav-links li {
+            margin-bottom: 2rem;
+        }
+
+        .mobile-nav-links a {
+            color: #374151;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 600;
+            display: block;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(55, 65, 81, 0.1);
+            transition: color 0.3s ease;
+        }
+
+        .mobile-nav-links a:hover {
+            color: #2EA6D4;
+        }
+
+        .mobile-dropdown-menu {
+            padding-left: 1rem;
+            margin-top: 1rem;
+        }
+
+        .mobile-dropdown-menu li {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-dropdown-menu a {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #6b7280;
+        }
+
+        .mobile-header-actions {
+            margin-top: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .mobile-header-actions .log-in {
+            font-size: 1.2rem;
+            padding: 1rem 0;
+            text-align: center;
+            border: 2px solid #2EA6D4;
+            border-radius: 50px;
+            color: #2EA6D4;
+        }
+
+        .mobile-header-actions .get-started {
+            font-size: 1.2rem;
+            padding: 1rem 2rem;
+            text-align: center;
+        }
+
+        /* Enhanced Hero Section with Multi-Color Approach - Now Asymmetric */
+        .hero {
+            background: linear-gradient(
+                90deg,
+                #fafbfc 0%,
+                #fffbf7 15%,
+                #fff8f3 30%,
+                #fffaf5 45%,
+                #fff9f4 60%,
+                #fffbf7 75%,
+                #fdfcfb 90%,
+                #fafbfc 100%
+            );
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: visible;
+        }
+
+        /* Enhanced Hero Content - Asymmetric Grid */
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 650px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            display: inline-flex;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.04);
+            animation: fadeInUp 1s ease;
+            border: 1px solid rgba(255, 250, 245, 0.8);
+        }
+
+        .hipaa-badge {
+            color: #1B75BB;
+            font-weight: 600;
+            background: linear-gradient(135deg, rgba(27, 117, 187, 0.1), rgba(46, 166, 212, 0.1));
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            border: 1px solid rgba(27, 117, 187, 0.3);
+            font-size: 0.875rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: #1f2937;
+            animation: fadeInUp 1.2s ease;
+        }
+
+        .tagline {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #2EA6D4;
+            animation: fadeInUp 1.2s ease 0.3s both;
+        }
+
+        .hero .highlight {
+            color: #2EA6D4;
+            font-weight: 700;
+            opacity: 0.95;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+            animation: fadeInUp 1.2s ease 0.6s both;
+        }
+
+        .hero-cta {
+            animation: fadeInUp 1.2s ease 0.9s both;
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .founder-info {
+            font-size: 0.95rem;
+            color: #7a6860;
+            margin-top: 1rem;
+            animation: fadeInUp 1.2s ease 1s both;
+        }
+
+        .founder-info em {
+            color: #6b7280;
+            font-style: italic;
+        }
+
+        /* Demo Section - Glass Morphism Enhancement */
+        .hero-demo {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1.2s ease 0.6s both;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            margin-top: 2rem;
+        }
+
+        .hero-demo:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 40px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .demo-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .demo-header h2 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .demo-header h2 .highlight {
+            color: #2EA6D4;
+            font-weight: 600;
+        }
+
+        .demo-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+        }
+
+        .demo-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-option {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .demo-option:hover {
+            transform: translateY(-3px);
+            background: rgba(255, 255, 255, 0.7);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .demo-option h3 {
+            font-size: 1.1rem;
+            color: #1f2937;
+            margin: 1rem 0 0.5rem 0;
+        }
+
+        .demo-option p {
+            color: #666;
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+
+        .video-preview {
+            background: #1a1a1a;
+            border-radius: 12px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .call-preview {
+            background: linear-gradient(135deg, #2EA6D4, #1B75BB);
+            border-radius: 12px;
+            height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .video-preview:hover, .call-preview:hover {
+            transform: scale(1.01);
+        }
+
+        .video-preview::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.3) 100%);
+            pointer-events: none;
+        }
+
+        .play-button, .phone-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, #2EA6D4, #1B75BB);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            animation: pulse 4s infinite;
+            position: relative;
+        }
+
+        .phone-icon {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .play-button::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, #2EA6D4, #79C5C7);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            opacity: 0;
+            transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .video-preview:hover .play-button::before {
+            opacity: 1;
+        }
+
+        .play-button:hover {
+            transform: scale(1.05);
+        }
+
+        .demo-benefits {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .demo-benefits li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .demo-benefits li:hover {
+            transform: translateX(5px);
+            color: #2EA6D4;
+        }
+
+        .demo-benefits li:nth-child(1) { animation-delay: 1s; }
+        .demo-benefits li:nth-child(2) { animation-delay: 1.2s; }
+        .demo-benefits li:nth-child(3) { animation-delay: 1.4s; }
+
+        .check-icon {
+            color: #10b981;
+            font-size: 1.1rem;
+            animation: checkmarkPop 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .demo-btn {
+            width: 100%;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, #2EA6D4, #1B75BB);
+            border: none;
+            border-radius: 50px;
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(46, 166, 212, 0.2);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .demo-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255,255,255,0.2) 50%,
+                transparent 70%
+            );
+            transform: rotate(45deg);
+            animation: shimmerButton 6s ease-in-out infinite;
+        }
+
+        .demo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(46, 166, 212, 0.3);
+            text-decoration: none;
+            color: white;
+        }
+
+        .call-demo-btn {
+            background: linear-gradient(135deg, #10b981, #059669);
+            box-shadow: 0 8px 20px rgba(16, 185, 129, 0.2);
+        }
+
+        .call-demo-btn:hover {
+            box-shadow: 0 12px 30px rgba(16, 185, 129, 0.3);
+        }
+
+        .demo-phone-link {
+            background: none !important;
+            box-shadow: none !important;
+            border: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        .demo-phone-link:hover {
+            background: none !important;
+            box-shadow: none !important;
+        }
+
+        .demo-footer {
+            text-align: center;
+            margin-top: 1rem;
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        .demo-cta {
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        /* Trust Section */
+        .trust {
+            padding: 60px 0;
+            background: linear-gradient(
+                90deg,
+                #ffffff 0%,
+                #fffbf9 30%,
+                #fffcfa 50%,
+                #fffbf9 70%,
+                #ffffff 100%
+            );
+            border-bottom: 1px solid #f5f3f1;
+        }
+
+        .trust-content {
+            text-align: center;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .trust-headline {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 2rem;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .trust-item {
+            text-align: center;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+            padding: 1.5rem;
+            border-radius: 16px;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .trust-item:hover {
+            background: linear-gradient(135deg, rgba(255, 154, 86, 0.03), rgba(46, 166, 212, 0.02));
+            transform: translateY(-3px);
+        }
+
+        .trust-item:nth-child(1) { animation-delay: 0.2s; }
+        .trust-item:nth-child(2) { animation-delay: 0.4s; }
+        .trust-item:nth-child(3) { animation-delay: 0.6s; }
+        .trust-item:nth-child(4) { animation-delay: 0.8s; }
+
+        .trust-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            animation: gentlePulse 4s ease-in-out infinite;
+            opacity: 0.9;
+        }
+
+        .trust-icon:nth-child(odd) {
+            animation-delay: 1s;
+        }
+
+        .trust-item h4 {
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .trust-item p {
+            color: #6b7280;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        /* Services Section - Glass Morphism Enhancement */
+        .services {
+            padding: 80px 0;
+            background: linear-gradient(
+                135deg,
+                #fffbf9 0%,
+                #fffcfa 25%,
+                #fffdfb 50%,
+                #fffcfa 75%,
+                #fffbf9 100%
+            );
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-badge {
+            background: rgba(46, 166, 212, 0.1);
+            color: #2EA6D4;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            display: inline-block;
+            margin-bottom: 1rem;
+            animation: fadeInUp 0.6s ease;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(46, 166, 212, 0.2);
+        }
+
+        .section-header h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            background: linear-gradient(135deg, #1f2937, #374151);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeInUp 0.6s ease 0.2s both;
+            position: relative;
+        }
+
+        .section-header h2 .highlight {
+            color: #2EA6D4;
+            font-weight: 600;
+        }
+
+        .highlight {
+            color: #2EA6D4;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .section-header p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 700px;
+            margin: 0 auto;
+            animation: fadeInUp 0.6s ease 0.4s both;
+        }
+
+        /* New 3-Tier Service Cards with Glass */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .service-tier {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2.5rem;
+            position: relative;
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            transform-style: preserve-3d;
+            will-change: transform;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .service-tier:hover {
+            transform: translateY(-8px) scale(1.01);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            border-color: rgba(46, 166, 212, 0.3);
+        }
+
+        .service-tier.popular {
+            border-color: #2EA6D4;
+            transform: scale(1.02);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(246, 252, 255, 0.9));
+        }
+
+        .service-tier.popular:hover {
+            transform: translateY(-8px) scale(1.04);
+            box-shadow: 0 25px 50px rgba(46, 166, 212, 0.15);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            right: 30px;
+            background: #2EA6D4;
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            animation: subtleBounce 3s ease-in-out infinite;
+        }
+
+        .service-icon-large {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .service-tier:hover .service-icon-large {
+            transform: rotate(5deg) scale(1.05);
+        }
+
+        .service-tier h3 {
+            font-size: 1.75rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-price {
+            font-size: 2rem;
+            color: #2EA6D4;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .service-price span {
+            font-size: 1rem;
+            color: #888;
+            font-weight: 400;
+        }
+
+        .setup-fee {
+            font-size: 0.875rem;
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-description {
+            color: #6b7280;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+
+        .service-features {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-features li {
+            padding: 0.5rem 0;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transform: translateX(0);
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .service-tier:hover .service-features li {
+            transform: translateX(3px);
+        }
+
+        .service-tier:hover .service-features li:nth-child(1) { transition-delay: 0.1s; }
+        .service-tier:hover .service-features li:nth-child(2) { transition-delay: 0.15s; }
+        .service-tier:hover .service-features li:nth-child(3) { transition-delay: 0.2s; }
+        .service-tier:hover .service-features li:nth-child(4) { transition-delay: 0.25s; }
+        .service-tier:hover .service-features li:nth-child(5) { transition-delay: 0.3s; }
+
+        .pricing-options {
+            background: linear-gradient(135deg, #fffbf9, #fffcfa);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin-bottom: 1.5rem;
+            font-size: 0.875rem;
+        }
+
+        .pricing-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            color: #555;
+        }
+
+        .pricing-option strong {
+            color: #1f2937;
+        }
+
+        .upgrade-note {
+            font-size: 0.75rem;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 1rem;
+        }
+
+        .service-cta {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: white;
+            border: 2px solid #2EA6D4;
+            border-radius: 50px;
+            color: #2EA6D4;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 0.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: #2EA6D4;
+            transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            z-index: -1;
+        }
+
+        .service-cta:hover {
+            color: white;
+        }
+
+        .service-cta:hover::before {
+            left: 0;
+        }
+
+        .service-tier.popular .service-cta {
+            background: #2EA6D4;
+            color: white;
+        }
+
+        .service-tier.popular .service-cta:hover {
+            background: #1B75BB;
+            border-color: #1B75BB;
+        }
+
+        .testimonial-snippet {
+            background: linear-gradient(135deg, #fffbf9, #fffcfa);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+            font-style: italic;
+            color: #666;
+            font-size: 0.95rem;
+            position: relative;
+        }
+
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            color: #1f2937;
+            margin-top: 0.75rem;
+            font-size: 0.875rem;
+        }
+
+        /* AEO Section */
+        .aeo {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f59e0b, #dc2626);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .aeo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 50%, rgba(255,255,255,0.1) 0%, transparent 50%);
+            animation: subtleGradientShift 20s ease infinite alternate;
+        }
+
+        .aeo-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .aeo-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            animation: gentlePulse 2s ease-in-out infinite;
+        }
+
+        .aeo-stat {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            animation: countUp 2s ease-out;
+        }
+
+        /* Psychology Foundation */
+        .psychology {
+            padding: 80px 0;
+            background: #1f2937;
+            color: white;
+        }
+
+        .psychology .section-header h2 {
+            color: white;
+        }
+
+        .psychology .section-header p {
+            color: #9ca3af;
+        }
+
+        .psychology-quote {
+            font-size: 1.5rem;
+            font-style: italic;
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 3rem;
+        }
+
+        .psychology-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .psychology-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            transform-style: preserve-3d;
+            cursor: pointer;
+        }
+
+        .psychology-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .psychology-card:hover::before {
+            left: 100%;
+        }
+
+        .psychology-card:hover {
+            transform: translateY(-4px) rotateX(3deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .psychology-emoji {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: transform 0.4s ease;
+        }
+
+        .psychology-card:hover .psychology-emoji {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .psychology-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .psychology-card p {
+            color: #d1d5db;
+        }
+
+        /* Enhanced Demo Section - Glass Container */
+        .demo {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff9f6, #fffbf8);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo h2 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .demo p {
+            font-size: 1.25rem;
+            margin-bottom: 3rem;
+            color: #666;
+        }
+
+        .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+            position: relative;
+            z-index: 2;
+        }
+
+        .demo-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .demo-btn {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(46, 166, 212, 0.2);
+            color: #1a1a1a;
+            padding: 2rem;
+            border-radius: 16px;
+            text-decoration: none;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .demo-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .demo-btn:hover::before {
+            left: 100%;
+        }
+
+        .demo-btn:hover {
+            background: linear-gradient(135deg, rgba(255, 154, 86, 0.04), rgba(46, 166, 212, 0.04));
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(46, 166, 212, 0.1);
+            border-color: rgba(46, 166, 212, 0.3);
+        }
+
+        .demo-video {
+            width: 100%;
+            height: 300px;
+            background: #000;
+            border-radius: 12px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .demo-phone {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1rem;
+        }
+
+        .demo-note {
+            margin-top: 3rem;
+            color: #666;
+        }
+
+        /* Complete Solution Section Styles */
+        .complete-solution {
+            margin-top: 3rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .solution-feature {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            animation: fadeInUp 1s ease both;
+        }
+
+        .solution-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 30px 40px -5px rgba(0, 0, 0, 0.15);
+            border-color: rgba(46, 166, 212, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            background: linear-gradient(135deg, #2EA6D4, #1B75BB);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            flex-shrink: 0;
+            width: 60px;
+            text-align: center;
+        }
+
+        .feature-content {
+            flex: 1;
+        }
+
+        .feature-content h3 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .feature-subtitle {
+            font-size: 1.1rem;
+            color: #2EA6D4;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-content p {
+            color: #555;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .feature-content p:not(.feature-subtitle) {
+            margin-top: 0.75rem;
+        }
+
+        .solution-cta {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08);
+        }
+
+        .primary-cta {
+            background: linear-gradient(135deg, #2EA6D4, #00A79D);
+            margin-right: 1rem;
+            color: white;
+        }
+
+        .secondary-cta {
+            background: linear-gradient(135deg, #79C5C7, #00A79D);
+            color: white;
+        }
+
+        /* Video Testimonials Section Styles - Glass Enhancement */
+        .video-testimonials {
+            padding: 80px 0;
+            background: linear-gradient(
+                90deg,
+                #fffbf9 0%,
+                #fffcfa 50%,
+                #fffbf9 100%
+            );
+            position: relative;
+        }
+
+        .video-testimonials.early-testimonials {
+            padding-top: 60px;
+        }
+
+        .video-testimonials.later-testimonials {
+            background: linear-gradient(
+                90deg,
+                #fffbf9 0%,
+                #fffaf8 25%,
+                #fffbf9 50%,
+                #fffcfa 75%,
+                #fffbf9 100%
+            );
+            padding: 60px 0 80px;
+        }
+
+
+
+        .video-testimonials::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #e5e7eb, transparent);
+        }
+
+        .video-testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1000px;
+        }
+
+        .video-testimonials .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Fix container to ensure grid works properly */
+        .early-testimonials .container,
+        .later-testimonials .container {
+            display: block !important;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Early testimonials specific 2-column layout */
+        .early-testimonials .video-testimonials-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            max-width: 1000px;
+            gap: 2rem;
+            margin: 3rem auto 0;
+        }
+
+        /* Later testimonials specific 2-column layout */
+        .later-testimonials .video-testimonials-grid {
+            display: grid !important;
+            grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+            max-width: 1000px;
+            gap: 2rem;
+            margin: 3rem auto 0;
+        }
+
+        /* Ensure cards take full width of their grid cell */
+        .early-testimonials .video-testimonial-card,
+        .later-testimonials .video-testimonial-card {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .early-testimonials .video-testimonials-grid,
+            .later-testimonials .video-testimonials-grid {
+                grid-template-columns: 1fr;
+                max-width: 600px;
+            }
+        }
+
+        .video-testimonial-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            overflow: visible;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            width: 100%;
+            min-width: 0; /* Fix for grid layout */
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .video-testimonial-card:nth-child(1) { animation-delay: 0.2s; }
+        .video-testimonial-card:nth-child(2) { animation-delay: 0.4s; }
+        .video-testimonial-card:nth-child(3) { animation-delay: 0.6s; }
+        .video-testimonial-card:nth-child(4) { animation-delay: 0.8s; }
+
+        .video-testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-container {
+            position: relative;
+            cursor: pointer;
+            border-radius: 20px 20px 0 0;
+            overflow: hidden;
+        }
+
+        .video-thumbnail {
+            background: linear-gradient(135deg, #1f2937, #374151);
+            aspect-ratio: 16/9;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .video-thumbnail.has-poster {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .video-thumbnail::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.4) 100%);
+            pointer-events: none;
+        }
+
+        .video-play-button {
+            z-index: 2;
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            filter: drop-shadow(0 4px 12px rgba(0,0,0,0.2));
+            opacity: 0.95;
+        }
+
+        .video-container:hover .video-play-button {
+            transform: scale(1.1);
+            filter: brightness(1.1) drop-shadow(0 6px 20px rgba(0,0,0,0.25));
+            opacity: 1;
+        }
+
+        .video-container:hover .video-thumbnail {
+            transform: scale(1.05);
+        }
+
+        .video-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        .video-info {
+            padding: 1.5rem 1.5rem 0;
+        }
+
+        .video-info h4 {
+            font-size: 1.25rem;
+            color: #1f2937;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .video-role {
+            color: #6b7280;
+            font-size: 0.95rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .video-result {
+            color: #2EA6D4;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Testimonial Quote Section */
+        .testimonial-quote {
+            padding: 0 1.5rem 1.5rem;
+        }
+
+        .quote-preview {
+            font-style: italic;
+            color: #4b5563;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .quote-preview::before {
+            content: '"';
+            position: absolute;
+            left: 0;
+            top: -0.5rem;
+            font-size: 2rem;
+            color: #2EA6D4;
+            opacity: 0.3;
+            font-family: Georgia, serif;
+        }
+
+        .read-more-btn {
+            background: none;
+            border: none;
+            color: #2EA6D4;
+            font-weight: 600;
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            padding: 0;
+        }
+
+        .read-more-btn:hover {
+            color: #1B75BB;
+            gap: 0.75rem;
+        }
+
+        .read-more-btn svg {
+            transition: transform 0.3s ease;
+        }
+
+        .read-more-btn.expanded svg {
+            transform: rotate(180deg);
+        }
+
+        .full-testimonial {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+                        opacity 0.4s ease-in 0.3s;
+            opacity: 0;
+        }
+
+        .full-testimonial.expanded {
+            max-height: 500px;
+            opacity: 1;
+        }
+
+        .full-testimonial-content {
+            padding-top: 1rem;
+            border-top: 1px solid #f3f4f6;
+            margin-top: 1rem;
+        }
+
+        .testimonial-rating {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .full-testimonial-text {
+            color: #374151;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-result-badge {
+            background: linear-gradient(135deg, #e6fef3, #d1fae5);
+            color: #065f46;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            display: inline-block;
+            border: 1px solid #10b981;
+            box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+            animation: checkmarkPop 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.8s both;
+        }
+
+
+
+        /* Coming Soon Card */
+        .video-testimonial-card.coming-soon {
+            border: 2px dashed #e5e7eb;
+            background: linear-gradient(135deg, #fffbf9, #fffcfa);
+        }
+
+        .coming-soon-thumbnail {
+            background: linear-gradient(135deg, #f9f5f3, #f5f1ee);
+        }
+
+        .coming-soon-content {
+            text-align: center;
+            z-index: 2;
+            position: relative;
+        }
+
+        .coming-soon-icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            filter: grayscale(50%);
+        }
+
+        .coming-soon-content p {
+            color: #6b7280;
+            font-weight: 500;
+            margin: 0.25rem 0;
+        }
+
+        .coming-soon-date {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+
+        .video-testimonials-cta {
+            text-align: center;
+            margin-top: 4rem;
+        }
+
+        .video-testimonials-cta p {
+            font-size: 1.25rem;
+            color: #374151;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Results Section */
+        .results {
+            padding: 80px 0;
+            background: linear-gradient(
+                135deg,
+                #ffffff 0%,
+                #fffbf9 50%,
+                #ffffff 100%
+            );
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #fffbf9, #fffcfa);
+            border-radius: 20px;
+            padding: 2.5rem;
+            text-align: center;
+            position: relative;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .result-card:nth-child(1) { animation-delay: 0.2s; }
+        .result-card:nth-child(2) { animation-delay: 0.4s; }
+        .result-card:nth-child(3) { animation-delay: 0.6s; }
+        .result-card:nth-child(4) { animation-delay: 0.8s; }
+
+        .result-card:hover {
+            transform: translateY(-3px);
+        }
+
+        .result-metric {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2EA6D4;
+            margin-bottom: 0.5rem;
+            animation: countUp 3s ease-out;
+        }
+
+        /* Enhanced Buttons and CTAs - Trust to Action Gradient */
+        .btn-primary {
+            background: linear-gradient(135deg, #2EA6D4, #00A79D);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(46, 166, 212, 0.25);
+            display: inline-block;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255,255,255,0.15) 50%,
+                transparent 70%
+            );
+            transform: rotate(45deg);
+            animation: shimmerButton 8s ease-in-out infinite;
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(46, 166, 212, 0.4);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, #ffffff, #f8fafc);
+            color: #B565A7;
+            padding: 16px 32px;
+            border: 2px solid;
+            border-image: linear-gradient(135deg, #79C5C7, #2EA6D4) 1;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #79C5C7, #2EA6D4);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(121, 197, 199, 0.3);
+        }
+
+        /* Footer CTA */
+        .footer-cta {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .footer-cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-cta-buttons {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 3rem;
+        }
+
+        .footer-tagline {
+            margin-top: 2rem;
+            font-size: 1.25rem;
+            font-style: italic;
+        }
+
+        /* Footer */
+        footer {
+            background: #1f2937;
+            color: white;
+            padding: 3rem 0 2rem;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: white;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #9ca3af;
+            text-decoration: none;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .footer-section a:hover {
+            color: #2EA6D4;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #374151;
+            padding-top: 2rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        /* Mobile Floating Bar */
+        .mobile-floating-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(46, 166, 212, 0.9);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            display: none;
+            z-index: 999;
+            animation: slideUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        @keyframes slideUp {
+            from {
+                transform: translateY(100%);
+                opacity: 0.5;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        /* Cursor Follower Effect */
+        .cursor-follower {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(circle, 
+                rgba(46, 166, 212, 0.15) 0%, 
+                rgba(121, 197, 199, 0.1) 30%, 
+                rgba(27, 117, 187, 0.05) 60%,
+                transparent 80%);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            mix-blend-mode: screen;
+            filter: blur(0.5px);
+            display: none;
+            opacity: 0.8;
+            will-change: transform, left, top;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #2EA6D4;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: all 0.08s ease-out;
+            display: none;
+            opacity: 0.8;
+            will-change: transform, left, top;
+        }
+
+        /* Show cursor only on devices with mouse */
+        @media (hover: hover) and (pointer: fine) {
+            .cursor-follower,
+            .cursor-dot {
+                display: block;
+            }
+            
+            /* Hide default cursor */
+            body {
+                cursor: none;
+            }
+            
+            /* Keep default cursor for text selection */
+            p, h1, h2, h3, h4, h5, h6, span {
+                cursor: text;
+            }
+        }
+
+        /* Cursor hover states */
+        body.cursor-hover .cursor-follower {
+            width: 64px;
+            height: 64px;
+            background: radial-gradient(circle, 
+                rgba(255, 154, 86, 0.12) 0%, 
+                rgba(181, 101, 167, 0.08) 30%, 
+                rgba(46, 166, 212, 0.05) 60%,
+                transparent 85%);
+            filter: blur(0.8px);
+            opacity: 0.9;
+        }
+
+        body.cursor-hover .cursor-dot {
+            transform: translate(-50%, -50%) scale(1.3);
+            background: linear-gradient(135deg, #2EA6D4, #00A79D);
+            opacity: 0.9;
+        }
+
+        /* Special cursor state for service cards */
+        body.cursor-service .cursor-follower {
+            width: 72px;
+            height: 72px;
+            background: radial-gradient(circle, 
+                rgba(46, 166, 212, 0.08) 0%, 
+                rgba(27, 117, 187, 0.05) 40%, 
+                transparent 85%);
+            border: 1px solid rgba(46, 166, 212, 0.15);
+            filter: blur(0.5px);
+        }
+
+        /* Cursor effect on gradient text */
+        body.cursor-gradient .cursor-follower {
+            width: 56px;
+            height: 56px;
+            background: radial-gradient(circle, 
+                rgba(46, 166, 212, 0.12) 0%, 
+                rgba(121, 197, 199, 0.08) 30%,
+                rgba(255, 154, 86, 0.04) 60%, 
+                transparent 85%);
+            animation: gentlePulse 3s ease-in-out infinite;
+            filter: blur(1px);
+        }
+
+        /* Click effect */
+        .cursor-follower.clicking {
+            transform: translate(-50%, -50%) scale(0.8);
+        }
+
+        .cursor-dot.clicking {
+            transform: translate(-50%, -50%) scale(0.5);
+        }
+
+        /* Hide cursor on touch devices */
+        @media (hover: none) and (pointer: coarse) {
+            .cursor-follower,
+            .cursor-dot {
+                display: none !important;
+            }
+            
+            body {
+                cursor: auto !important;
+            }
+        }
+
+        /* Form Input Animations */
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #2EA6D4;
+            box-shadow: 0 0 0 3px rgba(46, 166, 212, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        /* What We Do Section */
+        .what-we-do {
+            padding: 80px 0;
+            background: white;
+        }
+
+        .our-advantage {
+            padding: 80px 0;
+            background: linear-gradient(
+                90deg,
+                #fffbf9 0%,
+                #fffcfa 50%,
+                #fffbf9 100%
+            );
+        }
+
+        .advantage-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .advantage-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 20px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .advantage-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transition: left 0.8s ease;
+        }
+
+        .advantage-card:hover::before {
+            left: 100%;
+        }
+
+        .advantage-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .advantage-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            transition: transform 0.4s ease;
+        }
+
+        .advantage-card:hover .advantage-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        .advantage-card h3 {
+            font-size: 1.5rem;
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .advantage-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .who-we-serve {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #fff9f6, #fffbf8);
+        }
+
+        .serve-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .serve-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .serve-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .serve-card h3 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .serve-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .serve-note {
+            max-width: 800px;
+            margin: 3rem auto 0;
+            padding: 2rem;
+            background: rgba(46, 166, 212, 0.05);
+            border-radius: 16px;
+            border: 1px solid rgba(46, 166, 212, 0.1);
+            text-align: center;
+        }
+
+        .serve-note h4 {
+            color: #1f2937;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+
+        .serve-note p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .serve-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        .why-choose {
+            padding: 80px 0;
+            background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+            color: white;
+        }
+
+        .why-choose .section-header h2 {
+            color: white;
+        }
+
+        .why-choose .section-header p {
+            color: #9ca3af;
+        }
+
+        .why-choose-list {
+            list-style: none;
+            max-width: 800px;
+            margin: 3rem auto 0;
+        }
+
+        .why-choose-list li {
+            padding: 1rem 0;
+            color: #d1d5db;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            font-size: 1.1rem;
+            opacity: 0;
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        .why-choose-list li:nth-child(1) { animation-delay: 0.2s; }
+        .why-choose-list li:nth-child(2) { animation-delay: 0.4s; }
+        .why-choose-list li:nth-child(3) { animation-delay: 0.6s; }
+        .why-choose-list li:nth-child(4) { animation-delay: 0.8s; }
+        .why-choose-list li:nth-child(5) { animation-delay: 1.0s; }
+
+        .why-choose-list li::before {
+            content: '✓';
+            color: #10b981;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 0.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links,
+            .header-actions {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+                animation: fadeInUp 0.8s ease;
+            }
+
+            .demo-options {
+                grid-template-columns: 1fr;
+            }
+
+            .solution-feature {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+                padding: 1.5rem;
+            }
+
+            .feature-icon {
+                width: 100%;
+                font-size: 2rem;
+            }
+
+            .solution-cta {
+                padding: 1.5rem 1rem;
+            }
+
+            .primary-cta {
+                margin-right: 0;
+                margin-bottom: 1rem;
+                display: block;
+                width: 100%;
+            }
+
+            .secondary-cta {
+                display: block;
+                width: 100%;
+            }
+
+            .trust-grid,
+            .services-grid,
+            .psychology-grid,
+            .results-grid,
+            .advantage-grid,
+            .serve-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .video-testimonials-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+                max-width: 600px;
+            }
+            
+            .video-thumbnail {
+                height: 180px;
+            }
+
+            .full-testimonial.expanded {
+                max-height: 800px;
+            }
+
+            .mobile-floating-bar {
+                display: block;
+            }
+
+            /* Simpler animations on mobile */
+            .service-tier:hover {
+                transform: none;
+                box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            }
+
+            .psychology-card:hover {
+                transform: translateY(-3px);
+            }
+
+            .service-tier.popular {
+                transform: scale(1);
+            }
+
+            .orb {
+                filter: blur(60px);
+            }
+
+            .orb1, .orb2, .orb3, .orb4 {
+                width: 300px;
+                height: 300px;
+            }
+        }
+
+        /* Accessibility - Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+            
+            .hero h1,
+            .tagline,
+            .highlight,
+            .quiz-header h2 .highlight,
+            .section-header h2 .highlight {
+                animation: none !important;
+            }
+            
+            .cursor-follower,
+            .cursor-dot {
+                display: none !important;
+            }
+            
+            body {
+                cursor: auto !important;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <i class="fas fa-paw"></i>
-                <span>Friendly Paws</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#reviews" class="nav-link">Reviews</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><a href="#book" class="nav-link cta-btn">Book Now</a></li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+    <!-- Background Elements -->
+    <div class="mesh-gradient"></div>
+    <div class="floating-orbs">
+        <div class="orb orb1"></div>
+        <div class="orb orb2"></div>
+        <div class="orb orb3"></div>
+        <div class="orb orb4"></div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="logotrans.png" alt="ActionPotential.AI" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li class="dropdown">
+                        <a href="#services">Services <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#ai-voice-front-desk">AI Voice Front Desk</a></li>
+                            <li><a href="#patient-experience-system">Patient Experience System</a></li>
+                            <li><a href="#full-funnel-marketing">Full-funnel Behavior Based Marketing</a></li>
+                            <li><a href="#aeo">Answer Engine Optimization (AEO)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#demo">Demo</a></li>
+                    <li class="dropdown">
+                        <a href="#who-we-serve">Industries <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#mental-health-professionals">Mental Health Professionals</a></li>
+                            <li><a href="#neurology-brain-health">Neurology & Brain Health Practices</a></li>
+                            <li><a href="#credentialed-coaches">Credentialed Health & Wellness Coaches</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#client-success">Success Stories</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="header-actions">
+                    <a href="https://app.actionpotential.ai/" class="log-in">Client Login</a>
+                    <a href="#book-calendar" class="get-started">Book Strategy Call</a>
+                </div>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-close" onclick="toggleMobileMenu()">
+                <span>✕</span>
             </div>
         </div>
-    </nav>
+        <ul class="mobile-nav-links">
+            <li>
+                <a href="#services">Services</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="#ai-voice-front-desk">AI Voice Front Desk</a></li>
+                    <li><a href="#patient-experience-system">Patient Experience System</a></li>
+                    <li><a href="#full-funnel-marketing">Full-funnel Behavior Based Marketing</a></li>
+                    <li><a href="#aeo">Answer Engine Optimization (AEO)</a></li>
+                </ul>
+            </li>
+            <li><a href="#demo">Demo</a></li>
+            <li>
+                <a href="#who-we-serve">Industries</a>
+                <ul class="mobile-dropdown-menu">
+                    <li><a href="#mental-health-professionals">Mental Health Professionals</a></li>
+                    <li><a href="#neurology-brain-health">Neurology & Brain Health Practices</a></li>
+                    <li><a href="#credentialed-coaches">Credentialed Health & Wellness Coaches</a></li>
+                </ul>
+            </li>
+            <li><a href="#client-success">Success Stories</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        
+        <div class="mobile-header-actions">
+            <a href="https://app.actionpotential.ai/" class="log-in">Client Login</a>
+            <a href="#book-calendar" class="get-started">Book Strategy Call</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Welcome to <span class="highlight">Friendly Paws</span></h1>
-                <p class="hero-subtitle">Riverdale's Most Trusted Pet Sitting & Boarding Service</p>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">Years Experience</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">129</span>
-                        <span class="stat-label">Five-Star Reviews</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">24/7</span>
-                        <span class="stat-label">Available</span>
-                    </div>
-                </div>
-                <p class="hero-description">
-                    Professional pet care with love and attention your furry family deserves. 
-                    Available 365 days a year for all your pet sitting and boarding needs.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#book" class="btn btn-primary">Book Now</a>
-                    <a href="#about" class="btn btn-secondary">Learn More</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="image-card">
-                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Happy dogs playing">
-                </div>
-                <div class="floating-badge">
-                    <i class="fas fa-star"></i>
-                    <span>5.0 Rating</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <section class="hero">
         <div class="container">
-            <div class="about-content">
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1544568100-847a948585b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sarah with pets">
-                    <div class="experience-badge">
-                        <span>30 Years</span>
-                        <small>Experience</small>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="rating">
+                        <span class="hipaa-badge">🛡️ HIPAA</span>
+                        <span>Compliant</span>
                     </div>
-                </div>
-                <div class="about-text">
-                    <h2>Meet Sarah C. - Your Trusted Pet Care Professional</h2>
-                    <p class="about-subtitle">Professional cat & dog sitter with 30 years of experience serving Riverdale, NY</p>
-                    
-                    <div class="about-features">
-                        <div class="feature">
-                            <i class="fas fa-home"></i>
-                            <div>
-                                <h4>Boutique Style Care</h4>
-                                <p>House with backyard providing a comfortable, home-like environment</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>24/7 Availability</h4>
-                                <p>Available every day, all year round for emergency and last-minute care</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-heart"></i>
-                            <div>
-                                <h4>Passionate Care</h4>
-                                <p>Treating every pet as if they were my own with love and attention</p>
-                            </div>
-                        </div>
-                        <div class="feature">
-                            <i class="fas fa-medical-kit"></i>
-                            <div>
-                                <h4>Medical Experience</h4>
-                                <p>Experienced with special needs, senior pets, and medication administration</p>
-                            </div>
-                        </div>
-                    </div>
+                    <h1>
+                      Build a Patient-First Growth System for Your Practice
 
-                    <div class="credentials">
-                        <h4>Qualifications & Experience</h4>
-                        <ul>
-                            <li><i class="fas fa-check"></i> 30 years of professional pet care experience</li>
-                            <li><i class="fas fa-check"></i> Oral & injected medication administration</li>
-                            <li><i class="fas fa-check"></i> First aid/CPR certified</li>
-                            <li><i class="fas fa-check"></i> Senior dog and special needs experience</li>
-                            <li><i class="fas fa-check"></i> Experience with terminal illness care</li>
-                        </ul>
+                    </h1>
+                    <p class="tagline">Combining Behavioral Science with Ethical AI  </p>
+                    <p>
+                      We help brain health clinics, mental health practices, and credentialed coaches implement patient experience systems that reduce lead loss, increase bookings, and build trust without burning out your team.
+
+                    </p>
+                    <p class="founder-info">
+                        Dual master's degrees in Experimental Psychology and UX Design<br>
+                        <em>Deep expertise in behavioral science, conversation design, and AI systems</em>
+                    </p>
+                </div>
+                
+                <!-- Demo Section -->
+                <div class="hero-demo">
+                    <div class="demo-header">
+                                            <h2>Experience our Voice AI in Action</h2>
+                    <p class="demo-subtitle">Choose how you'd like to experience our demo</p>
+                    </div>
+                    
+                    <!-- Demo Options -->
+                    <div class="demo-options">
+                        <!-- Video Demo Option -->
+                        <div class="demo-option video-option">
+                            <div class="video-preview">
+                                <div class="play-button">▶️</div>
+                            </div>
+                            <h3>Watch Demo Video</h3>
+                            <p>Watch a recorded call of our voice AI in action</p>
+                        </div>
+                        
+                        <!-- Live Demo Option -->
+                        <a href="tel:1-855-695-2714" class="demo-phone-link" style="text-decoration: none; color: inherit; background: none; box-shadow: none; display: block;">
+                            <div class="demo-option call-option">
+                                <div class="call-preview">
+                                    <div class="phone-icon">📞</div>
+                                </div>
+                                <h3>Live Demo Call</h3>
+                                <p>Call and speak live with our Voice AI Front Desk</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    <p class="demo-footer">Ready to see what's possible for your practice?</p>
+                    <div class="demo-cta">
+                        <a href="#book-calendar" class="btn-primary">📅 Book Your Strategy Call</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
+    <!-- Complete Solution Section -->
+    <section id="services" class="services animate-on-scroll">
         <div class="container">
             <div class="section-header">
-                <h2>Our Pet Care Services</h2>
-                <p>Comprehensive care tailored to your pet's unique needs</p>
+                <h2>What's Included in Your Complete Patient Experience System</h2>
+                <p>A comprehensive, patient-centered solution designed to capture every opportunity and deliver exceptional care experiences</p>
             </div>
             
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-bed"></i>
+            <div class="complete-solution">
+                <!-- Patient-Centered AI Voice Front Desk -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">📞</div>
+                    <div class="feature-content">
+                        <h3>Patient-Centered AI Voice Front Desk</h3>
+                        <p class="feature-subtitle">Your phone now answers itself 24/7, in your tone, with smart logic.</p>
+                        <p>Handles FAQs, bookings, and escalations with empathy, not scripts.</p>
                     </div>
-                    <h3>Pet Boarding</h3>
-                    <p class="service-description">Overnight stays in my comfortable home with backyard</p>
-                    <div class="service-price">$150 <span>per night</span></div>
-                    <ul class="service-features">
-                        <li>Boutique style care</li>
-                        <li>24/7 supervision</li>
-                        <li>Daily exercise & play</li>
-                        <li>Photo & video updates</li>
-                    </ul>
-                    <a href="#book" class="btn btn-outline">Book Service</a>
                 </div>
 
-                <div class="service-card featured">
-                    <div class="featured-badge">Most Popular</div>
-                    <div class="service-icon">
-                        <i class="fas fa-sun"></i>
+                <!-- Smart Website Chat Assistant -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">💬</div>
+                    <div class="feature-content">
+                        <h3>Smart Website Chat Assistant</h3>
+                        <p class="feature-subtitle">A Patient-Centered AI Assistant That Supports Patients and Books Seamlessly</p>
+                        <p>New or returning, every patient gets quick answers and an easy path to scheduling. Available 24/7, our assistant delivers patient-centered support that feels personal, not robotic, while easing the burden on your staff.</p>
                     </div>
-                    <h3>Doggy Day Care</h3>
-                    <p class="service-description">Fun-filled days with socialization and exercise</p>
-                    <div class="service-price">$100 <span>per day</span></div>
-                    <ul class="service-features">
-                        <li>Small group setting</li>
-                        <li>Careful pet matching</li>
-                        <li>Indoor & outdoor play</li>
-                        <li>Regular updates</li>
-                    </ul>
-                    <a href="#book" class="btn btn-primary">Book Service</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-home"></i>
+                <!-- HIPAA-Compliant Intelligent Follow-Up -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">🔒</div>
+                    <div class="feature-content">
+                        <h3>HIPAA-Compliant Intelligent Follow-Up That Feels Human</h3>
+                        <p>Our system handles no-show recovery, post-visit check-ins, and lead nurturing through a blend of conversational AI (via SMS) and automated email written in your voice, aligned with your care model, and always on-brand.</p>
                     </div>
-                    <h3>Drop-In Visits</h3>
-                    <p class="service-description">Pet care in the comfort of your own home</p>
-                    <div class="service-price">$50 <span>per visit</span></div>
-                    <ul class="service-features">
-                        <li>Feeding & fresh water</li>
-                        <li>Playtime & companionship</li>
-                        <li>Litter box cleaning</li>
-                        <li>Mail & plant care</li>
-                    </ul>
-                    <a href="#book" class="btn btn-outline">Book Service</a>
                 </div>
 
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-walking"></i>
+                <!-- Reviews & Reputation Management -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">⭐</div>
+                    <div class="feature-content">
+                        <h3>Reviews & Reputation Management</h3>
+                        <p class="feature-subtitle">Grow Trust with Smarter, Simpler Review Systems</p>
+                        <p>Automatically request reviews via email and SMS, monitor sentiment with AI, and track trends through built-in analytics. Showcase your strongest reviews on your site or social with full control over what gets published. It's the easiest way to elevate your online reputation without adding to your staff's workload.</p>
                     </div>
-                    <h3>Dog Walking</h3>
-                    <p class="service-description">Daily exercise in your neighborhood</p>
-                    <div class="service-price">$38 <span>per walk</span></div>
-                    <ul class="service-features">
-                        <li>Customized walk duration</li>
-                        <li>All weather availability</li>
-                        <li>GPS tracking updates</li>
-                        <li>Post-walk report</li>
-                    </ul>
-                    <a href="#book" class="btn btn-outline">Book Service</a>
                 </div>
-            </div>
 
-            <div class="service-extras">
-                <h3>Additional Services</h3>
-                <div class="extras-grid">
-                    <div class="extra-item">
-                        <i class="fas fa-pills"></i>
-                        <span>Medication Administration</span>
+                <!-- Patient Re-Engagement Campaigns -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">🔄</div>
+                    <div class="feature-content">
+                        <h3>Patient Re-Engagement Campaigns</h3>
+                        <p>Ethically re-engage past patients and old leads with personalized messaging.</p>
                     </div>
-                    <div class="extra-item">
-                        <i class="fas fa-heart-pulse"></i>
-                        <span>Special Needs Care</span>
+                </div>
+
+                <!-- Google Business Profile Optimization -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">🔍</div>
+                    <div class="feature-content">
+                        <h3>Google Business Profile Optimization</h3>
+                        <p>We clean, optimize, and monitor your local presence so patients can find you quickly and book with confidence.</p>
                     </div>
-                    <div class="extra-item">
-                        <i class="fas fa-user-clock"></i>
-                        <span>Senior Pet Care</span>
+                </div>
+
+                <!-- Listings Consistency System -->
+                <div class="solution-feature animate-on-scroll">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-content">
+                        <h3>Listings Consistency System</h3>
+                        <p>Pushes your clinic information to over 50 directories, reducing confusion and enhancing credibility. Maintain a consistent presence with minimal effort from your team.</p>
                     </div>
-                    <div class="extra-item">
-                        <i class="fas fa-camera"></i>
-                        <span>Photo/Video Updates</span>
-                    </div>
+                </div>
+
+                <!-- Call to Action -->
+                <div class="solution-cta animate-on-scroll">
+                    <a href="#book-calendar" class="service-cta primary-cta">Book Your Free Marketing Audit</a>
+                    <button class="service-cta secondary-cta">See Our AI In Action: 555-123-4567</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section id="reviews" class="reviews">
+    <!-- Who We Serve Section -->
+    <section class="who-we-serve animate-on-scroll">
         <div class="container">
             <div class="section-header">
-                <h2>What Pet Parents Say</h2>
-                <p>129+ five-star reviews from happy pet families</p>
-                <div class="rating-display">
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <span>5.0 out of 5.0 stars • 129 reviews</span>
-                </div>
+                <div class="section-badge">🎯 Who We're Working With</div>
+                <h2>Our Current Client Focus</h2>
+                <p>We partner with healthcare professionals who prioritize patient experience and evidence-based care</p>
             </div>
-
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">A</div>
-                            <div>
-                                <h4>Amy Davis</h4>
-                                <p>Doggy Day Care • 3 months ago</p>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>"Sarah took care of my dog Birdie for a whole day. Birdie is a very rambunctious pitbull mix and not everyone is able to keep up with her, but Sarah had no problems. I highly recommend her to anyone who really wants quality care for their pet. Sarah goes above and beyond!"</p>
+            
+            <div class="serve-grid">
+                <div class="serve-card">
+                    <h3>Mental Health Professionals</h3>
+                    <p>Psychiatrists, Psychiatric Nurse Practitioners, Therapists, and Clinical Counselors looking to enhance patient/client interaction and streamline practice operations while maintaining the highest standards of care.</p>
                 </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">A</div>
-                            <div>
-                                <h4>Amanda Zaragoza</h4>
-                                <p>Pet Boarding • 2 months ago</p>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>"Sarah took care of my Rhodesian Ridgeback who is elderly and has bad separation anxiety. She was phenomenal with her. Sarah is kind and patient, she kept me up to date with Lola's wellbeing with daily texts and pictures while I was away."</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">W</div>
-                            <div>
-                                <h4>Wilmien Louise</h4>
-                                <p>Pet Boarding & Drop-In Visits • 4 months ago</p>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>"We would highly recommend working with Sarah at Friendly Paws! She has provided care for our dog overnight in her home, and in our home, and we couldn't be more happy. It's a comfort knowing we can entrust the care of our family pet to Sarah."</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">J</div>
-                            <div>
-                                <h4>Jeremy Shepard</h4>
-                                <p>Cat Care • 4 months ago</p>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>"Friendly Paws has become a part of our family watching our two kitties when we have (frequent) business travel! They are very responsive (quick and clear communication), always follow through without hesitation, have our trust coming into our home."</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">S</div>
-                            <div>
-                                <h4>Sarah Rutledge</h4>
-                                <p>Senior Cat Care • 2 months ago</p>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>"Sarah took great care of my senior cat while I was halfway around the world. She sent regular pics and updates, and I was able to relax knowing he was in good hands. I wholeheartedly recommend her."</p>
-                </div>
-
-                <div class="review-card">
-                    <div class="review-header">
-                        <div class="reviewer-info">
-                            <div class="reviewer-avatar">C</div>
-                            <div>
-                                <h4>Charles Alt</h4>
-                                <p>Doggy Day Care • 4 months ago</p>
-                            </div>
-                        </div>
-                        <div class="review-rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <p>"Friendly paws is absolutely amazing !!! They are attentive and really care for your animal. Don't be surprised if your dog comes home super happy and super happy to come back. At one point I thought my dude Murph loved her more than me!"</p>
-                </div>
-            </div>
-
-            <div class="trust-indicators">
-                <div class="trust-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Verified Background Check</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-reply"></i>
-                    <span>100% Response Rate</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-redo"></i>
-                    <span>20 Repeat Pet Parents</span>
-                </div>
-                <div class="trust-item">
-                    <i class="fas fa-camera"></i>
-                    <span>100% Photo Updates</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p>Ready to give your pet the best care? Contact me today!</p>
-                    
-                    <div class="contact-details">
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Riverdale, NY</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-clock"></i>
-                            <div>
-                                <h4>Availability</h4>
-                                <p>24/7, 365 days a year</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-reply-all"></i>
-                            <div>
-                                <h4>Response Time</h4>
-                                <p>Usually responds in a few minutes</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="availability-note">
-                        <i class="fas fa-info-circle"></i>
-                        <p><strong>Emergency & Last-Minute Care Available</strong><br>
-                        If you need someone last minute or in an emergency situation - I have your animal's back!</p>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <form id="contactForm">
-                        <h3>Send a Message</h3>
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" id="phone" name="phone" placeholder="Phone Number">
-                        </div>
-                        <div class="form-group">
-                            <select id="service" name="service" required>
-                                <option value="">Select Service</option>
-                                <option value="boarding">Pet Boarding</option>
-                                <option value="daycare">Doggy Day Care</option>
-                                <option value="visits">Drop-In Visits</option>
-                                <option value="walking">Dog Walking</option>
-                                <option value="other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Tell me about your pet and your needs..." rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Book Now Section -->
-    <section id="book" class="book-now">
-        <div class="container">
-            <div class="book-content">
-                <h2>Ready to Book?</h2>
-                <p>Join 129+ happy pet families who trust Friendly Paws with their beloved companions</p>
                 
-                <div class="booking-options">
-                    <div class="booking-card">
-                        <i class="fab fa-rover"></i>
-                        <h3>Book on Rover</h3>
-                        <p>Book directly through my verified Rover profile with instant confirmation</p>
-                        <a href="#" class="btn btn-primary">Book on Rover</a>
+                <div class="serve-card">
+                    <h3>Neurology & Brain Health Practices</h3>
+                    <p>Neurologists, integrative neurology practices, memory care centers, and cognitive wellness programs needing reliable, HIPAA-compliant lead management, patient engagement, and retention systems that honor the sensitivity of neurological care.</p>
+                </div>
+                
+                <div class="serve-card">
+                    <h3>Credentialed Health & Wellness Coaches</h3>
+                    <p>NBC-HWC certified, ICF credentialed, and evidence-based coaches seeking to scale their impact through automated, personalized client experiences that maintain the integrity of their coaching methodology.</p>
+                </div>
+            </div>
+            
+            <!-- Additional Note for Other Industries -->
+            <div class="serve-note">
+                <h4>Not in one of the above industries? That's okay.</h4>
+                <p>While we focus on healthcare and coaching practices, our systems can support any relationship-driven business that relies on booked appointments and values ethical, human-centered AI paired with behavioral science.</p>
+                <p>If you run a service-based business and want to improve intake, follow-up, and trust-building, we'd be delighted to discuss.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Success Video Testimonials Section -->
+    <section class="video-testimonials animate-on-scroll" id="client-success">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">✨ Client Success</div>
+                <h2>See What's <span class="highlight">Possible</span> For Your Practice</h2>
+                <p>Watch how our approach has helped practices like yours grow</p>
+            </div>
+            
+            <div class="video-testimonials-grid">
+                <!-- Video 1 - Balance Mental Health -->
+                <div class="video-testimonial-card">
+                    <div class="video-container" data-video-id="2">
+                        <div class="video-thumbnail">
+                            <div class="video-play-button">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="white" fill-opacity="0.9"/>
+                                    <path d="M24 20L40 30L24 40V20Z" fill="#2EA6D4"/>
+                                </svg>
+                            </div>
+                            <div class="video-duration">3:12</div>
+                        </div>
                     </div>
-                    <div class="booking-card">
-                        <i class="fas fa-phone"></i>
-                        <h3>Call Direct</h3>
-                        <p>Prefer to talk? Call me directly for immediate booking and questions</p>
-                        <a href="tel:+1234567890" class="btn btn-secondary">Call Now</a>
+                    <div class="video-info">
+                        <h4>Balance Mental Health</h4>
+                        <p class="video-role">Group Practice • 12 Providers</p>
+                        <p class="video-result">📈 67 five-star reviews in 90 days</p>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p class="quote-preview">
+                            We went from invisible to the highest-rated practice in town. The way they automated our review process feels so natural...
+                        </p>
+                        <button class="read-more-btn" data-testimonial="2">
+                            Read Full Story
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12L12 8L8 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="full-testimonial" id="testimonial-2">
+                            <div class="full-testimonial-content">
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="full-testimonial-text">
+                                    "We went from invisible to the highest-rated practice in town. 67 authentic reviews from real patients in just 90 days. The way they automated our review process feels so natural - patients actually want to leave reviews because the AI catches them at the perfect moment after a great session.
+                                    <br><br>
+                                    Beyond the reviews, our entire patient communication transformed. The AI handles scheduling, reminders, and follow-ups with such warmth that patients often mention how 'caring' our staff is. We've had to hire two new therapists just to handle the influx of new patients finding us through our improved online presence."
+                                </p>
+                                <div class="testimonial-result-badge">✅ Result: 67 five-star reviews + 40% increase in new patients</div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="booking-info">
-                    <h3>Before You Book</h3>
-                    <div class="info-grid">
-                        <div class="info-item">
-                            <i class="fas fa-paw"></i>
-                            <p><strong>Pet Capacity:</strong> Up to 5 pets per night for boarding</p>
+                <!-- Video 2 - Dr. Sarah Williams -->
+                <div class="video-testimonial-card">
+                    <div class="video-container" data-video-id="1">
+                        <div class="video-thumbnail">
+                            <div class="video-play-button">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="white" fill-opacity="0.9"/>
+                                    <path d="M24 20L40 30L24 40V20Z" fill="#2EA6D4"/>
+                                </svg>
+                            </div>
+                            <div class="video-duration">2:34</div>
                         </div>
-                        <div class="info-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <p><strong>Cancellation:</strong> 7-day cancellation policy</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-home"></i>
-                            <p><strong>Environment:</strong> Non-smoking household with unfenced yard</p>
-                        </div>
-                        <div class="info-item">
-                            <i class="fas fa-dog"></i>
-                            <p><strong>Pet Size:</strong> All sizes welcome (0-101+ lbs)</p>
+                    </div>
+                    <div class="video-info">
+                        <h4>Dr. Sarah Williams</h4>
+                        <p class="video-role">Psychiatrist • Private Practice</p>
+                        <p class="video-result">📈 89% reduction in no-shows</p>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p class="quote-preview">
+                            I was terrified AI would damage patient relationships. Instead, they compliment how caring our 'receptionist' is...
+                        </p>
+                        <button class="read-more-btn" data-testimonial="1">
+                            Read Full Story
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12L12 8L8 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="full-testimonial" id="testimonial-1">
+                            <div class="full-testimonial-content">
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="full-testimonial-text">
+                                    "I was terrified AI would damage patient relationships. Instead, they compliment how caring our 'receptionist' is. The HIPAA-compliant AI system they built for us has been revolutionary. Not only did it reduce our no-show rates by 89%, but it also handles crisis calls with remarkable sensitivity. The behavioral science approach they use truly understands patient psychology. 
+                                    <br><br>
+                                    What impressed me most was how they customized the AI to recognize mental health emergencies and respond appropriately. It's like having a receptionist who's also trained in crisis intervention. My patients feel heard and supported from their very first interaction with our practice."
+                                </p>
+                                <div class="testimonial-result-badge">✅ Result: 89% reduction in no-shows + Improved crisis response</div>
+                            </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Video 3 - Transform Coaching Academy -->
+                <div class="video-testimonial-card">
+                    <div class="video-container" data-video-id="3">
+                        <div class="video-thumbnail">
+                            <div class="video-play-button">
+                                <svg width="60" height="60" viewBox="0 0 60 60" fill="none">
+                                    <circle cx="30" cy="30" r="30" fill="white" fill-opacity="0.9"/>
+                                    <path d="M24 20L40 30L24 40V20Z" fill="#2EA6D4"/>
+                                </svg>
+                            </div>
+                            <div class="video-duration">1:58</div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Transform Coaching Academy</h4>
+                        <p class="video-role">Executive Coaching</p>
+                        <p class="video-result">📈 4x increase in qualified leads</p>
+                    </div>
+                    <div class="testimonial-quote">
+                        <p class="quote-preview">
+                            I wanted to transform more lives without burning out. Now perfectly-matched students find us automatically...
+                        </p>
+                        <button class="read-more-btn" data-testimonial="3">
+                            Read Full Story
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12L12 8L8 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </button>
+                        <div class="full-testimonial" id="testimonial-3">
+                            <div class="full-testimonial-content">
+                                <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                                <p class="full-testimonial-text">
+                                    "I wanted to transform more lives without burning out. Now perfectly-matched students find us automatically. Their behavioral science approach to our marketing means we attract executives who are ready for deep transformation work, not just surface-level coaching.
+                                    <br><br>
+                                    The AI nurturing sequence they built is incredible - it shares client success stories, addresses common fears about coaching, and builds trust over weeks. By the time prospects book a call, they're already sold on working with us. Our close rate went from 20% to 75%, and I'm working with clients who truly value the transformation process."
+                                </p>
+                                <div class="testimonial-result-badge">✅ Result: 4x qualified leads + 75% close rate</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 4 - Coming Soon Placeholder -->
+                <div class="video-testimonial-card coming-soon">
+                    <div class="video-container">
+                        <div class="video-thumbnail coming-soon-thumbnail">
+                            <div class="coming-soon-content">
+                                <span class="coming-soon-icon">🎬</span>
+                                <p>New Success Story</p>
+                                <p class="coming-soon-date">Coming Soon</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-info">
+                        <h4>Your Practice Here?</h4>
+                        <p class="video-role">Join our success stories</p>
+                        <p class="video-result">📞 <a href="tel:555-123-4567" style="color: #2EA6D4;">Call 555-123-4567</a></p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust animate-on-scroll" id="trust">
+        <div class="container">
+            <div class="trust-content">
+                <h3 class="trust-headline">Real Results, Real Businesses</h3>
+                <p>Our combination of behavioral science and AI delivers measurable, repeatable outcomes for real clients:</p>
+                <div class="trust-grid">
+                    <div class="trust-item">
+                        <div class="trust-icon">📞</div>
+                        <h4>Fewer Missed Opportunities</h4>
+                        <p>Never miss another call or lead with 24/7 AI-powered communication systems.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">📈</div>
+                        <h4>Higher Conversion Rates</h4>
+                        <p>Psychology-driven messaging that turns more prospects into paying clients.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">⭐</div>
+                        <h4>Better Reputation & SEO</h4>
+                        <p>Automated review systems that build your online presence and credibility.</p>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">📅</div>
+                        <h4>More Booked Appointments</h4>
+                        <p>Streamlined booking systems that make it easy for clients to schedule with you.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Unique Advantage Section -->
+    <section class="our-advantage animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">🚀 Our Unique Advantage</div>
+                <h2>We're Not Just an AI Vendor or Another Marketing Agency</h2>
+                <p>ActionPotential.AI is your full-service growth partner, combining a deep understanding of human behavior with cutting-edge automation to build systems that support your business and scale your impact.</p>
+            </div>
+            
+            <div class="advantage-grid">
+                <div class="advantage-card">
+                    <div class="advantage-icon">🧠</div>
+                    <h3>Behavioral Science Meets AI</h3>
+                    <p>Our background in experimental psychology and UX ensures every message, campaign, and system is designed to align with how people actually think, decide, and take action.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🤖</div>
+                    <h3>Ethical, Human-Centered Automation</h3>
+                    <p>Our AI is trained on your brand voice, tuned for subtlety, and designed to sound like a thoughtful member of your team.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🎯</div>
+                    <h3>Focus on Strategy, Not Repetition</h3>
+                    <p>We automate routine tasks so you and your team can focus on high-level strategy, client care, and the work that matters most.</p>
+                </div>
+                
+                <div class="advantage-card">
+                    <div class="advantage-icon">🔒</div>
+                    <h3>Built for Trust-Driven Businesses</h3>
+                    <p>From HIPAA compliance to high-touch messaging, our systems are made for industries where privacy, professionalism, and human connection are essential.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- AEO Section -->
+    <section class="aeo animate-on-scroll">
+        <div class="container">
+            <div class="aeo-content">
+                <div class="aeo-icon">🔮</div>
+                <h2>AEO - Answer Engine Optimization</h2>
+                <p class="aeo-stat">60% of decisions now start with AI</p>
+                <p>When someone asks ChatGPT "Who's the best therapist near me?" - will AI recommend you?<br>
+                Position yourself as a trusted choice before it's too late.</p>
+                <button class="btn-secondary" style="margin-top: 2rem; border-color: white; color: white;">
+                    Join the AEO Waitlist
+                </button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Psychology Foundation -->
+    <section class="psychology animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2>How Psychology Drives Better Marketing Results</h2>
+            </div>
+            
+            <p class="psychology-quote">"Most agencies guess what will work. We apply 15 years of psychology research to create campaigns that resonate on a deeper level."<br>- [Your Name], Founder</p>
+            
+            <div class="psychology-grid">
+                <div class="psychology-card">
+                    <div class="psychology-emoji">🧠</div>
+                    <h3>Decision Architecture</h3>
+                    <p>Every funnel designed around how humans actually make choices</p>
+                </div>
+                <div class="psychology-card">
+                    <div class="psychology-emoji">🤝</div>
+                    <h3>Trust Engineering</h3>
+                    <p>Building credibility through strategic touchpoints and social proof</p>
+                </div>
+                <div class="psychology-card">
+                    <div class="psychology-emoji">⚡</div>
+                    <h3>Behavioral Triggers</h3>
+                    <p>Ethical persuasion based on cognitive biases and motivations</p>
+                </div>
+                <div class="psychology-card">
+                    <div class="psychology-emoji">💭</div>
+                    <h3>Message-Market Fit</h3>
+                    <p>Copy that resonates because it mirrors their internal dialogue</p>
+                </div>
+                <div class="psychology-card">
+                    <div class="psychology-emoji">🎯</div>
+                    <h3>Conversion Psychology</h3>
+                    <p>Landing pages that convert 3x better through behavioral design</p>
+                </div>
+                <div class="psychology-card">
+                    <div class="psychology-emoji">❤️</div>
+                    <h3>Emotional Resonance</h3>
+                    <p>Campaigns that connect with both logic and emotion</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo animate-on-scroll" id="demo">
+        <div class="container">
+            <h2>Ready to See What's Possible?</h2>
+            <p>Book a free strategy call and get a personalized AI + Marketing Audit of your business — no cost, no pressure.</p>
+            
+            <div class="demo-container">
+                <div class="demo-options">
+                    <a href="#book-calendar" class="demo-btn">
+                        📊 Free Strategy Call<br>
+                        <small>Get a personalized AI + Marketing Audit of your business</small>
+                        <p class="demo-phone">Book My Free Audit</p>
+                    </a>
+                    <a href="tel:555-123-4567" class="demo-btn">
+                        🤖 Try Our AI Live<br>
+                        <small>Experience how psychology + AI creates perfect first impressions</small>
+                        <p style="margin-top: 1rem;">📞 555-123-4567</p>
+                    </a>
+                </div>
+                
+                <p class="demo-note">
+                    We'll uncover where leads are slipping through the cracks and show you how to plug them with human-centered automation that works.
+                </p>
+                
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="why-choose animate-on-scroll">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose ActionPotential.AI?</h2>
+                <p>A strategic partner — not just a software provider</p>
+            </div>
+            
+            <ul class="why-choose-list">
+                <li>Dual master's degrees in Experimental Psychology and UX Design</li>
+                <li>Deep expertise in behavioral science, conversation design, and AI systems</li>
+                <li>HIPAA-compliant solutions built for healthcare and high-trust service businesses</li>
+                <li>Proven systems that pay for themselves</li>
+                <li>A strategic partner — not just a software provider</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results animate-on-scroll" id="results">
+        <div class="container">
+            <div class="section-header">
+                <h2>Results Our Clients Typically See</h2>
+                <p>Based on aggregate data from healthcare and coaching practices we've served</p>
+            </div>
+            
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-metric">15-20</div>
+                    <h3>Hours Saved Weekly</h3>
+                    <p>Focus on what matters while AI handles the rest</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-metric">94%</div>
+                    <h3>Caller Satisfaction</h3>
+                    <p>People prefer our AI to most human receptionists</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-metric">4x</div>
+                    <h3>More Reviews</h3>
+                    <p>Happy customers become your reputation</p>
+                </div>
+                <div class="result-card">
+                    <div class="result-metric">40%</div>
+                    <h3>Increase in Bookings</h3>
+                    <p>Never miss another opportunity to serve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final Booking Calendar Section -->
+    <section class="final-booking animate-on-scroll" id="book-calendar" style="padding: 80px 0; background: linear-gradient(135deg, #f8fafc 0%, #ffffff 50%, #f8fafc 100%);">
+        <div class="container">
+            <div style="text-align: center; margin-bottom: 3rem;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin-bottom: 1rem;">Ready to Transform Your Practice?</h2>
+                <p style="font-size: 1.25rem; color: #6b7280; max-width: 600px; margin: 0 auto;">Schedule your free strategy call below. We'll create a custom growth plan for your practice in just 30 minutes.</p>
+            </div>
+            
+            <!-- Calendar Widget Container -->
+            <div style="max-width: 800px; margin: 0 auto; background: rgba(255, 255, 255, 0.95); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1); border: 1px solid rgba(255, 255, 255, 0.8);">
+                <iframe src="https://link.actionpotential.ai/widget/booking/ksD7NPYqg5JoFugUIJnm" style="width: 100%; border: none; overflow: hidden; height: 600px; border-radius: 16px;" scrolling="no" id="ksD7NPYqg5JoFugUIJnm_1753301135350"></iframe>
+            </div>
+            
+            <div style="text-align: center; margin-top: 2rem;">
+                <p style="color: #9ca3af; font-size: 0.95rem;">🔒 HIPAA Compliant • 📞 No Sales Pressure • ⚡ Immediate Value</p>
+            </div>
+        </div>
+    </section>
+    <script src="https://link.actionpotential.ai/js/form_embed.js" type="text/javascript"></script>
+
+    <!-- Footer CTA -->
+    <section class="footer-cta animate-on-scroll">
+        <div class="container">
+            <h2>Ready to See What's Possible?</h2>
+            <p>Book a free strategy call and get a personalized AI + Marketing Audit of your business — no cost, no pressure.</p>
+            
+            <div class="footer-cta-buttons">
+                <a href="#book-calendar" class="btn-primary">
+                    📅 Book My Free Audit
+                </a>
+                <a href="tel:555-123-4567" class="btn-secondary" style="background: white; color: #1f2937;">
+                    📞 Experience Our AI: 555-123-4567
+                </a>
+                <a href="#demo" class="btn-secondary" style="background: white; color: #1f2937;">
+                    📊 View Our Process
+                </a>
+            </div>
+            
+            <p class="footer-tagline">
+                "We'll uncover where leads are slipping through the cracks and show you how to plug them with human-centered automation that works."
+            </p>
+            <p style="margin-top: 1rem; color: #9ca3af;">
+                Full-Service Marketing. Powered by Psychology. Scaled by AI.
+            </p>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer id="contact">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <div class="footer-logo">
-                        <i class="fas fa-paw"></i>
-                        <span>Friendly Paws</span>
-                    </div>
-                    <p>Riverdale's most trusted pet sitting and boarding service for over 30 years.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                    </div>
+                    <h3>Get Started Today</h3>
+                    <p>We combine behavioral science and human-centered AI to turn missed leads into booked clients, so you can grow your business and focus on what you do best.</p>
+                    <p><strong>Email:</strong> hello@actionpotential.ai</p>
+                    <p><strong>Phone:</strong> (555) 123-4567</p>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Pet Boarding</a></li>
-                        <li><a href="#services">Doggy Day Care</a></li>
-                        <li><a href="#services">Drop-In Visits</a></li>
-                        <li><a href="#services">Dog Walking</a></li>
-                    </ul>
+                    <h3>Our Services</h3>
+                    <a href="#services">Capture Package</a>
+                    <a href="#services">Convert Package</a>
+                    <a href="#services">Scale Package</a>
+                    <a href="#services">AI Voice Front Desk</a>
+                    <a href="#services">Lead Management</a>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>About</h4>
-                    <ul>
-                        <li><a href="#about">About Sarah</a></li>
-                        <li><a href="#reviews">Reviews</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                        <li><a href="#book">Book Now</a></li>
-                    </ul>
+                    <h3>Company</h3>
+                    <a href="#about">About</a>
+                    <a href="#early-testimonials">Success Stories</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                
                 <div class="footer-section">
-                    <h4>Contact Info</h4>
-                    <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> Riverdale, NY</p>
-                        <p><i class="fas fa-clock"></i> Available 24/7/365</p>
-                        <p><i class="fas fa-star"></i> 5.0 Stars • 129+ Reviews</p>
-                    </div>
+                    <h3>Resources</h3>
+                    <a href="#">Behavioral Science Guide</a>
+                    <a href="#">AEO Optimization</a>
+                    <a href="#">AI Marketing Playbook</a>
+                    <a href="#book-calendar">Free Consultation</a>
                 </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 Friendly Paws. All rights reserved.</p>
-                <p>Professional pet sitting and boarding services in Riverdale, NY</p>
+                <p>&copy; 2024 ActionPotential.AI. All rights reserved. | Full-Service Marketing. Powered by Psychology. Scaled by AI.</p>
             </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Mobile Floating Bar -->
+    <div class="mobile-floating-bar">
+        Free Marketing Audit: <a href="#book-calendar" style="color: white; text-decoration: underline;">Book Now</a>
+    </div>
+
+    <!-- Cursor Follower -->
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
+    <!-- Chat Widget -->
+    <script 
+      src="https://widgets.leadconnectorhq.com/loader.js"  
+      data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" 
+      data-widget-id="66860a9a6ae8564ec87446ee"   > 
+    </script>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 10000; align-items: center; justify-content: center;">
+        <div class="video-modal-content" style="position: relative; max-width: 90%; max-height: 90%; background: black; border-radius: 10px; overflow: hidden;">
+            <button class="close-modal" onclick="closeVideo()" style="position: absolute; top: 10px; right: 10px; background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; font-size: 20px; cursor: pointer; z-index: 10001;">&times;</button>
+            <video id="modalVideo" class="modal-video" controls style="width: 100%; height: 100%; max-width: 800px; max-height: 600px;">
+                <source src="" type="video/mp4">
+                <source src="" type="video/quicktime">
+            </video>
+        </div>
+    </div>
+
+    <script>
+        // Simple video configuration
+        const videoConfig = {
+            1: {
+                url: '/videos/Mauro Testimonial.MP4',
+                name: 'Mauro'
+            },
+            2: {
+                url: 'https://storage.googleapis.com/msgsndr/yOkUSQmv7D3J1n6pmgAL/media/686c732dd55cfe6294cd77a4.mp4',
+                name: 'Dan'
+            },
+            3: {
+                url: '/videos/JaiEditedTestimonial.mp4',
+                name: 'Jai'
+            },
+            'demo': {
+                url: '/videos/Voice AI Demo 1 .mp4',
+                name: 'Voice AI Demo'
+            }
+        };
+
+        // Simple play video function - modal only
+        function playVideo(videoId) {
+            const config = videoConfig[videoId];
+            if (!config) return;
+            
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            
+            if (!modal || !video) return;
+            
+            // Set video source
+            video.src = config.url;
+            
+            // Show modal
+            modal.style.display = 'flex';
+            
+            // Load and play video
+            video.load();
+            video.play().catch(e => {
+                // Video will still show with controls even if autoplay fails
+            });
+        }
+
+        // Close video modal
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            
+            video.pause();
+            video.currentTime = 0;
+            video.src = '';
+            modal.style.display = 'none';
+        }
+
+        // Video Testimonials Click Handlers
+        document.addEventListener('DOMContentLoaded', function() {
+            document.querySelectorAll('.video-container[data-video-id]').forEach(container => {
+                container.addEventListener('click', function() {
+                    const videoId = this.getAttribute('data-video-id');
+                    playVideo(videoId);
+                });
+            });
+            
+            // Close modal on escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeVideo();
+                }
+            });
+            
+            // Close modal on background click
+            document.getElementById('videoModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeVideo();
+                }
+            });
+        });
+
+
+
+        // Parallax effect for orbs
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const orbs = document.querySelectorAll('.orb');
+            
+            orbs.forEach((orb, index) => {
+                const speed = 0.5 + (index * 0.1);
+                const translateY = scrolled * speed * 0.3;
+                orb.style.transform = `translate(0, ${translateY}px) scale(1)`;
+            });
+        });
+
+        // Cursor Follower Effect
+        const cursorFollower = document.querySelector('.cursor-follower');
+        const cursorDot = document.querySelector('.cursor-dot');
+        let mouseX = 0;
+        let mouseY = 0;
+        let followerX = 0;
+        let followerY = 0;
+        let dotX = 0;
+        let dotY = 0;
+
+        // Check if device has mouse
+        const hasHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        if (hasHover) {
+            // Track mouse position
+            document.addEventListener('mousemove', (e) => {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            // Smooth animation loop
+            function animateCursor() {
+                // Smooth follow for main circle - slower for more elegance
+                followerX += (mouseX - followerX) * 0.06;
+                followerY += (mouseY - followerY) * 0.06;
+                cursorFollower.style.left = followerX + 'px';
+                cursorFollower.style.top = followerY + 'px';
+
+                // Faster follow for dot but still smooth
+                dotX += (mouseX - dotX) * 0.2;
+                dotY += (mouseY - dotY) * 0.2;
+                cursorDot.style.left = dotX + 'px';
+                cursorDot.style.top = dotY + 'px';
+
+                requestAnimationFrame(animateCursor);
+            }
+            animateCursor();
+
+            // Add hover effects
+            const interactiveElements = document.querySelectorAll('a, button, .service-cta, .btn-primary, .btn-secondary, .video-container, .demo-btn, input, textarea');
+            const serviceCards = document.querySelectorAll('.service-tier');
+            
+            interactiveElements.forEach(el => {
+                el.addEventListener('mouseenter', () => {
+                    document.body.classList.add('cursor-hover');
+                });
+                
+                el.addEventListener('mouseleave', () => {
+                    document.body.classList.remove('cursor-hover');
+                });
+            });
+
+            // Special effect for service cards
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    document.body.classList.add('cursor-service');
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    document.body.classList.remove('cursor-service');
+                });
+            });
+
+            // Special effect for gradient text
+            const gradientTexts = document.querySelectorAll('.hero h1, .tagline, .highlight, .founder-info em');
+            gradientTexts.forEach(text => {
+                text.addEventListener('mouseenter', () => {
+                    document.body.classList.add('cursor-gradient');
+                });
+                
+                text.addEventListener('mouseleave', () => {
+                    document.body.classList.remove('cursor-gradient');
+                });
+            });
+
+            // Hide cursor when leaving window
+            document.addEventListener('mouseout', (e) => {
+                if (!e.relatedTarget) {
+                    cursorFollower.style.opacity = '0';
+                    cursorDot.style.opacity = '0';
+                }
+            });
+
+            document.addEventListener('mouseover', () => {
+                cursorFollower.style.opacity = '1';
+                cursorDot.style.opacity = '1';
+            });
+
+            // Add click effect
+            document.addEventListener('mousedown', () => {
+                cursorFollower.classList.add('clicking');
+                cursorDot.classList.add('clicking');
+            });
+
+            document.addEventListener('mouseup', () => {
+                cursorFollower.classList.remove('clicking');
+                cursorDot.classList.remove('clicking');
+            });
+        }
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Apply to all animate-on-scroll elements
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Also observe individual cards
+        document.querySelectorAll('.trust-item, .service-tier, .psychology-card, .result-card, .video-testimonial-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add hover effects for what-we-do service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-3px)';
+                this.style.boxShadow = '0 10px 25px rgba(0,0,0,0.08)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = 'none';
+            });
+        });
+
+        // Demo functionality
+        document.querySelectorAll('.video-demo-btn, .video-preview, .video-option').forEach(element => {
+            element.addEventListener('click', function() {
+                // Play the Voice AI Demo video
+                playVideo('demo');
+            });
+        });
+
+        // Call demo button functionality
+        document.querySelectorAll('.call-demo-btn').forEach(element => {
+            element.addEventListener('click', function(e) {
+                // Let the tel: link work normally for calling
+                // The href="tel:555-123-4567" will handle the phone call
+                console.log('Initiating call demo');
+            });
+        });
+
+
+
+        // Read More functionality for testimonials
+        document.addEventListener('DOMContentLoaded', function() {
+            const readMoreBtns = document.querySelectorAll('.read-more-btn');
+            
+            readMoreBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const testimonialId = this.getAttribute('data-testimonial');
+                    const fullTestimonial = document.getElementById(`testimonial-${testimonialId}`);
+                    const isExpanded = this.classList.contains('expanded');
+                    
+                    if (isExpanded) {
+                        // Collapse
+                        fullTestimonial.classList.remove('expanded');
+                        this.classList.remove('expanded');
+                        this.innerHTML = `
+                            Read Full Story
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12L12 8L8 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        `;
+                    } else {
+                        // Expand
+                        fullTestimonial.classList.add('expanded');
+                        this.classList.add('expanded');
+                        this.innerHTML = `
+                            Show Less
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 12L12 8L8 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        `;
+                    }
+                });
+            });
+        });
+
+        // Number counter animation
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                obj.innerHTML = Math.floor(progress * (end - start) + start);
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+
+        // Animate result metrics when they come into view
+        const metricObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.animated) {
+                    entry.target.animated = true;
+                    const value = entry.target.innerText;
+                    if (value.includes('%')) {
+                        animateValue(entry.target, 0, parseInt(value), 3000);
+                        setTimeout(() => {
+                            entry.target.innerHTML += '%';
+                        }, 3000);
+                    } else if (value.includes('-')) {
+                        const parts = value.split('-');
+                        animateValue(entry.target, 0, parseInt(parts[0]), 3000);
+                        setTimeout(() => {
+                            entry.target.innerHTML += '-' + parts[1];
+                        }, 3000);
+                    } else if (value.includes('x')) {
+                        animateValue(entry.target, 0, parseInt(value), 3000);
+                        setTimeout(() => {
+                            entry.target.innerHTML += 'x';
+                        }, 3000);
+                    } else {
+                        animateValue(entry.target, 0, parseInt(value), 3000);
+                    }
+                }
+            });
+        }, { threshold: 0.5 });
+
+        document.querySelectorAll('.result-metric').forEach(el => {
+            metricObserver.observe(el);
+        });
+    </script>
+
+    <script>
+        // Mobile Menu Toggle Function
+        function toggleMobileMenu() {
+            const hamburger = document.querySelector('.hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            hamburger.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        // Close mobile menu when clicking on a link
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileLinks = document.querySelectorAll('.mobile-nav-links a, .mobile-header-actions a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    const hamburger = document.querySelector('.hamburger');
+                    const mobileMenu = document.getElementById('mobileMenu');
+                    
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(e) {
+                const hamburger = document.querySelector('.hamburger');
+                const mobileMenu = document.getElementById('mobileMenu');
+                
+                if (!hamburger.contains(e.target) && !mobileMenu.contains(e.target)) {
+                    hamburger.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                }
+            });
+        });
+    </script>
 </body>
 </html>

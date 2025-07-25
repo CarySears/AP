@@ -1640,6 +1640,11 @@
             border-color: rgba(46, 166, 212, 0.3);
         }
 
+        .solution-feature:hover .feature-visual {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         .feature-icon {
             font-size: 2.5rem;
             background: linear-gradient(135deg, #2EA6D4, #1B75BB);
@@ -2631,6 +2636,18 @@
                 font-size: 2rem;
             }
 
+            .feature-visual {
+                margin-left: 0 !important;
+                align-self: center;
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+
+            .feature-visual img {
+                width: 220px !important;
+                height: 68px !important;
+            }
+
             .solution-cta {
                 padding: 1.5rem 1rem;
             }
@@ -2902,6 +2919,10 @@
                         <h3>Patient-Centered AI Voice Front Desk</h3>
                         <p class="feature-subtitle">Your phone now answers itself 24/7, in your tone, with smart logic.</p>
                         <p>Handles FAQs, bookings, and escalations with empathy, not scripts.</p>
+                    </div>
+                    <!-- Appointment Notification Visual -->
+                    <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                        <img src="appointment-notification.svg" alt="Appointment Notification Example" style="width: 260px; height: 80px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15));">
                     </div>
                 </div>
 

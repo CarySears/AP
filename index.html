@@ -461,11 +461,27 @@
             font-size: 14px;
             line-height: 1;
             transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .log-in::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #2EA6D4;
+            transition: width 0.3s ease;
         }
 
         .log-in:hover {
             color: #2EA6D4;
             transform: translateY(-1px);
+        }
+
+        .log-in:hover::after {
+            width: 100%;
         }
 
         .get-started {

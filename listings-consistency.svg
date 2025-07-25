@@ -12,9 +12,7 @@
   <!-- Status overview -->
   <g>
     <rect x="20" y="90" width="360" height="40" rx="6" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
-    <circle cx="50" cy="110" r="6" fill="#10b981"/>
-    <text x="65" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#10b981">All listings up to date</text>
-    <text x="320" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="12" fill="#6b7280" text-anchor="end">Last sync: 2 hours ago</text>
+    <text x="50" y="115" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#10b981">All listings up to date</text>
   </g>
   
   <!-- Directory grid -->
@@ -24,24 +22,18 @@
     <rect x="30" y="150" width="100" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
     <text x="80" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#4285f4" text-anchor="middle">Google</text>
     <text x="80" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Business Profile</text>
-    <circle cx="110" cy="160" r="6" fill="#10b981"/>
-    <text x="115" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">✓</text>
     <text x="80" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#10b981" text-anchor="middle">Synced</text>
     
     <!-- Yelp -->
     <rect x="150" y="150" width="100" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
     <text x="200" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#d32323" text-anchor="middle">Yelp</text>
     <text x="200" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Reviews</text>
-    <circle cx="230" cy="160" r="6" fill="#10b981"/>
-    <text x="235" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">✓</text>
     <text x="200" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#10b981" text-anchor="middle">Synced</text>
     
     <!-- Apple Maps -->
     <rect x="270" y="150" width="100" height="70" rx="8" fill="#ffffff" stroke="#e5e7eb" stroke-width="1"/>
     <text x="320" y="170" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="14" font-weight="600" fill="#007AFF" text-anchor="middle">Apple Maps</text>
     <text x="320" y="185" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="11" fill="#6b7280" text-anchor="middle">Business Connect</text>
-    <circle cx="350" cy="160" r="6" fill="#10b981"/>
-    <text x="355" y="164" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#ffffff" text-anchor="middle">✓</text>
     <text x="320" y="210" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif" font-size="10" fill="#10b981" text-anchor="middle">Synced</text>
     
     <!-- Row 2 -->

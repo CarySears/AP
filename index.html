@@ -1327,24 +1327,9 @@
             overflow: hidden;
         }
 
-        .service-cta::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: #2EA6D4;
-            transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-            z-index: -1;
-        }
-
         .service-cta:hover {
+            background: #2EA6D4;
             color: white;
-        }
-
-        .service-cta:hover::before {
-            left: 0;
         }
 
         .service-tier.popular .service-cta {

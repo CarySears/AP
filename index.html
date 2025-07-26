@@ -1652,11 +1652,21 @@
             width: calc(100% / 6); /* Each card takes 1/6 of the carousel width */
             min-width: 800px; /* Ensure minimum width for content */
             flex-shrink: 0;
-            margin: 0 2rem;
+            margin: 0 1rem;
             max-width: 1000px;
             height: auto;
             max-height: 75vh;
             overflow-y: auto;
+        }
+
+        /* Ensure the first card is fully visible */
+        .solution-feature:first-child {
+            margin-left: 2rem;
+        }
+
+        /* Ensure the last card has proper spacing */
+        .solution-feature:last-child {
+            margin-right: 2rem;
         }
 
         .solution-feature:hover {
@@ -3055,21 +3065,21 @@
                         <div class="solution-feature animate-on-scroll">
                             <div class="feature-icon">📞</div>
                             <div class="feature-content">
-                        <h3>Patient-Centered AI Voice Front Desk</h3>
-                        <p class="feature-subtitle">Your phone now answers itself 24/7, in your tone, with smart logic.</p>
-                        
-                        <p>Handles calls and texts, answering inquiries with professionalism. Ensures patients feel cared for 24/7.</p>
-                        
-                        <p><strong>Schedules appointments</strong> - No double bookings or missed slots.</p>
-                        
-                        <p><strong>Manages FAQs</strong> - Answers questions related to insurance, availability, and hours.</p>
-                        
-                        <p><strong>Handles escalations</strong> empathetically.</p>
-                        
-                        <p>Real-time call notifications, recordings, transcriptions, and summaries.</p>
-                        
-                        <p>After-hours answering service.</p>
-                        
+                                <h3>Patient-Centered AI Voice Front Desk</h3>
+                                <p class="feature-subtitle">Your phone now answers itself 24/7, in your tone, with smart logic.</p>
+                                
+                                <p>Handles calls and texts, answering inquiries with professionalism. Ensures patients feel cared for 24/7.</p>
+                                
+                                <p><strong>Schedules appointments</strong> - No double bookings or missed slots.</p>
+                                
+                                <p><strong>Manages FAQs</strong> - Answers questions related to insurance, availability, and hours.</p>
+                                
+                                <p><strong>Handles escalations</strong> empathetically.</p>
+                                
+                                <p>Real-time call notifications, recordings, transcriptions, and summaries.</p>
+                                
+                                <p>After-hours answering service.</p>
+                                
                                 <p><strong>Saves Time and Money.</strong> Your staff focuses on patient care, not the phone.</p>
                             </div>
                             <!-- Appointment Notification Visual -->
@@ -3079,84 +3089,81 @@
                         </div>
 
                         <!-- Smart Website Chat Assistant -->
-                <div class="solution-feature animate-on-scroll">
-                    <div class="feature-icon">💬</div>
-                    <div class="feature-content">
-                        <h3>Smart Website Chat Assistant</h3>
-                        <p class="feature-subtitle">A Patient-Centered AI Assistant That Supports Patients and Books Seamlessly</p>
-                        <p>New or returning, every patient gets quick answers and an easy path to scheduling. Available 24/7, our assistant delivers patient-centered support that feels personal, not robotic, while easing the burden on your staff.</p>
-                    </div>
-                    <!-- Insurance Chat Visual -->
-                    <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                        <img src="insurance-chat.svg" alt="Insurance Chat Conversation Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                    </div>
-                </div>
-
-                <!-- HIPAA-Compliant Intelligent Follow-Up -->
-                <div class="solution-feature animate-on-scroll">
-                    <div class="feature-icon">🔒</div>
-                    <div class="feature-content">
-                        <h3>HIPAA-Compliant Intelligent Follow-Up That Feels Human</h3>
-                        <p>Our system handles no-show recovery, post-visit check-ins, and lead nurturing through a blend of conversational AI (via SMS) and automated email written in your voice, aligned with your care model, and always on-brand. Ethically re-engage patients with personalized messaging.</p>
-                    </div>
-                    <!-- Patient Re-engagement SMS Visual -->
-                    <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                        <img src="patient-reengagement-sms.svg" alt="Patient Re-engagement SMS Sequence Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                    </div>
-                </div>
-
-                <!-- Reviews & Reputation Management -->
-                <div class="solution-feature animate-on-scroll">
-                    <div class="feature-icon">⭐</div>
-                    <div class="feature-content">
-                        <h3>Reviews & Reputation Management</h3>
-                        <p class="feature-subtitle">Grow Trust with Smarter, Simpler Review Systems</p>
-                        <p>Automatically request reviews via email and SMS, monitor sentiment with AI, and track trends through built-in analytics. Showcase your strongest reviews on your site or social with full control over what gets published. It's the easiest way to elevate your online reputation without adding to your staff's workload.</p>
-                    </div>
-                    <!-- Review Request Email Visual -->
-                    <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                        <img src="review-request-email.svg" alt="Review Request Email Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                    </div>
-                </div>
-
-
-                <!-- Google Business Profile Optimization -->
-                <div class="solution-feature animate-on-scroll">
-                    <div class="feature-icon">🔍</div>
-                    <div class="feature-content">
-                        <h3>Google Business Profile Optimization</h3>
-                        <p class="feature-subtitle">Complete Optimization & Monitoring for Maximum Local Visibility</p>
-                        <p>We clean, optimize, and monitor your local presence so patients can find you quickly and book with confidence.</p>
-                        
-                        <div style="margin-top: 1rem;">
-                            <p><strong>🔍 Increased Visibility:</strong> Optimized profiles appear more frequently in relevant local search results, improving your local SEO rankings and patient discovery.</p>
-                            
-                            <p><strong>📈 More Leads and Conversions:</strong> Higher visibility and engagement leads to increased website traffic, patient inquiries, and new appointments.</p>
+                        <div class="solution-feature animate-on-scroll">
+                            <div class="feature-icon">💬</div>
+                            <div class="feature-content">
+                                <h3>Smart Website Chat Assistant</h3>
+                                <p class="feature-subtitle">A Patient-Centered AI Assistant That Supports Patients and Books Seamlessly</p>
+                                <p>New or returning, every patient gets quick answers and an easy path to scheduling. Available 24/7, our assistant delivers patient-centered support that feels personal, not robotic, while easing the burden on your staff.</p>
+                            </div>
+                            <!-- Insurance Chat Visual -->
+                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                                <img src="insurance-chat.svg" alt="Insurance Chat Conversation Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
+                            </div>
                         </div>
-                        
 
-                    </div>
-                    <!-- Google Business Profile Visual -->
-                    <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                        <img src="google-business-profile.svg" alt="Google Business Profile with Score Optimization" style="width: 280px; height: 420px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                    </div>
-                </div>
+                        <!-- HIPAA-Compliant Intelligent Follow-Up -->
+                        <div class="solution-feature animate-on-scroll">
+                            <div class="feature-icon">🔒</div>
+                            <div class="feature-content">
+                                <h3>HIPAA-Compliant Intelligent Follow-Up That Feels Human</h3>
+                                <p>Our system handles no-show recovery, post-visit check-ins, and lead nurturing through a blend of conversational AI (via SMS) and automated email written in your voice, aligned with your care model, and always on-brand. Ethically re-engage patients with personalized messaging.</p>
+                            </div>
+                            <!-- Patient Re-engagement SMS Visual -->
+                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                                <img src="patient-reengagement-sms.svg" alt="Patient Re-engagement SMS Sequence Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
+                            </div>
+                        </div>
 
-                <!-- Listings Consistency System -->
-                <div class="solution-feature animate-on-scroll">
-                    <div class="feature-icon">📋</div>
-                    <div class="feature-content">
-                        <h3>Listings Consistency System</h3>
-                        <p class="feature-subtitle">70+ Directory Sync with Real-Time Analytics Dashboard</p>
-                        <p>Automatically distribute and synchronize your practice information across 70+ authoritative directories, including Google, Apple Maps, Bing, Foursquare, Yellow Pages, and Facebook.</p>
-                        
-                        <p style="margin-top: 1rem;"><strong>Local SEO Boost:</strong> Consistent business information across directories creates powerful signals to search engines, improving your local search visibility by up to 23% and driving more qualified patient traffic.</p>
-                    </div>
-                    <!-- Listings Consistency Visual -->
-                    <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                        <img src="listings-consistency.svg" alt="Directory Listings Consistency Dashboard Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                    </div>
-                </div>
+                        <!-- Reviews & Reputation Management -->
+                        <div class="solution-feature animate-on-scroll">
+                            <div class="feature-icon">⭐</div>
+                            <div class="feature-content">
+                                <h3>Reviews & Reputation Management</h3>
+                                <p class="feature-subtitle">Grow Trust with Smarter, Simpler Review Systems</p>
+                                <p>Automatically request reviews via email and SMS, monitor sentiment with AI, and track trends through built-in analytics. Showcase your strongest reviews on your site or social with full control over what gets published. It's the easiest way to elevate your online reputation without adding to your staff's workload.</p>
+                            </div>
+                            <!-- Review Request Email Visual -->
+                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                                <img src="review-request-email.svg" alt="Review Request Email Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
+                            </div>
+                        </div>
+
+                        <!-- Google Business Profile Optimization -->
+                        <div class="solution-feature animate-on-scroll">
+                            <div class="feature-icon">🔍</div>
+                            <div class="feature-content">
+                                <h3>Google Business Profile Optimization</h3>
+                                <p class="feature-subtitle">Complete Optimization & Monitoring for Maximum Local Visibility</p>
+                                <p>We clean, optimize, and monitor your local presence so patients can find you quickly and book with confidence.</p>
+                                
+                                <div style="margin-top: 1rem;">
+                                    <p><strong>🔍 Increased Visibility:</strong> Optimized profiles appear more frequently in relevant local search results, improving your local SEO rankings and patient discovery.</p>
+                                    
+                                    <p><strong>📈 More Leads and Conversions:</strong> Higher visibility and engagement leads to increased website traffic, patient inquiries, and new appointments.</p>
+                                </div>
+                            </div>
+                            <!-- Google Business Profile Visual -->
+                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                                <img src="google-business-profile.svg" alt="Google Business Profile with Score Optimization" style="width: 280px; height: 420px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
+                            </div>
+                        </div>
+
+                        <!-- Listings Consistency System -->
+                        <div class="solution-feature animate-on-scroll">
+                            <div class="feature-icon">📋</div>
+                            <div class="feature-content">
+                                <h3>Listings Consistency System</h3>
+                                <p class="feature-subtitle">70+ Directory Sync with Real-Time Analytics Dashboard</p>
+                                <p>Automatically distribute and synchronize your practice information across 70+ authoritative directories, including Google, Apple Maps, Bing, Foursquare, Yellow Pages, and Facebook.</p>
+                                
+                                <p style="margin-top: 1rem;"><strong>Local SEO Boost:</strong> Consistent business information across directories creates powerful signals to search engines, improving your local search visibility by up to 23% and driving more qualified patient traffic.</p>
+                            </div>
+                            <!-- Listings Consistency Visual -->
+                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                                <img src="listings-consistency.svg" alt="Directory Listings Consistency Dashboard Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
+                            </div>
+                        </div>
                     
                     </div> <!-- End carousel-container -->
                 </div> <!-- End solution-carousel -->

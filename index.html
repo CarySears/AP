@@ -1624,17 +1624,16 @@
             overflow: hidden;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start;
+            padding-left: 5vw;
         }
 
         .carousel-container {
             display: flex;
-            width: max-content; /* Let it size based on content */
-            height: 85vh;
             transition: transform 0.3s ease-out;
             will-change: transform;
             align-items: center;
-            padding: 2rem 0;
+            gap: 5vw;
         }
 
         .solution-feature {
@@ -1649,13 +1648,10 @@
             display: flex;
             align-items: flex-start;
             gap: 1.5rem;
-            width: 80vw; /* Each card takes most of the viewport width */
-            min-width: 800px; /* Ensure minimum width for content */
-            max-width: 1000px; /* Cap the maximum width */
+            width: 90vw;
+            max-width: 1200px;
+            min-height: 400px;
             flex-shrink: 0;
-            margin: 0 2rem;
-            height: auto;
-            max-height: 75vh;
             overflow-y: auto;
         }
 
@@ -4132,7 +4128,7 @@
             });
         });
 
-        // Horizontal Scroll with Vertical Movement
+                // Horizontal Scroll with Vertical Movement
         document.addEventListener('DOMContentLoaded', function() {
             const carouselContainer = document.getElementById('carousel-container');
             const completeSection = document.getElementById('complete-solution');
@@ -4147,31 +4143,39 @@
                 return;
             }
 
-                         function updateCarousel() {
-                 const rect = completeSection.getBoundingClientRect();
-                 const start = 0; // When section starts being visible
-                 const end = -(completeSection.offsetHeight - window.innerHeight); // When section ends
-                 
-                 // Calculate scroll progress through the section (0 to 1)
-                 let progress = -rect.top / (completeSection.offsetHeight - window.innerHeight);
-                 progress = Math.max(0, Math.min(1, progress));
-                 
-                 // Calculate translation based on card width + margin
-                 const cardWidth = 80; // 80vw
-                 const cardMargin = 4; // 2rem * 2 (left + right margin converted to vw)
-                 const totalCardWidth = cardWidth + cardMargin; // Total space per card in vw
-                 
-                 // Translate based on actual card spacing
-                 const maxTranslate = -((totalSlides - 1) * totalCardWidth);
-                 const translateX = progress * maxTranslate;
-                 carouselContainer.style.transform = `translateX(${translateX}vw)`;
-                 
-                 // Update progress dots
-                 const currentSlide = Math.round(progress * (totalSlides - 1));
-                 progressDots.forEach((dot, index) => {
-                     dot.classList.toggle('active', index === currentSlide);
-                 });
-             }
+            function updateCarousel() {
+                const rect = completeSection.getBoundingClientRect();
+                
+                // Calculate scroll progress through the section (0 to 1)
+                let progress = -rect.top / (completeSection.offsetHeight - window.innerHeight);
+                progress = Math.max(0, Math.min(1, progress));
+                
+                // Simple translation: each card is 95vw (90vw + 5vw gap)
+                const cardSpacing = 95; // 90vw card + 5vw gap
+                const maxTranslate = (totalSlides - 1) * cardSpacing;
+                const translateX = progress * maxTranslate;
+                
+                carouselContainer.style.transform = `translateX(-${translateX}vw)`;
+                
+                // Update progress dots
+                const currentSlide = Math.round(progress * (totalSlides - 1));
+                progressDots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+                
+                // Debug info (remove after testing)
+                if (progress > 0) {
+                    console.log(`Progress: ${progress.toFixed(2)}, Current slide: ${currentSlide}, TranslateX: -${translateX.toFixed(1)}vw`);
+                }
+            }
+            
+            // Also log initial card count
+            const cards = carouselContainer.querySelectorAll('.solution-feature');
+            console.log(`Found ${cards.length} cards in carousel`);
+            cards.forEach((card, index) => {
+                const title = card.querySelector('h3')?.textContent || 'Unknown';
+                console.log(`Card ${index + 1}: ${title}`);
+            });
 
             // Update on scroll
             window.addEventListener('scroll', updateCarousel);

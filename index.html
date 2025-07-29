@@ -1851,20 +1851,17 @@
                 margin-bottom: 12px !important;
             }
             
-            .ai-receptionist-section .solution-feature {
-                flex-direction: column !important;
-                text-align: center;
+            .ai-receptionist-section > .container > div {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            
+            .ai-receptionist-content {
                 padding: 1.5rem !important;
             }
             
-            .ai-receptionist-section .feature-visual {
-                margin-left: 0 !important;
-                margin-top: 1.5rem;
-            }
-            
-            .ai-receptionist-section .feature-visual img {
-                width: 200px !important;
-                height: 60px !important;
+            .ai-receptionist-visual {
+                order: -1;
             }
         }
 
@@ -3053,33 +3050,78 @@
         <div class="container">
             <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 32px 0 16px 0;">Meet Your AI Receptionist – 24/7 Phone Coverage</h2>
             
-            <div class="solution-feature animate-on-scroll" style="display: flex; align-items: center; gap: 2rem; background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); margin: 2rem 0;">
-                <div class="feature-icon" style="font-size: 3rem; flex-shrink: 0;">📞</div>
-                <div class="feature-content" style="flex: 1;">
-                    <p class="feature-subtitle" style="font-size: 1.2rem; color: #2EA6D4; font-weight: 600; margin-bottom: 1.5rem;">Your phone now answers itself 24/7—trained on your practice.</p>
+            <!-- Main Content Layout -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin: 3rem 0;">
+                
+                <!-- Left Side: Content -->
+                <div class="ai-receptionist-content" style="background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+                    <p class="feature-subtitle" style="font-size: 1.3rem; color: #2EA6D4; font-weight: 600; margin-bottom: 2rem;">Your phone now answers itself 24/7—trained on your practice.</p>
                     
-                    <div style="display: grid; gap: 1rem;">
+                    <div style="display: grid; gap: 1.2rem;">
                         <p><strong>Always available:</strong> Patients get a professional, empathetic response at any hour—no more voicemail frustration.</p>
                         <p><strong>Answers questions instantly:</strong> Handles insurance, hours, and availability FAQs with professionalism and accuracy.</p>
                         <p><strong>Books new appointments:</strong> Fills your calendar without double bookings or missed slots.</p>
                         <p><strong>Escalates when needed:</strong> Knows when to loop in a real team member, so patients feel supported.</p>
                         <p><strong>Sends instant call updates:</strong> Notifications, recordings, transcriptions, and summaries keep you in the loop.</p>
                         
-                        <div style="margin-top: 1.5rem;">
-                            <p><strong>Overflow & After-Hours Coverage:</strong> Can be configured for your exact needs:</p>
-                            <ul style="margin: 0.5rem 0 0 1.5rem; color: #374151;">
+                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: #f8fafc; border-radius: 12px; border-left: 4px solid #2EA6D4;">
+                            <p style="font-weight: 600; margin-bottom: 1rem; color: #1f2937;"><strong>Overflow & After-Hours Coverage:</strong> Can be configured for your exact needs:</p>
+                            <ul style="margin: 0 0 0 1.5rem; color: #374151; line-height: 1.6;">
                                 <li style="margin-bottom: 8px;">Answer all calls 24/7/365</li>
                                 <li style="margin-bottom: 8px;">Step in only when your staff can't pick up (overflow)</li>
                                 <li style="margin-bottom: 8px;">Cover specific hours such as evenings, weekends, or holidays</li>
                             </ul>
                         </div>
                         
-                        <p style="margin-top: 1rem;"><strong>Supports your staff:</strong> Frees up your team to focus on patients and higher-level tasks instead of repetitive phone duties that lead to burnout.</p>
-                        <p style="margin-top: 1rem; font-style: italic; color: #2EA6D4;">Perfect for practices that want to stop missing calls and start capturing more patient opportunities immediately—while easing the burden on staff.</p>
+                        <p style="margin-top: 1.5rem;"><strong>Supports your staff:</strong> Frees up your team to focus on patients and higher-level tasks instead of repetitive phone duties that lead to burnout.</p>
+                        <p style="margin-top: 1rem; font-style: italic; color: #2EA6D4; font-size: 1.1rem; padding: 1rem; background: rgba(46, 166, 212, 0.05); border-radius: 8px;">Perfect for practices that want to stop missing calls and start capturing more patient opportunities immediately—while easing the burden on staff.</p>
                     </div>
                 </div>
-                <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                    <img src="appointment-notification.svg" alt="Appointment Notification Example" style="width: 260px; height: 80px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15));">
+                
+                <!-- Right Side: Visual Flow -->
+                <div class="ai-receptionist-visual" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                    
+                    <!-- Step 1: Phone Call -->
+                    <div style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0;">📞</div>
+                        <div>
+                            <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.1rem;">Patient Calls</h4>
+                            <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">AI answers immediately with professional, empathetic response</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow -->
+                    <div style="text-align: center; color: #2EA6D4; font-size: 1.5rem;">↓</div>
+                    
+                    <!-- Step 2: AI Chat Interface -->
+                    <div style="background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);">
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #79C5C7, #B565A7); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0;">🤖</div>
+                            <div>
+                                <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.1rem;">AI Conversation</h4>
+                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Handles FAQs, insurance questions, availability</p>
+                            </div>
+                        </div>
+                        <!-- Mini chat preview -->
+                        <div style="background: #f8fafc; border-radius: 8px; padding: 1rem; font-size: 0.85rem;">
+                            <div style="margin-bottom: 0.5rem; color: #2EA6D4;"><strong>AI:</strong> "Hi! How can I help you today?"</div>
+                            <div style="margin-bottom: 0.5rem; color: #6b7280;"><strong>Patient:</strong> "I need to schedule an appointment"</div>
+                            <div style="color: #2EA6D4;"><strong>AI:</strong> "I'd be happy to help you schedule..."</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Arrow -->
+                    <div style="text-align: center; color: #2EA6D4; font-size: 1.5rem;">↓</div>
+                    
+                    <!-- Step 3: Appointment Booked -->
+                    <div style="display: flex; align-items: center; gap: 1rem; background: white; padding: 1.5rem; border-radius: 12px; box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #10B981, #059669); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; color: white; flex-shrink: 0;">✅</div>
+                        <div>
+                            <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.1rem;">Appointment Booked</h4>
+                            <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Calendar updated, notifications sent, staff informed</p>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>

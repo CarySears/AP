@@ -1846,7 +1846,15 @@
                 margin: 24px 0 12px 0 !important;
             }
             
-            .problem-section ul li,
+            .problem-section > .container > div {
+                grid-template-columns: 1fr !important;
+                gap: 1.5rem !important;
+            }
+            
+            .problem-section > .container > div > div {
+                padding: 1.5rem !important;
+            }
+            
             .full-team-intro ul li {
                 margin-bottom: 12px !important;
             }
@@ -3015,33 +3023,119 @@
     <!-- Problem Section -->
     <section class="problem-section" style="padding: 4rem 0; background: #fffbf9;">
         <div class="container">
-            <h1 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 0 0 2rem 0; padding: 32px 0 16px 0;">What Happens When You're With a Patient and the Phone Rings?</h1>
+            <h1 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 0 0 3rem 0; padding: 32px 0 16px 0;">What Happens When You're With a Patient and the Phone Rings?</h1>
             
-            <h2 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin: 32px 0 16px 0;">Missed Calls = Missed Opportunities</h2>
-            <p style="margin-bottom: 1.5rem; color: #374151; line-height: 1.6;">Whether you're solo or have a front desk team, missed calls are inevitable:</p>
+            <!-- Problem Scenarios Grid -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0;">
+                
+                <!-- Scenario 1: Missed Calls -->
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #EF4444;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #EF4444, #DC2626); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: white; flex-shrink: 0;">📵</div>
+                        <div>
+                            <h2 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.4rem; font-weight: 600;">Missed Calls = Missed Opportunities</h2>
+                        </div>
+                    </div>
+                    
+                    <p style="margin-bottom: 1.5rem; color: #374151; line-height: 1.6; font-weight: 500;">Whether you're solo or have a front desk team, missed calls are inevitable:</p>
+                    
+                    <div style="space-y: 1rem;">
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #EF4444; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Staff can't answer every call at once, leading to long wait times and patient frustration.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #EF4444; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Calls and voicemails pile up, creating hours of follow-up work.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #EF4444; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Patients left on hold or waiting for a callback often feel ignored.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #EF4444; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Prospective patients often hang up and call another practice.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem;">
+                            <div style="width: 8px; height: 8px; background: #EF4444; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Inconsistent and expensive answering services frustrate patients even more because they're not properly trained on your practice.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scenario 2: Staff Burden -->
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #F59E0B;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #F59E0B, #D97706); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: white; flex-shrink: 0;">😰</div>
+                        <div>
+                            <h2 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.4rem; font-weight: 600;">The Daily Burden on Staff</h2>
+                        </div>
+                    </div>
+                    
+                    <div style="space-y: 1rem;">
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #F59E0B; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Repetitive questions and spam calls interrupt other work and patient care.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #F59E0B; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Juggling phones, admin, and patients leads to burnout.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem;">
+                            <div style="width: 8px; height: 8px; background: #F59E0B; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Even the best staff can't answer 24/7/365. Sick days, vacations, evenings, weekends, and holidays mean calls slip through.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Visual representation of overwhelmed staff -->
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: #FEF3C7; border-radius: 8px; border: 1px solid #F59E0B;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #92400E;">
+                            <span>📞</span><span>📞</span><span>📞</span>
+                            <span style="margin: 0 0.5rem;">→</span>
+                            <span style="font-weight: 600;">Staff Overwhelmed</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Scenario 3: Scaling Challenge -->
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #8B5CF6; grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; justify-content: center;">
+                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #8B5CF6, #7C3AED); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: white; flex-shrink: 0;">📈</div>
+                        <div>
+                            <h2 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.4rem; font-weight: 600; text-align: center;">The Bigger Challenge: Scaling With Demand</h2>
+                        </div>
+                    </div>
+                    
+                    <div style="text-align: center;">
+                        <p style="margin-bottom: 1rem; color: #374151; line-height: 1.6;">It's hard to take on new patients if you're struggling just to handle the calls and admin for your current ones.</p>
+                        <p style="margin-bottom: 1.5rem; color: #374151; line-height: 1.6;">Even busy practices hit a ceiling because their systems can't scale with demand—while still maintaining a consistently excellent patient and staff experience.</p>
+                        
+                        <!-- Visual scaling representation -->
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; padding: 1rem; background: #F3E8FF; border-radius: 8px;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.2rem;">📞</div>
+                                <div style="font-size: 0.8rem; color: #6B7280;">Current Calls</div>
+                            </div>
+                            <div style="color: #8B5CF6; font-size: 1.5rem;">+</div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.2rem;">👥</div>
+                                <div style="font-size: 0.8rem; color: #6B7280;">New Patients</div>
+                            </div>
+                            <div style="color: #EF4444; font-size: 1.5rem;">=</div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 1.2rem;">🚫</div>
+                                <div style="font-size: 0.8rem; color: #6B7280;">System Overload</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
-            <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: #374151; line-height: 1.8;">
-                <li style="margin-bottom: 10px;">Staff can't answer every call at once, leading to long wait times and patient frustration.</li>
-                <li style="margin-bottom: 10px;">Calls and voicemails pile up, creating hours of follow-up work.</li>
-                <li style="margin-bottom: 10px;">Patients left on hold or waiting for a callback often feel ignored.</li>
-                <li style="margin-bottom: 10px;">Prospective patients often hang up and call another practice.</li>
-                <li style="margin-bottom: 10px;">Inconsistent and expensive answering services frustrate patients even more because they're not properly trained on your practice.</li>
-            </ul>
-            
-            <blockquote style="text-align: center; font-size: 1.3rem; font-style: italic; color: #2EA6D4; margin: 2.5rem 0; padding: 1.5rem; border-left: 4px solid #2EA6D4; background: rgba(46, 166, 212, 0.05); border-radius: 8px;">
+            <!-- Central Pull Quote -->
+            <blockquote style="text-align: center; font-size: 1.4rem; font-style: italic; color: #2EA6D4; margin: 3rem auto; padding: 2rem; border: 2px solid #2EA6D4; background: rgba(46, 166, 212, 0.05); border-radius: 16px; max-width: 700px; position: relative;">
+                <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #fffbf9; padding: 0 1rem; font-size: 2rem;">💡</div>
                 Every missed call is a missed opportunity to connect with a patient or prospective patient.
             </blockquote>
-            
-            <h2 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin: 32px 0 16px 0;">The Daily Burden on Staff</h2>
-            <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: #374151; line-height: 1.8;">
-                <li style="margin-bottom: 10px;">Repetitive questions and spam calls interrupt other work and patient care.</li>
-                <li style="margin-bottom: 10px;">Juggling phones, admin, and patients leads to burnout.</li>
-                <li style="margin-bottom: 10px;">Even the best staff can't answer 24/7/365. Sick days, vacations, evenings, weekends, and holidays mean calls slip through.</li>
-            </ul>
-            
-            <h2 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin: 32px 0 16px 0;">The Bigger Challenge: Scaling With Demand</h2>
-            <p style="margin-bottom: 1rem; color: #374151; line-height: 1.6;">It's hard to take on new patients if you're struggling just to handle the calls and admin for your current ones.</p>
-            <p style="margin-bottom: 2rem; color: #374151; line-height: 1.6;">Even busy practices hit a ceiling because their systems can't scale with demand—while still maintaining a consistently excellent patient and staff experience.</p>
         </div>
     </section>
 

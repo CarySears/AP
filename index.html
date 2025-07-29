@@ -1855,6 +1855,17 @@
                 padding: 1.5rem !important;
             }
             
+            .problem-section > .container > div > div > div:last-child {
+                margin-top: 1rem !important;
+                padding: 0.75rem !important;
+            }
+            
+            .problem-section > .container > div > div > div:last-child > div {
+                gap: 0.5rem !important;
+                flex-wrap: wrap;
+                justify-content: center !important;
+            }
+            
             .full-team-intro ul li {
                 margin-bottom: 12px !important;
             }
@@ -3135,51 +3146,63 @@
                     </div>
                 </div>
                 
-                <!-- Scenario 3: Scaling Challenge -->
-                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #7C3AED; grid-column: 1 / -1; max-width: 600px; margin: 0 auto;">
-                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; justify-content: center;">
+                <!-- Scenario 3: The Bigger Picture -->
+                <div style="background: white; padding: 2rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border-left: 4px solid #7C3AED;">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
                         <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #7C3AED, #6D28D9); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
                             <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6z"/>
-                                <path d="M22 6h-6v6h2V8h4V6z"/>
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14H7v-2h5v2zm3-4H7v-2h8v2zm0-4H7V7h8v2z"/>
                             </svg>
                         </div>
                         <div>
-                            <h2 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.4rem; font-weight: 600; text-align: center;">The Bigger Challenge: Scaling With Demand</h2>
+                            <h2 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.4rem; font-weight: 600;">The Bigger Picture</h2>
                         </div>
                     </div>
                     
-                    <div style="text-align: center;">
-                        <p style="margin-bottom: 1rem; color: #374151; line-height: 1.6;">It's hard to take on new patients if you're struggling just to handle the calls and admin for your current ones.</p>
-                        <p style="margin-bottom: 1.5rem; color: #374151; line-height: 1.6;">Even busy practices hit a ceiling because their systems can't scale with demand—while still maintaining a consistently excellent patient and staff experience.</p>
-                        
-                        <!-- Professional scaling representation -->
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; margin-top: 1.5rem; padding: 1rem; background: #F3E8FF; border-radius: 8px;">
+                    <div style="space-y: 1rem;">
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #7C3AED; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">It's hard to take on new patients if you're struggling just to handle the calls and admin for your current ones.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem; margin-bottom: 1rem;">
+                            <div style="width: 8px; height: 8px; background: #7C3AED; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Even busy practices hit a ceiling because their systems can't scale with demand.</p>
+                        </div>
+                        <div style="display: flex; align-items: start; gap: 0.75rem;">
+                            <div style="width: 8px; height: 8px; background: #7C3AED; border-radius: 50%; flex-shrink: 0; margin-top: 0.5rem;"></div>
+                            <p style="margin: 0; color: #374151; line-height: 1.6;">Maintaining excellent patient and staff experience becomes impossible without the right systems.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Professional scaling representation -->
+                    <div style="margin-top: 1.5rem; padding: 1rem; background: #F3E8FF; border-radius: 8px; border: 1px solid #7C3AED;">
+                        <div style="display: flex; align-items: center; justify-content: center; gap: 1rem; font-size: 0.9rem; color: #6D28D9;">
                             <div style="text-align: center;">
-                                <div style="width: 32px; height: 32px; background: #7C3AED; border-radius: 6px; margin: 0 auto 4px; display: flex; align-items: center; justify-content: center;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                <div style="width: 24px; height: 24px; background: #7C3AED; border-radius: 4px; margin: 0 auto 4px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
                                         <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                                     </svg>
                                 </div>
-                                <div style="font-size: 0.8rem; color: #6B7280;">Current Calls</div>
+                                <span style="font-size: 0.8rem;">Current Load</span>
                             </div>
-                            <div style="color: #7C3AED; font-size: 1.5rem; font-weight: 600;">+</div>
+                            <span style="color: #7C3AED; font-weight: 600;">+</span>
                             <div style="text-align: center;">
-                                <div style="width: 32px; height: 32px; background: #7C3AED; border-radius: 6px; margin: 0 auto 4px; display: flex; align-items: center; justify-content: center;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
-                                        <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zM4 18v-4h3v4h2v-7.5c0-.83.67-1.5 1.5-1.5S12 9.67 12 10.5V18h2v-4h3v4h2V8.5c0-1.93-1.57-3.5-3.5-3.5S12 6.57 12 8.5V10c-1.1 0-2 .9-2 2v6H4z"/>
+                                <div style="width: 24px; height: 24px; background: #7C3AED; border-radius: 4px; margin: 0 auto 4px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
+                                        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                                     </svg>
                                 </div>
-                                <div style="font-size: 0.8rem; color: #6B7280;">New Patients</div>
+                                <span style="font-size: 0.8rem;">Growth</span>
                             </div>
-                            <div style="color: #DC2626; font-size: 1.5rem; font-weight: 600;">=</div>
+                            <span style="color: #DC2626; font-weight: 600;">=</span>
                             <div style="text-align: center;">
-                                <div style="width: 32px; height: 32px; background: #DC2626; border-radius: 6px; margin: 0 auto 4px; display: flex; align-items: center; justify-content: center;">
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white">
+                                <div style="width: 24px; height: 24px; background: #DC2626; border-radius: 4px; margin: 0 auto 4px; display: flex; align-items: center; justify-content: center;">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="white">
                                         <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
                                     </svg>
                                 </div>
-                                <div style="font-size: 0.8rem; color: #6B7280;">System Overload</div>
+                                <span style="font-size: 0.8rem;">Capacity Limit</span>
                             </div>
                         </div>
                     </div>

@@ -1831,6 +1831,41 @@
                 grid-template-columns: 1fr;
                 max-width: 600px;
             }
+            
+            /* Mobile styles for new sections */
+            .problem-section h1,
+            .ai-receptionist-section h2,
+            .full-team-intro h2 {
+                font-size: 1.8rem !important;
+                padding: 24px 0 12px 0 !important;
+                margin: 24px 0 12px 0 !important;
+            }
+            
+            .problem-section h2 {
+                font-size: 1.5rem !important;
+                margin: 24px 0 12px 0 !important;
+            }
+            
+            .problem-section ul li,
+            .full-team-intro ul li {
+                margin-bottom: 12px !important;
+            }
+            
+            .ai-receptionist-section .solution-feature {
+                flex-direction: column !important;
+                text-align: center;
+                padding: 1.5rem !important;
+            }
+            
+            .ai-receptionist-section .feature-visual {
+                margin-left: 0 !important;
+                margin-top: 1.5rem;
+            }
+            
+            .ai-receptionist-section .feature-visual img {
+                width: 200px !important;
+                height: 60px !important;
+            }
         }
 
         .video-testimonial-card {
@@ -2980,44 +3015,111 @@
         </div>
     </section>
 
+    <!-- Problem Section -->
+    <section class="problem-section" style="padding: 4rem 0; background: #fffbf9;">
+        <div class="container">
+            <h1 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 0 0 2rem 0; padding: 32px 0 16px 0;">What Happens When You're With a Patient and the Phone Rings?</h1>
+            
+            <h2 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin: 32px 0 16px 0;">Missed Calls = Missed Opportunities</h2>
+            <p style="margin-bottom: 1.5rem; color: #374151; line-height: 1.6;">Whether you're solo or have a front desk team, missed calls are inevitable:</p>
+            
+            <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: #374151; line-height: 1.8;">
+                <li style="margin-bottom: 10px;">Staff can't answer every call at once, leading to long wait times and patient frustration.</li>
+                <li style="margin-bottom: 10px;">Calls and voicemails pile up, creating hours of follow-up work.</li>
+                <li style="margin-bottom: 10px;">Patients left on hold or waiting for a callback often feel ignored.</li>
+                <li style="margin-bottom: 10px;">Prospective patients often hang up and call another practice.</li>
+                <li style="margin-bottom: 10px;">Inconsistent and expensive answering services frustrate patients even more because they're not properly trained on your practice.</li>
+            </ul>
+            
+            <blockquote style="text-align: center; font-size: 1.3rem; font-style: italic; color: #2EA6D4; margin: 2.5rem 0; padding: 1.5rem; border-left: 4px solid #2EA6D4; background: rgba(46, 166, 212, 0.05); border-radius: 8px;">
+                Every missed call is a missed opportunity to connect with a patient or prospective patient.
+            </blockquote>
+            
+            <h2 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin: 32px 0 16px 0;">The Daily Burden on Staff</h2>
+            <ul style="margin: 1.5rem 0; padding-left: 1.5rem; color: #374151; line-height: 1.8;">
+                <li style="margin-bottom: 10px;">Repetitive questions and spam calls interrupt other work and patient care.</li>
+                <li style="margin-bottom: 10px;">Juggling phones, admin, and patients leads to burnout.</li>
+                <li style="margin-bottom: 10px;">Even the best staff can't answer 24/7/365. Sick days, vacations, evenings, weekends, and holidays mean calls slip through.</li>
+            </ul>
+            
+            <h2 style="font-size: 2rem; font-weight: 600; color: #1f2937; margin: 32px 0 16px 0;">The Bigger Challenge: Scaling With Demand</h2>
+            <p style="margin-bottom: 1rem; color: #374151; line-height: 1.6;">It's hard to take on new patients if you're struggling just to handle the calls and admin for your current ones.</p>
+            <p style="margin-bottom: 2rem; color: #374151; line-height: 1.6;">Even busy practices hit a ceiling because their systems can't scale with demand—while still maintaining a consistently excellent patient and staff experience.</p>
+        </div>
+    </section>
+
+    <!-- AI Receptionist Solution Section -->
+    <section class="ai-receptionist-section" style="padding: 4rem 0; background: #f8fafc;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 32px 0 16px 0;">Meet Your AI Receptionist – 24/7 Phone Coverage</h2>
+            
+            <div class="solution-feature animate-on-scroll" style="display: flex; align-items: center; gap: 2rem; background: white; padding: 2.5rem; border-radius: 16px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); margin: 2rem 0;">
+                <div class="feature-icon" style="font-size: 3rem; flex-shrink: 0;">📞</div>
+                <div class="feature-content" style="flex: 1;">
+                    <p class="feature-subtitle" style="font-size: 1.2rem; color: #2EA6D4; font-weight: 600; margin-bottom: 1.5rem;">Your phone now answers itself 24/7—trained on your practice.</p>
+                    
+                    <div style="display: grid; gap: 1rem;">
+                        <p><strong>Always available:</strong> Patients get a professional, empathetic response at any hour—no more voicemail frustration.</p>
+                        <p><strong>Answers questions instantly:</strong> Handles insurance, hours, and availability FAQs with professionalism and accuracy.</p>
+                        <p><strong>Books new appointments:</strong> Fills your calendar without double bookings or missed slots.</p>
+                        <p><strong>Escalates when needed:</strong> Knows when to loop in a real team member, so patients feel supported.</p>
+                        <p><strong>Sends instant call updates:</strong> Notifications, recordings, transcriptions, and summaries keep you in the loop.</p>
+                        
+                        <div style="margin-top: 1.5rem;">
+                            <p><strong>Overflow & After-Hours Coverage:</strong> Can be configured for your exact needs:</p>
+                            <ul style="margin: 0.5rem 0 0 1.5rem; color: #374151;">
+                                <li style="margin-bottom: 8px;">Answer all calls 24/7/365</li>
+                                <li style="margin-bottom: 8px;">Step in only when your staff can't pick up (overflow)</li>
+                                <li style="margin-bottom: 8px;">Cover specific hours such as evenings, weekends, or holidays</li>
+                            </ul>
+                        </div>
+                        
+                        <p style="margin-top: 1rem;"><strong>Supports your staff:</strong> Frees up your team to focus on patients and higher-level tasks instead of repetitive phone duties that lead to burnout.</p>
+                        <p style="margin-top: 1rem; font-style: italic; color: #2EA6D4;">Perfect for practices that want to stop missing calls and start capturing more patient opportunities immediately—while easing the burden on staff.</p>
+                    </div>
+                </div>
+                <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
+                    <img src="appointment-notification.svg" alt="Appointment Notification Example" style="width: 260px; height: 80px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15));">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Team Introduction Section -->
+    <section class="full-team-intro" style="padding: 4rem 0; background: #fffbf9;">
+        <div class="container">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 32px 0 16px 0;">Your AI Practice Management Team Does More Than Just Answer the Phone</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="font-size: 1.1rem; color: #374151; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Some practices choose the AI Receptionist as their complete 24/7 phone solution. Others want a fully integrated system that manages every patient touchpoint.
+                </p>
+                
+                <p style="font-size: 1.1rem; color: #374151; line-height: 1.7; margin-bottom: 1.5rem;">
+                    The Full AI Practice Management Team includes the AI Receptionist plus additional "team members" who work alongside your staff to:
+                </p>
+                
+                <ul style="text-align: left; max-width: 600px; margin: 2rem auto; color: #374151; line-height: 1.7;">
+                    <li style="margin-bottom: 10px;">Greet and assist website visitors instantly</li>
+                    <li style="margin-bottom: 10px;">Send appointment reminders, handle no-show recovery, and follow up after visits</li>
+                    <li style="margin-bottom: 10px;">Request and respond to reviews</li>
+                    <li style="margin-bottom: 10px;">Optimize your online presence so patients can find you easily</li>
+                    <li style="margin-bottom: 10px;">Simplify content creation and scheduling across multiple channels</li>
+                </ul>
+                
+                <p style="font-size: 1.1rem; color: #2EA6D4; font-style: italic; margin-top: 2rem;">
+                    As you scroll, meet each member of your full team—each one designed to support your staff and create a better experience for patients.
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- Complete Solution Section -->
     <section id="services" class="services animate-on-scroll">
         <div class="container">
-            <div class="section-header">
-                <h2>What's Included in Your Complete Patient Experience System</h2>
-                <p>A comprehensive, patient-centered solution designed to capture every opportunity and deliver exceptional care experiences</p>
-            </div>
-            
             <div class="complete-solution" id="complete-solution">
                 <div class="solution-carousel">
                     <div class="carousel-container" id="carousel-container">
-                        <!-- AI Receptionist -->
-                        <div class="solution-feature animate-on-scroll">
-                            <div class="feature-icon">📞</div>
-                            <div class="feature-content">
-                                <h3>AI Receptionist</h3>
-                                <p class="feature-subtitle">Your phone now answers itself 24/7—trained on your practice.</p>
-                                
-                                <p><strong>Always available:</strong> Patients get a professional, empathetic response at any hour—no more voicemail frustration.</p>
-                                
-                                <p><strong>Answers questions instantly:</strong> Handles insurance, hours, and availability FAQs with professionalism and accuracy.</p>
-                                
-                                <p><strong>Books new appointments:</strong> Fills your calendar without double bookings or missed slots.</p>
-                                
-                                <p><strong>Escalates when needed:</strong> Knows when to loop in a real team member, so patients feel supported.</p>
-                                
-                                <p><strong>Sends instant call updates:</strong> Notifications, recordings, transcriptions, and summaries keep you in the loop.</p>
-                                
-                                <p><strong>No more outdated and expensive answering services:</strong> Patients get a seamless, 24/7 experience instead.</p>
-                                
-                                <p><strong>Frees up staff:</strong> Your team can focus on patient care—not answering phones.</p>
-                            </div>
-                            <!-- Appointment Notification Visual -->
-                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                                <img src="appointment-notification.svg" alt="Appointment Notification Example" style="width: 260px; height: 80px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15));">
-                            </div>
-                        </div>
-
                         <!-- Smart Website Chat Assistant -->
                         <div class="solution-feature animate-on-scroll">
                             <div class="feature-icon">💬</div>

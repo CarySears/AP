@@ -1903,6 +1903,27 @@
                 color: #6b7280;
                 font-weight: 500;
             }
+            
+            /* Mobile optimization for team scroll hint */
+            .team-scroll-hint {
+                margin: 1rem 0 0.25rem 0 !important;
+            }
+            
+            .team-scroll-hint div {
+                font-size: 0.75rem !important;
+                gap: 0.3rem !important;
+            }
+            
+            .team-scroll-hint span {
+                display: none !important;
+            }
+            
+            .team-scroll-hint::before {
+                content: "⬇ Meet your team";
+                font-size: 0.75rem;
+                color: #79C5C7;
+                font-weight: 500;
+            }
         }
 
         .video-testimonial-card {
@@ -3397,6 +3418,16 @@
                 <p style="font-size: 1.1rem; color: #2EA6D4; font-style: italic; margin-top: 2rem;">
                     As you scroll, meet each member of your full team—each one designed to support your staff and create a better experience for patients.
                 </p>
+                
+                <!-- Team scroll hint -->
+                <div class="team-scroll-hint" style="text-align: center; margin: 1.5rem 0 0.5rem 0; opacity: 0; animation: fadeInUp 1s ease-out 1s forwards;">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #79C5C7; font-size: 0.85rem; font-weight: 500;">
+                        <span>Scroll to meet your team</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="animation: bounce 2s infinite;">
+                            <path d="M7 10L12 15L17 10H7Z"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

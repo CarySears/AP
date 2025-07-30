@@ -1882,6 +1882,27 @@
             .ai-receptionist-visual {
                 order: -1;
             }
+            
+            /* Mobile optimization for scroll hint */
+            .scroll-hint {
+                margin: 1.5rem 0 0.5rem 0 !important;
+            }
+            
+            .scroll-hint div {
+                font-size: 0.8rem !important;
+                gap: 0.3rem !important;
+            }
+            
+            .scroll-hint span {
+                display: none !important;
+            }
+            
+            .scroll-hint::before {
+                content: "⬇ See success stories";
+                font-size: 0.8rem;
+                color: #6b7280;
+                font-weight: 500;
+            }
         }
 
         .video-testimonial-card {

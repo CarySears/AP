@@ -2869,6 +2869,35 @@
                 cursor: auto !important;
             }
         }
+
+        /* Scroll hint animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 0.8;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-6px);
+            }
+            60% {
+                transform: translateY(-3px);
+            }
+        }
+
+        /* Hide scroll hint when user scrolls past the section */
+        .scroll-hint {
+            transition: opacity 0.3s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -3453,6 +3482,16 @@
                 <div class="section-badge">✨ Client Success</div>
                 <h2>See What's <span class="highlight">Possible</span> For Your Practice</h2>
                 <p>Watch how our approach has helped practices like yours grow</p>
+                
+                <!-- Subtle scroll hint -->
+                <div class="scroll-hint" style="text-align: center; margin: 2rem 0 1rem 0; opacity: 0; animation: fadeInUp 1s ease-out 0.8s forwards;">
+                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #6b7280; font-size: 0.9rem; font-weight: 500;">
+                        <span>Scroll to explore success stories</span>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="animation: bounce 2s infinite;">
+                            <path d="M7 10L12 15L17 10H7Z"/>
+                        </svg>
+                    </div>
+                </div>
             </div>
             
             <div class="video-testimonials-grid">

@@ -2822,7 +2822,7 @@
         }
 
         .ai-card summary {
-            padding: 2rem 2.5rem 2rem 2rem !important;
+            padding: 2rem 2rem 2rem 2rem !important;
         }
 
         .ai-card summary::-webkit-details-marker {
@@ -2838,19 +2838,20 @@
             transform: rotate(180deg);
         }
 
-        .ai-card summary::before {
+        .ai-card summary::after {
             content: '';
             position: absolute;
-            bottom: 0.5rem;
-            right: 2.5rem;
-            font-size: 0.7rem;
+            top: 50%;
+            right: 3.5rem;
+            font-size: 0.65rem;
             color: #9CA3AF;
-            opacity: 0.7;
+            opacity: 0.6;
             pointer-events: none;
+            transform: translateY(-50%);
             white-space: nowrap;
         }
 
-        .ai-card:not([open]) summary::before {
+        .ai-card:not([open]) summary::after {
             content: 'Click to expand';
         }
 
@@ -3101,7 +3102,7 @@
                 margin-left: 0 !important;
             }
 
-            .ai-card summary::before {
+            .ai-card summary::after {
                 display: none !important;
             }
 

@@ -99,6 +99,23 @@
                 padding: 14px 24px !important;
                 font-size: 1rem !important;
             }
+
+            /* Demo block extra small mobile optimizations */
+            .demo-block h2 {
+                font-size: 1.5rem !important;
+            }
+
+            .demo-block p {
+                font-size: 1rem !important;
+            }
+
+            .demo-block .demo-option {
+                padding: 1.5rem !important;
+            }
+
+            .demo-block h3 {
+                font-size: 1.1rem !important;
+            }
         }
 
         /* Floating orbs */
@@ -2931,6 +2948,23 @@
                 padding: 1rem !important;
             }
 
+            /* Demo block mobile optimizations */
+            .demo-block h2 {
+                font-size: 1.8rem !important;
+            }
+
+            .demo-block div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+
+            .demo-block .demo-option {
+                min-width: auto !important;
+                width: 100% !important;
+                max-width: 350px !important;
+                margin: 0 auto !important;
+            }
+
             .mobile-floating-bar {
                 display: block;
             }
@@ -3651,41 +3685,37 @@
         </div>
     </section>
 
-    <!-- Meet Your Virtual Front Desk Section -->
-    <section class="demo-section animate-on-scroll" style="padding: 4rem 0; background: #fffbf9;">
+    <!-- Demo Block - Meet Your Virtual Front Desk -->
+    <section class="demo-block animate-on-scroll" style="padding: 4rem 0; background: #fffbf9;">
         <div class="container">
-            <div class="hero-demo">
-                <div class="demo-header">
-                    <h2>Meet Your Virtual Front Desk</h2>
-                    <p class="demo-subtitle">The ultimate assistant for practices that want to focus on their patients —not admin tasks or missed calls.</p>
-                </div>
+            <div style="text-align: center; max-width: 800px; margin: 0 auto;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; margin-bottom: 2rem;">Meet Your Virtual Front Desk</h2>
                 
-                <!-- Demo Options -->
-                <div class="demo-options">
-                    <!-- Video Demo Option -->
-                    <div class="demo-option video-option">
-                        <div class="video-preview">
-                            <div class="play-button">▶️</div>
+                <p style="font-size: 1.2rem; color: #374151; line-height: 1.7; margin-bottom: 3rem;">
+                    See the AI Receptionist book a real patient in one minute—or call in and test it live.
+                </p>
+                
+                <!-- Demo Buttons -->
+                <div style="display: flex; gap: 2rem; justify-content: center; align-items: center; flex-wrap: wrap; margin-bottom: 2rem;">
+                    <!-- Watch Recorded Call Button -->
+                    <div class="demo-option video-option" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 32px rgba(27, 117, 187, 0.12); border: 1px solid rgba(46, 166, 212, 0.1); cursor: pointer; transition: all 0.3s ease; min-width: 280px; text-align: center;">
+                        <div class="video-preview" style="margin-bottom: 1rem;">
+                            <div class="play-button" style="width: 60px; height: 60px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(46, 166, 212, 0.3);">▶️</div>
                         </div>
-                        <h3>Watch Demo Video</h3>
-                        <p>Watch a recorded call of our voice AI front desk in action</p>
+                        <h3 style="font-size: 1.3rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Watch Recorded Call</h3>
+                        <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Watch a real conversation with our AI</p>
                     </div>
                     
-                    <!-- Live Demo Option -->
-                    <a href="tel:1-855-695-2714" class="demo-phone-link" style="text-decoration: none; color: inherit; background: none; box-shadow: none; display: block;">
-                        <div class="demo-option call-option">
-                            <div class="call-preview">
-                                <div class="phone-icon">📞</div>
+                    <!-- Dial Live Demo Button -->
+                    <a href="tel:1-855-695-2714" style="text-decoration: none; color: inherit;">
+                        <div class="demo-option call-option" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 32px rgba(27, 117, 187, 0.12); border: 1px solid rgba(46, 166, 212, 0.1); cursor: pointer; transition: all 0.3s ease; min-width: 280px; text-align: center;">
+                            <div class="call-preview" style="margin-bottom: 1rem;">
+                                <div class="phone-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #FF9A56, #B565A7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(255, 154, 86, 0.3);">📞</div>
                             </div>
-                            <h3>Live Demo Call</h3>
-                            <p>Call and speak live with our Voice AI Front Desk</p>
+                            <h3 style="font-size: 1.3rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Dial the Live Demo Line</h3>
+                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Call and speak with our AI now</p>
                         </div>
                     </a>
-                </div>
-                
-                <p class="demo-footer">Ready to see your AI in action?</p>
-                <div class="demo-cta">
-                    <a href="#book-calendar" class="btn-primary">🤖 Get Your Free AI Audit + Custom Demo</a>
                 </div>
             </div>
         </div>

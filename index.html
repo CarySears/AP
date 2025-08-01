@@ -123,9 +123,14 @@
                 font-size: 1rem !important;
             }
 
-            .ai-card summary > div {
+            .ai-card summary > div:first-child > div {
                 width: 36px !important;
                 height: 36px !important;
+            }
+
+            .ai-card .accordion-chevron {
+                width: 20px !important;
+                height: 20px !important;
             }
 
             .ai-card div[style*="padding: 0 2rem 2rem 2rem"] {
@@ -2821,6 +2826,26 @@
             margin-bottom: 0;
         }
 
+        .ai-card[open] .accordion-chevron {
+            transform: rotate(180deg);
+        }
+
+        .ai-card summary::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 3rem;
+            font-size: 0.75rem;
+            color: #9CA3AF;
+            opacity: 0.6;
+            pointer-events: none;
+            transform: translateY(-50%);
+        }
+
+        .ai-card:not([open]) summary::before {
+            content: 'Click to expand';
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links,
@@ -3044,18 +3069,32 @@
                 padding: 1.5rem 1rem !important;
                 font-size: 1.1rem !important;
                 flex-direction: column !important;
-                align-items: flex-start !important;
-                gap: 0.5rem !important;
+                align-items: stretch !important;
+                gap: 1rem !important;
             }
 
-            .ai-card summary > div {
+            .ai-card summary > div:first-child {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.75rem !important;
+            }
+
+            .ai-card summary > div:first-child > div {
                 width: 40px !important;
                 height: 40px !important;
-                align-self: flex-start !important;
             }
 
             .ai-card summary span {
                 line-height: 1.4 !important;
+            }
+
+            .ai-card .accordion-chevron {
+                align-self: center !important;
+                margin-left: 0 !important;
+            }
+
+            .ai-card summary::before {
+                display: none !important;
             }
 
             .ai-card div[style*="padding: 0 2rem 2rem 2rem"] {
@@ -3410,13 +3449,20 @@
                 
                 <!-- AI Receptionist Card -->
                 <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
-                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
-                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(46, 166, 212, 0.25);">
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none; position: relative;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(46, 166, 212, 0.25);">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                </svg>
+                            </div>
+                            <span>AI Receptionist · 24/7 phone coverage that books appointments</span>
+                        </div>
+                        <div class="accordion-chevron" style="width: 24px; height: 24px; color: #2EA6D4; transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem;">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
                             </svg>
                         </div>
-                        <span>AI Receptionist · 24/7 phone coverage that books appointments</span>
                     </summary>
                     
                     <div style="padding: 0 2rem 2rem 2rem;">
@@ -3505,11 +3551,18 @@
 
                 <!-- AI Patient Concierge Card -->
                 <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
-                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
-                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #79C5C7, #00A79D); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(121, 197, 199, 0.25);">
-                            💬
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none; position: relative;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #79C5C7, #00A79D); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(121, 197, 199, 0.25);">
+                                💬
+                            </div>
+                            <span>AI Patient Concierge · Website chat that turns visitors into patients</span>
                         </div>
-                        <span>AI Patient Concierge · Website chat that turns visitors into patients</span>
+                        <div class="accordion-chevron" style="width: 24px; height: 24px; color: #2EA6D4; transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </div>
                     </summary>
                     
                     <div style="padding: 0 2rem 2rem 2rem;">
@@ -3534,11 +3587,18 @@
 
                 <!-- AI Outreach Coordinator Card -->
                 <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
-                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
-                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #00A79D, #1B75BB); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0, 167, 157, 0.25);">
-                            🔒
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none; position: relative;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #00A79D, #1B75BB); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0, 167, 157, 0.25);">
+                                🔒
+                            </div>
+                            <span>AI Outreach Coordinator · No-show recovery & reactivation texts</span>
                         </div>
-                        <span>AI Outreach Coordinator · No-show recovery & reactivation texts</span>
+                        <div class="accordion-chevron" style="width: 24px; height: 24px; color: #2EA6D4; transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </div>
                     </summary>
                     
                     <div style="padding: 0 2rem 2rem 2rem;">
@@ -3571,11 +3631,18 @@
 
                 <!-- AI Practice Growth Coordinator Card -->
                 <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
-                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
-                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #1B75BB, #2EA6D4); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(27, 117, 187, 0.25);">
-                            📈
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; justify-content: space-between; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none; position: relative;">
+                        <div style="display: flex; align-items: center; gap: 1rem; flex: 1;">
+                            <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #1B75BB, #2EA6D4); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(27, 117, 187, 0.25);">
+                                📈
+                            </div>
+                            <span>AI Practice Growth Coordinator · Automated reviews & Google Business Page optimization</span>
                         </div>
-                        <span>AI Practice Growth Coordinator · Automated reviews & Google Business Page optimization</span>
+                        <div class="accordion-chevron" style="width: 24px; height: 24px; color: #2EA6D4; transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                            </svg>
+                        </div>
                     </summary>
                     
                     <div style="padding: 0 2rem 2rem 2rem;">

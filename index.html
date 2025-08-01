@@ -116,6 +116,26 @@
             .demo-block h3 {
                 font-size: 1.1rem !important;
             }
+
+            /* AI Accordion Cards Extra Small Mobile */
+            .ai-card summary {
+                padding: 1.25rem 0.75rem !important;
+                font-size: 1rem !important;
+            }
+
+            .ai-card summary > div {
+                width: 36px !important;
+                height: 36px !important;
+            }
+
+            .ai-card div[style*="padding: 0 2rem 2rem 2rem"] {
+                padding: 0 0.75rem 1.25rem 0.75rem !important;
+            }
+
+            .ai-card ul li {
+                font-size: 0.9rem !important;
+                margin-bottom: 0.75rem !important;
+            }
         }
 
         /* Floating orbs */
@@ -2774,6 +2794,33 @@
             margin-top: 0.1rem;
         }
 
+        /* AI Accordion Cards */
+        .ai-card {
+            transition: all 0.3s ease;
+        }
+
+        .ai-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 40px rgba(46, 166, 212, 0.18) !important;
+        }
+
+        .ai-card summary {
+            transition: all 0.3s ease;
+        }
+
+        .ai-card summary:hover {
+            background: linear-gradient(145deg, rgba(46, 166, 212, 0.02) 0%, rgba(121, 197, 199, 0.02) 100%);
+        }
+
+        .ai-card summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .ai-card[open] summary {
+            border-bottom: 1px solid rgba(46, 166, 212, 0.1);
+            margin-bottom: 0;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links,
@@ -2990,6 +3037,44 @@
             .orb1, .orb2, .orb3, .orb4 {
                 width: 300px;
                 height: 300px;
+            }
+
+            /* AI Accordion Cards Mobile */
+            .ai-card summary {
+                padding: 1.5rem 1rem !important;
+                font-size: 1.1rem !important;
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.5rem !important;
+            }
+
+            .ai-card summary > div {
+                width: 40px !important;
+                height: 40px !important;
+                align-self: flex-start !important;
+            }
+
+            .ai-card summary span {
+                line-height: 1.4 !important;
+            }
+
+            .ai-card div[style*="padding: 0 2rem 2rem 2rem"] {
+                padding: 0 1rem 1.5rem 1rem !important;
+            }
+
+            .ai-card img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+
+            .ai-card div[style*="display: flex; gap: 1rem; justify-content: center"] {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+
+            .ai-card div[style*="display: flex; gap: 1rem; justify-content: center"] img {
+                max-width: 100% !important;
+                width: 100% !important;
             }
         }
 
@@ -3319,215 +3404,215 @@
                 </div>
             </div>
             
-            <!-- Main Content Layout -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; margin: 3rem 0;">
+            <!-- AI Practice Management Team Accordion -->
+            <div style="max-width: 900px; margin: 3rem auto;">
+                <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin-bottom: 3rem;">Four Automations That Run Your Front Desk</h2>
                 
-                <!-- Left Side: Content -->
-                <div class="ai-receptionist-content" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); padding: 2.5rem; border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); position: relative; overflow: hidden; border-left: 4px solid #2EA6D4;">
-                    <div style="position: absolute; top: 0; right: 0; width: 120px; height: 120px; background: radial-gradient(circle, rgba(46, 166, 212, 0.05) 0%, transparent 70%); border-radius: 50%; transform: translate(40px, -40px);"></div>
-                    <p class="feature-subtitle" style="font-size: 1.3rem; color: #2EA6D4; font-weight: 600; margin-bottom: 2rem; position: relative; z-index: 1;">Your phone now answers itself 24/7—trained on your practice.</p>
-                    
-                    <div style="display: grid; gap: 1.2rem;">
-                        <p><strong>Always available:</strong> Patients get a professional, empathetic response at any hour—no more voicemail frustration.</p>
-                        <p><strong>Answers questions instantly:</strong> Handles insurance, hours, and availability FAQs with professionalism and accuracy.</p>
-                        <p><strong>Books new appointments:</strong> Fills your calendar without double bookings or missed slots.</p>
-                        <p><strong>Escalates when needed:</strong> Knows when to loop in a real team member, so patients feel supported.</p>
-                        <p><strong>Sends instant call updates:</strong> Notifications, recordings, transcriptions, and summaries keep you in the loop.</p>
-                        
-                        <div style="margin-top: 1.5rem; padding: 1.5rem; background: linear-gradient(135deg, rgba(46, 166, 212, 0.05) 0%, rgba(121, 197, 199, 0.05) 100%); border-radius: 12px; border-left: 4px solid #2EA6D4; position: relative; overflow: hidden;">
-                            <div style="position: absolute; top: -10px; right: -10px; width: 30px; height: 30px; background: radial-gradient(circle, rgba(46, 166, 212, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-                            <p style="font-weight: 600; margin-bottom: 1rem; color: #1f2937; position: relative; z-index: 1;"><strong>Overflow & After-Hours Coverage:</strong> Can be configured for your exact needs:</p>
-                            <ul style="margin: 0 0 0 1.5rem; color: #374151; line-height: 1.6; position: relative; z-index: 1;">
-                                <li style="margin-bottom: 8px;">Answer all calls 24/7/365</li>
-                                <li style="margin-bottom: 8px;">Step in only when your staff can't pick up (overflow)</li>
-                                <li style="margin-bottom: 8px;">Cover specific hours such as evenings, weekends, or holidays</li>
-                            </ul>
-                        </div>
-                        
-                        <p style="margin-top: 1.5rem; position: relative; z-index: 1;"><strong>Supports your staff:</strong> Frees up your team to focus on patients and higher-level tasks instead of repetitive phone duties that lead to burnout.</p>
-                        <p style="margin-top: 1rem; font-style: italic; color: #2EA6D4; font-size: 1.1rem; padding: 1.25rem; background: linear-gradient(135deg, rgba(46, 166, 212, 0.05) 0%, rgba(121, 197, 199, 0.05) 100%); border-radius: 12px; border: 1px solid rgba(46, 166, 212, 0.15); position: relative; z-index: 1;">Perfect for practices that want to stop missing calls and start capturing more patient opportunities immediately—while easing the burden on staff.</p>
-                    </div>
-                </div>
-                
-                <!-- Right Side: Visual Flow -->
-                <div class="ai-receptionist-visual" style="display: flex; flex-direction: column; gap: 1.5rem;">
-                    
-                    <!-- Step 1: Phone Call -->
-                    <div style="display: flex; align-items: center; gap: 1rem; background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(46, 166, 212, 0.08); position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; background: radial-gradient(circle, rgba(46, 166, 212, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(46, 166, 212, 0.25);">
+                <!-- AI Receptionist Card -->
+                <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(46, 166, 212, 0.25);">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                             </svg>
                         </div>
-                        <div style="position: relative; z-index: 1;">
-                            <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.1rem; font-weight: 600;">Patient Calls</h4>
-                            <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">AI answers immediately with professional, empathetic response</p>
-                        </div>
-                    </div>
+                        <span>AI Receptionist · 24/7 phone coverage that books appointments</span>
+                    </summary>
                     
-                    <!-- Arrow -->
-                    <div style="text-align: center; color: #2EA6D4; font-size: 1.5rem;">↓</div>
-                    
-                    <!-- Step 2: AI Chat Interface -->
-                    <div style="background: linear-gradient(145deg, #ffffff 0%, #f9fffe 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(121, 197, 199, 0.08); position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; background: radial-gradient(circle, rgba(121, 197, 199, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; position: relative; z-index: 1;">
-                            <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #79C5C7, #00A79D); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(121, 197, 199, 0.25);">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
-                                </svg>
+                    <div style="padding: 0 2rem 2rem 2rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; color: #374151; line-height: 1.7;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Greets callers in your tone.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Smart triage routes urgent phrases to staff or notification - trained on your protocol.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Answers insurance and availability on the spot.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Prevents double-booking and sends confirmations.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Secure call summary with transcript in your inbox.</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- AI Receptionist Visual Flow -->
+                        <div style="display: flex; flex-direction: column; gap: 1.5rem; background: rgba(46, 166, 212, 0.02); padding: 2rem; border-radius: 12px; border: 1px solid rgba(46, 166, 212, 0.1);">
+                            
+                            <!-- Step 1: Phone Call -->
+                            <div style="display: flex; align-items: center; gap: 1rem; background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(46, 166, 212, 0.08);">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1rem; font-weight: 600;">Patient Calls</h4>
+                                    <p style="margin: 0; color: #6b7280; font-size: 0.85rem;">AI answers immediately with professional, empathetic response</p>
+                                </div>
                             </div>
-                            <div>
-                                <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.1rem; font-weight: 600;">AI Conversation</h4>
-                                <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Handles FAQs, insurance questions, availability</p>
+                            
+                            <!-- Arrow -->
+                            <div style="text-align: center; color: #2EA6D4; font-size: 1.2rem;">↓</div>
+                            
+                            <!-- Step 2: AI Conversation -->
+                            <div style="background: linear-gradient(145deg, #ffffff 0%, #f9fffe 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(121, 197, 199, 0.08);">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #79C5C7, #00A79D); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
+                                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4l4 4 4-4h4c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1rem; font-weight: 600;">AI Conversation</h4>
+                                        <p style="margin: 0; color: #6b7280; font-size: 0.85rem;">Handles FAQs, insurance questions, availability</p>
+                                    </div>
+                                </div>
+                                
+                                <!-- Mini chat preview -->
+                                <div style="background: linear-gradient(135deg, rgba(121, 197, 199, 0.05) 0%, rgba(46, 166, 212, 0.05) 100%); border-radius: 8px; padding: 1rem; font-size: 0.8rem; border: 1px solid rgba(121, 197, 199, 0.1);">
+                                    <div style="margin-bottom: 0.5rem; color: #2EA6D4; font-weight: 500;"><strong>AI:</strong> "Hi! How can I help you today?"</div>
+                                    <div style="margin-bottom: 0.5rem; color: #6b7280;"><strong>Patient:</strong> "I need to schedule an appointment"</div>
+                                    <div style="color: #2EA6D4; font-weight: 500;"><strong>AI:</strong> "I'd be happy to help you schedule..."</div>
+                                </div>
+                            </div>
+                            
+                            <!-- Arrow -->
+                            <div style="text-align: center; color: #2EA6D4; font-size: 1.2rem;">↓</div>
+                            
+                            <!-- Step 3: Appointment Booked -->
+                            <div style="display: flex; align-items: center; gap: 1rem; background: linear-gradient(145deg, #ffffff 0%, #fafffe 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 167, 157, 0.08);">
+                                <div style="width: 50px; height: 50px; background: linear-gradient(135deg, #00A79D, #1B75BB); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0;">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1rem; font-weight: 600;">Appointment Booked</h4>
+                                    <p style="margin: 0; color: #6b7280; font-size: 0.85rem;">Calendar updated, notifications sent, staff informed</p>
+                                </div>
                             </div>
                         </div>
-                        <!-- Mini chat preview -->
-                        <div style="background: linear-gradient(135deg, rgba(121, 197, 199, 0.05) 0%, rgba(46, 166, 212, 0.05) 100%); border-radius: 8px; padding: 1rem; font-size: 0.85rem; border: 1px solid rgba(121, 197, 199, 0.1); position: relative; z-index: 1;">
-                            <div style="margin-bottom: 0.5rem; color: #2EA6D4; font-weight: 500;"><strong>AI:</strong> "Hi! How can I help you today?"</div>
-                            <div style="margin-bottom: 0.5rem; color: #6b7280;"><strong>Patient:</strong> "I need to schedule an appointment"</div>
-                            <div style="color: #2EA6D4; font-weight: 500;"><strong>AI:</strong> "I'd be happy to help you schedule..."</div>
+                    </div>
+                </details>
+
+                <!-- AI Patient Concierge Card -->
+                <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #79C5C7, #00A79D); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(121, 197, 199, 0.25);">
+                            💬
+                        </div>
+                        <span>AI Patient Concierge · Website chat that turns visitors into patients</span>
+                    </summary>
+                    
+                    <div style="padding: 0 2rem 2rem 2rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; color: #374151; line-height: 1.7;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Replies within seconds, day or night.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Answers FAQs, collects contact info, books appointments.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Feels personal, not robotic, using your brand voice.</span>
+                            </li>
+                        </ul>
+                        
+                        <img src="insurance-chat.svg" alt="Insurance Chat Conversation Example" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(27, 117, 187, 0.15); margin: 0 auto; display: block;" loading="lazy">
+                    </div>
+                </details>
+
+                <!-- AI Outreach Coordinator Card -->
+                <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #00A79D, #1B75BB); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0, 167, 157, 0.25);">
+                            🔒
+                        </div>
+                        <span>AI Outreach Coordinator · No-show recovery & reactivation texts</span>
+                    </summary>
+                    
+                    <div style="padding: 0 2rem 2rem 2rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; color: #374151; line-height: 1.7;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Sends friendly reschedule links after missed visits.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Post-visit check-ins gather quick feedback.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Reactivates lapsed patients at 30-, 60-, and 90-day marks or your preferred cadence.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Opt-out logic keeps HIPAA and TCPA compliance tight.</span>
+                            </li>
+                        </ul>
+                        
+                        <img src="patient-reengagement-sms.svg" alt="Patient Re-engagement SMS Sequence Example" style="width: 100%; max-width: 400px; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(27, 117, 187, 0.15); margin: 0 auto; display: block;" loading="lazy">
+                    </div>
+                </details>
+
+                <!-- AI Practice Growth Coordinator Card -->
+                <details class="ai-card" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.12); margin-bottom: 2rem; border: 1px solid rgba(46, 166, 212, 0.1); overflow: hidden;">
+                    <summary style="padding: 2rem; cursor: pointer; display: flex; align-items: center; gap: 1rem; font-size: 1.3rem; font-weight: 600; color: #1f2937; list-style: none;">
+                        <div style="width: 48px; height: 48px; background: linear-gradient(135deg, #1B75BB, #2EA6D4); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(27, 117, 187, 0.25);">
+                            📈
+                        </div>
+                        <span>AI Practice Growth Coordinator · Automated reviews & Google Business Page optimization</span>
+                    </summary>
+                    
+                    <div style="padding: 0 2rem 2rem 2rem;">
+                        <ul style="list-style: none; padding: 0; margin: 0 0 2rem 0; color: #374151; line-height: 1.7;">
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Automatically requests reviews.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Monitors sentiment to manage reputation.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Grows your online visibility.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Helps with local SEO.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start; margin-bottom: 1rem;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Builds trust.</span>
+                            </li>
+                            <li style="display: flex; align-items: flex-start;">
+                                <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                <span>Drives more patient inquiries and bookings.</span>
+                            </li>
+                        </ul>
+                        
+                        <div style="display: flex; gap: 1rem; justify-content: center; align-items: flex-start; flex-wrap: wrap;">
+                            <img src="review-request-email.svg" alt="Review Request Email Example" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(27, 117, 187, 0.15);" loading="lazy">
+                            <img src="google-business-profile.svg" alt="Google Business Profile with Score Optimization" style="width: 100%; max-width: 300px; height: auto; border-radius: 12px; box-shadow: 0 4px 20px rgba(27, 117, 187, 0.15);" loading="lazy">
                         </div>
                     </div>
-                    
-                    <!-- Arrow -->
-                    <div style="text-align: center; color: #2EA6D4; font-size: 1.5rem;">↓</div>
-                    
-                    <!-- Step 3: Appointment Booked -->
-                    <div style="display: flex; align-items: center; gap: 1rem; background: linear-gradient(145deg, #ffffff 0%, #fafffe 100%); padding: 1.5rem; border-radius: 12px; box-shadow: 0 4px 16px rgba(0, 167, 157, 0.08); position: relative; overflow: hidden;">
-                        <div style="position: absolute; top: -15px; right: -15px; width: 30px; height: 30px; background: radial-gradient(circle, rgba(0, 167, 157, 0.1) 0%, transparent 70%); border-radius: 50%;"></div>
-                        <div style="width: 60px; height: 60px; background: linear-gradient(135deg, #00A79D, #1B75BB); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: white; flex-shrink: 0; box-shadow: 0 4px 12px rgba(0, 167, 157, 0.25);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                            </svg>
-                        </div>
-                        <div style="position: relative; z-index: 1;">
-                            <h4 style="margin: 0 0 0.5rem 0; color: #1f2937; font-size: 1.1rem; font-weight: 600;">Appointment Booked</h4>
-                            <p style="margin: 0; color: #6b7280; font-size: 0.9rem;">Calendar updated, notifications sent, staff informed</p>
-                        </div>
-                    </div>
-                    
-                </div>
+                </details>
             </div>
         </div>
     </section>
 
-    <!-- Full Team Introduction Section -->
-    <section class="full-team-intro" style="padding: 4rem 0; background: #fffbf9;">
-        <div class="container">
-            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 32px 0 16px 0;">Your AI Practice Management Team Does More Than Just Answer the Phone</h2>
-            
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 1.1rem; color: #374151; line-height: 1.7; margin-bottom: 1.5rem;">
-                    Some practices choose the AI Receptionist as their complete 24/7 phone solution. Others want a fully integrated system that manages every patient touchpoint.
-                </p>
-                
-                <p style="font-size: 1.1rem; color: #374151; line-height: 1.7; margin-bottom: 1.5rem;">
-                    The Full AI Practice Management Team includes the AI Receptionist plus additional "team members" who work alongside your staff to:
-                </p>
-                
-                <ul style="text-align: left; max-width: 600px; margin: 2rem auto; color: #374151; line-height: 1.7;">
-                    <li style="margin-bottom: 10px;">Greet and assist website visitors instantly</li>
-                    <li style="margin-bottom: 10px;">Send appointment reminders, handle no-show recovery, and follow up after visits</li>
-                    <li style="margin-bottom: 10px;">Request and respond to reviews</li>
-                    <li style="margin-bottom: 10px;">Optimize your online presence so patients can find you easily</li>
-                    <li style="margin-bottom: 10px;">Simplify content creation and scheduling across multiple channels</li>
-                </ul>
-                
-                <p style="font-size: 1.1rem; color: #2EA6D4; font-style: italic; margin-top: 2rem;">
-                    As you scroll, meet each member of your full team—each one designed to support your staff and create a better experience for patients.
-                </p>
-                
-                <!-- Team scroll hint -->
-                <div class="team-scroll-hint" style="text-align: center; margin: 1.5rem 0 0.5rem 0; opacity: 0; animation: fadeInUp 1s ease-out 1s forwards;">
-                    <div style="display: inline-flex; align-items: center; gap: 0.5rem; color: #79C5C7; font-size: 0.85rem; font-weight: 500;">
-                        <span>Scroll to meet your team</span>
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" style="animation: bounce 2s infinite;">
-                            <path d="M7 10L12 15L17 10H7Z"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Complete Solution Section -->
-    <section id="services" class="services animate-on-scroll">
-        <div class="container">
-            <div class="complete-solution" id="complete-solution">
-                <div class="solution-carousel">
-                    <div class="carousel-container" id="carousel-container">
-                        <!-- AI Patient Concierge -->
-                        <div class="solution-feature animate-on-scroll">
-                            <div class="feature-icon">💬</div>
-                            <div class="feature-content">
-                                <h3>AI Patient Concierge</h3>
-                                <p class="feature-subtitle">Greet and Assist Website Visitors Instantly</p>
-                                <p>Your website is often the first interaction patients have with your practice. The AI Patient Concierge gives new and returning visitors instant answers and a clear path to scheduling—24/7. It feels personal, not robotic, while reducing the workload on your staff.</p>
-                            </div>
-                            <!-- Insurance Chat Visual -->
-                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                                <img src="insurance-chat.svg" alt="Insurance Chat Conversation Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                            </div>
-                        </div>
-
-                        <!-- AI Patient Outreach Coordinator -->
-                        <div class="solution-feature animate-on-scroll">
-                            <div class="feature-icon">🔒</div>
-                            <div class="feature-content">
-                                <h3>AI Patient Outreach Coordinator</h3>
-                                <p class="feature-subtitle">Drive Attendance, Follow-Ups, and Reactivations via AI-Powered Text Messaging and Personalized Email Automation</p>
-                                <p>This HIPAA-compliant coordinator manages no-show recovery, post-visit check-ins, and lead nurturing using conversational AI-powered text messaging and automated email written in your voice. It keeps patients engaged and connected to your practice—without adding extra work to your staff.</p>
-                            </div>
-                            <!-- Patient Re-engagement SMS Visual -->
-                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                                <img src="patient-reengagement-sms.svg" alt="Patient Re-engagement SMS Sequence Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                            </div>
-                        </div>
-
-                        <!-- AI Practice Growth Coordinator -->
-                        <div class="solution-feature animate-on-scroll">
-                            <div class="feature-icon">📈</div>
-                            <div class="feature-content" style="max-width: 450px; flex-shrink: 0;">
-                                <h3>AI Practice Growth Coordinator</h3>
-                                <p class="feature-subtitle">Help New Patients Find You and Choose You</p>
-                                <p>Automatically request reviews via text and email, monitor sentiment with AI, and keep your Google Business Profile optimized so you're easy to find. This coordinator grows your reputation and visibility online, building trust while driving more patient inquiries and bookings.</p>
-                            </div>
-                            <!-- Combined Visuals: Review Request Email and Google Business Profile -->
-                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease; display: flex; gap: 0.75rem; align-items: flex-start;">
-                                <img src="review-request-email.svg" alt="Review Request Email Example" style="width: 200px; height: 250px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px; transform: translateY(0px);">
-                                <img src="google-business-profile.svg" alt="Google Business Profile with Score Optimization" style="width: 200px; height: 250px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px; transform: translateY(-15px) translateX(20px);">
-                            </div>
-                        </div>
-
-
-
-                        <!-- AI Social Media & Content Coordinator -->
-                        <div class="solution-feature animate-on-scroll">
-                            <div class="feature-icon">📱</div>
-                            <div class="feature-content">
-                                <h3>AI Social Media & Content Coordinator</h3>
-                                <p class="feature-subtitle">Create and Schedule Content Across All Channels in Minutes</p>
-                                <p>Easily plan, create, and schedule posts for Facebook, Instagram, LinkedIn, TikTok, Google Business Profile, and YouTube—all from one dashboard. With AI assistance, you can quickly draft on‑brand posts, schedule recurring or one‑time content, and track performance without juggling multiple tools.</p>
-                            </div>
-                            <!-- Social Media Dashboard Visual -->
-                            <div class="feature-visual" style="flex-shrink: 0; margin-left: 1.5rem; opacity: 0.9; transform: translateY(10px); transition: all 0.4s ease;">
-                                <img src="listings-consistency.svg" alt="Social Media & Content Dashboard Example" style="width: 280px; height: 350px; filter: drop-shadow(0 4px 12px rgba(27, 117, 187, 0.15)); border-radius: 12px;">
-                            </div>
-                        </div>
-                    
-                    </div> <!-- End carousel-container -->
-                </div> <!-- End solution-carousel -->
-
-            </div>
-            
-            <!-- Call to Action - moved outside the sticky section -->
-            <div style="text-align: center; margin: 3rem auto; padding: 2rem;" class="animate-on-scroll">
-                <a href="#book-calendar" class="service-cta primary-cta">Get Your Free AI Audit + Custom Demo</a>
-            </div>
-        </div>
-    </section>
 
 
 

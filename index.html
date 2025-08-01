@@ -685,12 +685,12 @@
             overflow: visible;
         }
 
-        /* Enhanced Hero Content - Asymmetric Grid */
+        /* Enhanced Hero Content - Centered */
         .hero-content {
-            display: grid;
-            grid-template-columns: 1.2fr 1fr;
-            gap: 4rem;
+            display: flex;
+            justify-content: center;
             align-items: center;
+            text-align: center;
             position: relative;
             z-index: 2;
         }
@@ -2725,7 +2725,6 @@
             }
 
             .hero-content {
-                grid-template-columns: 1fr;
                 text-align: center;
             }
 

@@ -3118,9 +3118,56 @@
     <!-- Problem Section -->
     <section class="problem-section" style="padding: 4rem 0; background: #fffbf9;">
         <div class="container">
-            <h1 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 0 0 3rem 0; padding: 32px 0 16px 0;">What Happens When You're With a Patient and the Phone Rings?</h1>
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #1f2937; text-align: center; margin: 0 0 2rem 0; padding: 32px 0 16px 0;">When the phone rings while you're with a patient</h2>
             
-            <!-- Problem Scenarios Grid -->
+            <!-- Visible Section -->
+            <div style="max-width: 800px; margin: 0 auto 3rem auto; text-align: center;">
+                <p style="font-size: 1.2rem; color: #374151; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Missed calls cost care and revenue. Our AI Receptionist answers 24/7, handles FAQs like insurance inquiries, and books appointments.
+                </p>
+                <p style="font-size: 1.1rem; color: #2EA6D4; font-weight: 600;">
+                    Result: more booked appointments, less admin stress.
+                </p>
+            </div>
+            
+            <!-- Accordion Section -->
+            <div style="max-width: 700px; margin: 0 auto;">
+                <div class="accordion-item" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 12px; box-shadow: 0 4px 20px rgba(27, 117, 187, 0.08); overflow: hidden; border: 1px solid rgba(46, 166, 212, 0.1);">
+                    <button class="accordion-header" style="width: 100%; padding: 1.5rem 2rem; background: none; border: none; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 1.3rem; font-weight: 600; color: #1f2937; transition: all 0.3s ease;" onclick="toggleAccordion(this)">
+                        <span>What goes wrong without an AI front desk?</span>
+                        <span class="accordion-icon" style="font-size: 1.5rem; color: #2EA6D4; transition: transform 0.3s ease;">+</span>
+                    </button>
+                    <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease;">
+                        <div style="padding: 0 2rem 2rem 2rem;">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 166, 212, 0.05); border-radius: 8px; border-left: 3px solid #2EA6D4;">
+                                    <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                    <span style="color: #374151; line-height: 1.6;">Patients hang up or leave voicemail, creating hours of follow-up work.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 166, 212, 0.05); border-radius: 8px; border-left: 3px solid #2EA6D4;">
+                                    <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                    <span style="color: #374151; line-height: 1.6;">Answering services feel generic and mishandle sensitive info.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; margin-bottom: 1rem; padding: 1rem; background: rgba(46, 166, 212, 0.05); border-radius: 8px; border-left: 3px solid #2EA6D4;">
+                                    <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                    <span style="color: #374151; line-height: 1.6;">Spam and repeat questions interrupt real patient care and burn out staff.</span>
+                                </li>
+                                <li style="display: flex; align-items: flex-start; margin-bottom: 0; padding: 1rem; background: rgba(46, 166, 212, 0.05); border-radius: 8px; border-left: 3px solid #2EA6D4;">
+                                    <span style="color: #2EA6D4; margin-right: 0.75rem; font-weight: bold;">•</span>
+                                    <span style="color: #374151; line-height: 1.6;">Nights, weekends, and holidays mean opportunities slip away.</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Solutions Section -->
+    <section class="ai-solutions" style="padding: 4rem 0; background: #fffbf9;">
+        <div class="container">
+            <!-- Content moved to separate section -->
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin: 3rem 0;">
                 
                 <!-- Scenario 1: Missed Calls -->
@@ -4411,6 +4458,23 @@
             
             hamburger.classList.toggle('active');
             mobileMenu.classList.toggle('active');
+        }
+
+        // Accordion Toggle Function
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.accordion-icon');
+            const isExpanded = content.style.maxHeight && content.style.maxHeight !== '0px';
+            
+            if (isExpanded) {
+                content.style.maxHeight = '0px';
+                icon.textContent = '+';
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                icon.textContent = '−';
+                icon.style.transform = 'rotate(180deg)';
+            }
         }
 
         // Close mobile menu when clicking on a link

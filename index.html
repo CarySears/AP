@@ -2817,6 +2817,14 @@
             background: linear-gradient(145deg, rgba(46, 166, 212, 0.02) 0%, rgba(121, 197, 199, 0.02) 100%);
         }
 
+        .ai-card .accordion-chevron {
+            margin-left: 2rem !important;
+        }
+
+        .ai-card summary {
+            padding: 2rem 3rem 2rem 2rem !important;
+        }
+
         .ai-card summary::-webkit-details-marker {
             display: none;
         }
@@ -2834,12 +2842,13 @@
             content: '';
             position: absolute;
             top: 50%;
-            right: 3rem;
+            right: 5rem;
             font-size: 0.75rem;
             color: #9CA3AF;
             opacity: 0.6;
             pointer-events: none;
             transform: translateY(-50%);
+            white-space: nowrap;
         }
 
         .ai-card:not([open]) summary::before {

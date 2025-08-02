@@ -3132,6 +3132,13 @@
                 display: none !important;
             }
 
+            /* Pricing Section Mobile */
+            .pricing-section div[style*="display: grid; grid-template-columns: 1fr 1fr"] {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+
             .ai-card div[style*="display: flex; gap: 1rem; justify-content: center"] {
                 flex-direction: column !important;
                 gap: 1rem !important;
@@ -3884,6 +3891,53 @@
                     <div style="color: #d1d5db;">•</div>
                     <div>10DLC-Registered Texting</div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section" style="background: #ffffff; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2>Simple, Predictable Pricing</h2>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <!-- Pricing Cards -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem;">
+                    <!-- Phone AI -->
+                    <div style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">Phone AI</h3>
+                        <p style="font-size: 1.25rem; font-weight: 600; color: #2EA6D4; margin-bottom: 1.5rem;">Starting at $299 / mo</p>
+                        <div style="text-align: left; margin-bottom: 1.5rem;">
+                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">Unlimited AI phone receptionist</p>
+                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">Appointment booking</p>
+                        </div>
+                        <div style="border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">
+                            <p style="color: #374151; line-height: 1.6; font-size: 0.95rem;">White-glove onboarding & 24/7 support</p>
+                        </div>
+                    </div>
+
+                    <!-- Full AI Team -->
+                    <div style="background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%); border: 2px solid #2EA6D4; border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.15); position: relative;">
+                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2EA6D4; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
+                            Most Popular
+                        </div>
+                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">Full AI Team</h3>
+                        <p style="font-size: 1.25rem; font-weight: 600; color: #2EA6D4; margin-bottom: 1.5rem;">Starting at $499 / mo</p>
+                        <div style="text-align: left; margin-bottom: 1.5rem;">
+                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">All Phone AI features plus web chat, automated texts & emails, review automation, local SEO</p>
+                        </div>
+                        <div style="border-top: 1px solid #e2e8f0; padding-top: 1.5rem;">
+                            <p style="color: #374151; line-height: 1.6; font-size: 0.95rem;">White-glove onboarding & 24/7 support</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Footnote -->
+                <p style="text-align: center; color: #6b7280; font-size: 0.85rem; font-style: italic; margin-top: 2rem;">
+                    Final subscription varies by number of providers, locations, and optional EHR/API integration.
+                </p>
             </div>
         </div>
     </section>

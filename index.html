@@ -2861,6 +2861,41 @@
             font-size: 0.95rem;
         }
 
+        /* Usage Wallet Details */
+        .usage-wallet-details:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08) !important;
+        }
+
+        .usage-wallet-details summary:hover {
+            background: rgba(46, 166, 212, 0.02);
+            border-radius: 8px;
+        }
+
+        .usage-wallet-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        .usage-wallet-details[open] .usage-chevron {
+            transform: rotate(180deg);
+        }
+
+        .usage-wallet-details summary::after {
+            content: 'Click to expand';
+            position: absolute;
+            bottom: -1.5rem;
+            right: 0;
+            font-size: 0.7rem;
+            color: #9CA3AF;
+            opacity: 0.7;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .usage-wallet-details[open] summary::after {
+            content: 'Click to collapse';
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .nav-links,
@@ -3147,6 +3182,17 @@
             .pricing-section th,
             .pricing-section td {
                 padding: 0.5rem 0 !important;
+            }
+
+            /* Usage Wallet Details Mobile */
+            .usage-wallet-details summary {
+                flex-direction: column !important;
+                align-items: flex-start !important;
+                gap: 0.5rem !important;
+            }
+
+            .usage-wallet-details summary::after {
+                display: none !important;
             }
 
             .ai-card div[style*="display: flex; gap: 1rem; justify-content: center"] {
@@ -3951,9 +3997,14 @@
                 
                 <!-- Usage Wallet Details -->
                 <div style="max-width: 700px; margin: 3rem auto 0;">
-                    <details style="background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
-                        <summary style="cursor: pointer; font-weight: 600; color: #1f2937; list-style: none; margin-bottom: 1rem;">
-                            <strong>Carrier fees—passed through at our bulk discounted cost</strong>
+                    <details class="usage-wallet-details" style="background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04); transition: all 0.3s ease;">
+                        <summary style="cursor: pointer; font-weight: 600; color: #1f2937; list-style: none; margin-bottom: 1rem; display: flex; align-items: center; justify-content: space-between; padding: 0.5rem 0; position: relative;">
+                            <span><strong>Carrier fees—passed through at our bulk discounted cost</strong></span>
+                            <div class="usage-chevron" style="width: 20px; height: 20px; color: #6b7280; transition: transform 0.3s ease; flex-shrink: 0; margin-left: 1rem;">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
+                                </svg>
+                            </div>
                         </summary>
                         
                         <!-- Usage Table -->

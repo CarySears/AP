@@ -3139,6 +3139,16 @@
                 gap: 1.5rem !important;
             }
 
+            /* Usage Wallet Table Mobile */
+            .pricing-section table {
+                font-size: 0.8rem !important;
+            }
+            
+            .pricing-section th,
+            .pricing-section td {
+                padding: 0.5rem 0 !important;
+            }
+
             .ai-card div[style*="display: flex; gap: 1rem; justify-content: center"] {
                 flex-direction: column !important;
                 gap: 1rem !important;
@@ -3938,6 +3948,72 @@
                 <p style="text-align: center; color: #6b7280; font-size: 0.85rem; font-style: italic; margin-top: 2rem;">
                     Final subscription varies by number of providers, locations, and optional EHR/API integration.
                 </p>
+                
+                <!-- Usage Wallet Details -->
+                <div style="max-width: 700px; margin: 3rem auto 0;">
+                    <details style="background: linear-gradient(145deg, #f8fafc 0%, #f1f5f9 100%); border: 1px solid #e2e8f0; border-radius: 12px; padding: 1.5rem; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);">
+                        <summary style="cursor: pointer; font-weight: 600; color: #1f2937; list-style: none; margin-bottom: 1rem;">
+                            <strong>Carrier fees—passed through at our bulk discounted cost</strong>
+                        </summary>
+                        
+                        <!-- Usage Table -->
+                        <div style="overflow-x: auto; margin-bottom: 1.5rem;">
+                            <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                                <thead>
+                                    <tr style="border-bottom: 2px solid #e2e8f0;">
+                                        <th style="text-align: left; padding: 0.75rem 0; color: #374151; font-weight: 600;">Item</th>
+                                        <th style="text-align: right; padding: 0.75rem 0; color: #374151; font-weight: 600;">Our rate</th>
+                                        <th style="text-align: right; padding: 0.75rem 0; color: #374151; font-weight: 600;">$10 ≈</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 0.75rem 0; color: #374151;">Inbound voice minutes</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">0.85 ¢ / min</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">~175 mins</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 0.75rem 0; color: #374151;">SMS segments (160 chars)</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">0.83 ¢ / segment</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">~205 texts</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 0.75rem 0; color: #374151;">MMS messages</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">2.0 ¢ / msg</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">500 images</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 0.75rem 0; color: #374151;">Email sends</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">0.071 ¢ / email</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">~14,105 emails</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 0.75rem 0; color: #374151;">HIPAA phone number</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">$2.26 / mo</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">—</td>
+                                    </tr>
+                                    <tr style="border-bottom: 1px solid #f1f5f9;">
+                                        <td style="padding: 0.75rem 0; color: #374151;">10DLC brand (one-time)</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">$19</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">—</td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding: 0.75rem 0; color: #374151;">10DLC campaign (annual)</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">$15–$45</td>
+                                        <td style="padding: 0.75rem 0; text-align: right; color: #374151;">—</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <!-- Usage Credit Info -->
+                        <div style="background: rgba(46, 166, 212, 0.05); border: 1px solid rgba(46, 166, 212, 0.1); border-radius: 8px; padding: 1rem;">
+                            <p style="color: #374151; line-height: 1.6; margin: 0; font-size: 0.9rem;">
+                                We preload $25 usage credit at launch. When the wallet drops below $10, it auto-reloads $25 with your card on file. Most clinics spend $40–$120 / mo in usage credit.
+                            </p>
+                        </div>
+                    </details>
+                </div>
             </div>
         </div>
     </section>

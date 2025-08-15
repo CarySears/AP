@@ -3543,16 +3543,14 @@
                         <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Watch a real conversation with our AI</p>
                     </div>
                     
-                    <!-- Dial Live Demo Button -->
-                    <a href="tel:1-855-695-2714" style="text-decoration: none; color: inherit;">
-                        <div class="demo-option call-option" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 32px rgba(27, 117, 187, 0.12); border: 1px solid rgba(46, 166, 212, 0.1); cursor: pointer; transition: all 0.3s ease; min-width: 280px; text-align: center;">
-                            <div class="call-preview" style="margin-bottom: 1rem;">
-                                <div class="phone-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #FF9A56, #B565A7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(255, 154, 86, 0.3);">📞</div>
-                            </div>
-                            <h4 style="font-size: 1.3rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Dial the Live Demo Line</h4>
-                            <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Call and speak with our AI now</p>
+                    <!-- Start Web Chat Button -->
+                    <div id="start-web-chat-tile-hipaa" class="demo-option call-option" style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border-radius: 16px; padding: 2rem; box-shadow: 0 8px 32px rgba(27, 117, 187, 0.12); border: 1px solid rgba(46, 166, 212, 0.1); cursor: pointer; transition: all 0.3s ease; min-width: 280px; text-align: center;">
+                        <div class="call-preview" style="margin-bottom: 1rem;">
+                            <div class="phone-icon" style="width: 60px; height: 60px; background: linear-gradient(135deg, #2EA6D4, #79C5C7); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto; color: white; font-size: 1.5rem; box-shadow: 0 4px 15px rgba(46, 166, 212, 0.3);">💬</div>
                         </div>
-                    </a>
+                        <h4 style="font-size: 1.3rem; font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">Start Web Chat</h4>
+                        <p style="color: #6b7280; margin: 0; font-size: 0.95rem;">Chat with our AI now</p>
+                    </div>
                 </div>
             </div>
             
@@ -4837,6 +4835,21 @@
                     mobileMenu.classList.remove('active');
                 }
             });
+
+            // Open LeadConnector chat when HIPAA tile is clicked
+            var chatTileHipaa = document.getElementById('start-web-chat-tile-hipaa');
+            if (chatTileHipaa) {
+                chatTileHipaa.addEventListener('click', function() {
+                    if (window.leadConnector && window.leadConnector.chatWidget && typeof window.leadConnector.chatWidget.openWidget === 'function') {
+                        window.leadConnector.chatWidget.openWidget();
+                    } else {
+                        var bubble = document.querySelector('[id^="lccwp-chat-widget"], .lcw-widget, .lcw-bubble');
+                        if (bubble) {
+                            bubble.click();
+                        }
+                    }
+                });
+            }
         });
 
 

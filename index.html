@@ -119,12 +119,12 @@
         header {
             position: fixed;
             inset: 0 0 auto 0;
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.92);
             border-bottom: 1px solid rgba(46, 166, 212, 0.15);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             z-index: 1000;
-            padding: 0.75rem 0;
+            padding: 1rem 0 0.75rem 0;
             box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
             animation: slideDown 0.8s ease;
         }
@@ -148,7 +148,7 @@
         }
 
         .logo-image {
-            height: 56px;
+            height: 64px;
             width: auto;
             transition: transform 0.3s ease;
         }
@@ -229,7 +229,7 @@
         .mega-panel {
             position: absolute;
             left: 50%;
-            top: calc(100% + 0.25rem);
+            top: calc(100% + 0.3rem);
             transform: translate(-50%, 0);
             background: rgba(255, 255, 255, 0.98);
             border-radius: 24px;
@@ -237,8 +237,6 @@
             box-shadow: 0 35px 65px rgba(15, 23, 42, 0.18);
             padding: 2rem;
             min-width: 880px;
-            max-height: none;
-            overflow: visible;
             opacity: 0;
             pointer-events: none;
             transition: opacity 0.18s ease;
@@ -265,10 +263,10 @@
         .mega-panel::before {
             content: '';
             position: absolute;
-            top: -70px;
-            left: -40px;
-            right: -40px;
-            height: 70px;
+            top: -60px;
+            left: -16px;
+            right: -16px;
+            height: 60px;
         }
 
         .industries-grid {
@@ -427,7 +425,7 @@
         }
 
         .hero {
-            padding: 140px 0 100px;
+            padding: 130px 0 100px;
             background: linear-gradient(90deg, #fafbfc 0%, #fff8f3 35%, #fffbf7 70%, #fafbfc 100%);
             position: relative;
         }

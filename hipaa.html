@@ -384,17 +384,17 @@
 
         /* Enhanced Header - Glass Morphism Added */
         header {
-            background: rgba(255, 255, 255, 0.85);
+            background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             box-shadow: 0 1px 30px rgba(0,0,0,0.08);
             position: fixed;
             width: 100%;
-            top: -15px;
+            top: 0;
             z-index: 1000;
             border-bottom: 1px solid rgba(46, 166, 212, 0.1);
             margin: 0;
-            padding: 0;
+            padding: 1rem 0 0.75rem 0;
             animation: slideDown 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
 
@@ -414,7 +414,7 @@
             justify-content: space-between;
             align-items: center;
             gap: 1.5rem;
-            padding: 0 0 20px 0;
+            padding: 0;
         }
 
         .logo {
@@ -423,13 +423,26 @@
         }
 
         .logo-image {
-            height: 56px;
+            height: 64px;
             width: auto;
             transition: transform 0.3s ease;
         }
 
         .logo-image:hover {
             transform: scale(1.05);
+        }
+
+        header {
+            padding: 1rem 0 0.75rem;
+            top: 0;
+        }
+
+        .logo-image {
+            height: 64px;
+        }
+
+        .hero {
+            padding: 130px 0 80px;
         }
 
         .nav-links {
@@ -837,7 +850,7 @@
                 #fdfcfb 90%,
                 #fafbfc 100%
             );
-            padding: 100px 0 80px;
+            padding: 130px 0 80px;
             position: relative;
             overflow: visible;
         }
@@ -3352,6 +3365,9 @@
                     </a>
                 </div>
                 <ul class="nav-links">
+                    <li>
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
                     <li class="mega">
                         <a href="#services" class="nav-link">
                             Solutions

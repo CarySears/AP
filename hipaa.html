@@ -494,9 +494,9 @@
 
         .mega-panel {
             position: absolute;
-            top: calc(100% + 1.25rem);
+            top: calc(100% + 0.75rem);
             left: 50%;
-            transform: translate(-50%, 10px);
+            transform: translate(-50%, 6px);
             background: rgba(255, 255, 255, 0.98);
             border-radius: 24px;
             border: 1px solid rgba(46, 166, 212, 0.15);
@@ -510,6 +510,15 @@
             pointer-events: none;
             transition: opacity 0.25s ease, transform 0.25s ease;
             z-index: 1000;
+        }
+
+        .mega-panel::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: 0;
+            right: 0;
+            height: 20px;
         }
 
         .mega:hover .mega-panel,

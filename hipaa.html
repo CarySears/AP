@@ -463,6 +463,27 @@
             color: #111827;
         }
 
+        .cta-link {
+            background: linear-gradient(135deg, #2EA6D4, #00A79D);
+            color: #fff !important;
+            box-shadow: 0 12px 30px rgba(46, 166, 212, 0.35);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-link::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.45), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.5s ease;
+        }
+
+        .cta-link:hover::before {
+            transform: translateX(100%);
+        }
+
         .dropdown-arrow {
             font-size: 10px;
             transition: transform 0.3s ease;
@@ -3358,7 +3379,7 @@
                         </div>
                     </li>
                     <li>
-                        <a href="#book-calendar" class="nav-link">Get Free AI Audit & Customized Demo</a>
+                        <a href="#book-calendar" class="nav-link cta-link">Get Free AI Audit & Customized Demo</a>
                     </li>
                     <li>
                         <a href="https://app.actionpotential.ai/" class="nav-link" target="_blank" rel="noopener">Login</a>

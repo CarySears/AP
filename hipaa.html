@@ -412,34 +412,31 @@
         nav {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            padding: 0 0 20px 0;
-            min-height: 30px;
+            align-items: center;
             gap: 1.5rem;
+            padding: 0 0 20px 0;
         }
 
         .logo {
             display: flex;
-            align-items: baseline;
+            align-items: center;
         }
 
         .logo-image {
-            height: 60px;
+            height: 56px;
             width: auto;
             transition: transform 0.3s ease;
-            margin-right: 0.5rem;
-            transform: translateY(12px);
         }
 
         .logo-image:hover {
-            transform: translateY(12px) scale(1.05);
+            transform: scale(1.05);
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 1.1rem;
-            align-items: baseline;
+            gap: 0.6rem;
+            align-items: center;
             margin: 0;
         }
 
@@ -447,66 +444,32 @@
             position: relative;
         }
 
-        .nav-link-trigger {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 0.1rem;
-            text-decoration: none;
+        .nav-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.4rem 0.85rem;
+            border-radius: 999px;
+            font-size: 0.95rem;
+            font-weight: 600;
             color: #111827;
-            padding: 0.35rem 0.75rem;
-            border-radius: 12px;
-            position: relative;
-            min-width: 140px;
+            text-decoration: none;
             transition: background 0.2s ease, color 0.2s ease;
         }
 
-        .nav-link-trigger.simple {
-            flex-direction: row;
-            align-items: center;
-            gap: 0.4rem;
-            min-width: auto;
-            padding: 0.4rem 0.75rem;
-        }
-
-        .nav-link-title {
-            font-size: 0.95rem;
-            font-weight: 600;
-            letter-spacing: 0.01em;
-        }
-
-        .nav-link-sub {
-            font-size: 0.78rem;
-            color: #6b7280;
-            letter-spacing: 0.02em;
-        }
-
-        .nav-link-trigger:hover,
-        .nav-link-trigger:focus-visible {
+        .nav-link:hover,
+        .nav-link:focus-visible {
             background: rgba(46, 166, 212, 0.12);
             color: #111827;
         }
 
         .dropdown-arrow {
             font-size: 10px;
-            margin-left: 0.35rem;
             transition: transform 0.3s ease;
-            display: inline-block;
-            position: absolute;
-            right: 0.75rem;
-            top: 50%;
-            transform: translateY(-50%);
-            color: #94a3b8;
         }
 
-        .mega:hover > a .dropdown-arrow {
+        .nav-links li:hover > .nav-link .dropdown-arrow {
             transform: rotate(180deg);
-        }
-
-        .nav-link-trigger.simple .dropdown-arrow {
-            position: static;
-            transform: none;
-            margin-left: 0.15rem;
         }
 
         .mega {
@@ -537,6 +500,23 @@
             left: 0;
             right: 0;
             height: 20px;
+        }
+
+        .mega-panel.simple-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 0.5rem;
+            min-width: 320px;
+            padding: 1.5rem;
+        }
+
+        .mega-panel.simple-grid a {
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .mega-panel.simple-grid a + a {
+            margin-top: 0.4rem;
         }
 
         .mega-panel__intro {
@@ -580,6 +560,12 @@
             grid-template-columns: repeat(3, minmax(0, 1fr));
             gap: 1.5rem;
             margin-top: 1.5rem;
+        }
+
+        .industries-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(220px, 1fr));
+            gap: 1.5rem;
         }
 
         .mega:hover .mega-panel,
@@ -645,76 +631,6 @@
 
         .mega-panel ul li + li {
             margin-top: 0.4rem;
-        }
-
-        .header-actions {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-        }
-
-        .log-in {
-            color: #6b7280;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 1;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .log-in::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #2EA6D4;
-            transition: width 0.3s ease;
-        }
-
-        .log-in:hover {
-            color: #2EA6D4;
-            transform: translateY(-1px);
-        }
-
-        .log-in:hover::after {
-            width: 100%;
-        }
-
-        .get-started {
-            background: linear-gradient(135deg, #2EA6D4, #00A79D);
-            color: white;
-            padding: 7px 36px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.4s ease;
-            box-shadow: 0 4px 15px rgba(46, 166, 212, 0.3);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .get-started::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transition: left 0.5s ease;
-        }
-
-        .get-started:hover::before {
-            left: 100%;
-        }
-
-        .get-started:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(46, 166, 212, 0.4);
         }
 
         /* Hamburger Menu Styles */
@@ -3408,186 +3324,46 @@
                     </a>
                 </div>
                 <ul class="nav-links">
-                    <li>
-                        <a href="/" class="nav-link-trigger simple">
-                            <span class="nav-link-title">Home</span>
-                        </a>
-                    </li>
                     <li class="mega">
-                        <a href="#services" class="nav-link-trigger">
-                            <span class="nav-link-title">Solutions</span>
-                            <span class="nav-link-sub">Healthcare-grade automations</span>
+                        <a href="#services" class="nav-link">
+                            Solutions
                             <span class="dropdown-arrow">▼</span>
                         </a>
-                        <div class="mega-panel">
-                            <div class="mega-panel__intro">
-                                <div>
-                                    <p class="mega-label">Solutions</p>
-                                    <h3>Patient experience systems that scale</h3>
-                                    <p>Voice, chat, and follow-up touchpoints built with HIPAA in mind.</p>
-                                </div>
-                                <a href="#book-calendar" class="mega-panel__cta">Get a clinical audit →</a>
-                            </div>
-                            <div class="mega-grid">
-                                <div>
-                                    <p class="mega-label">AI Front Desk</p>
-                                    <a href="#ai-receptionist-section">
-                                        <strong>AI Phone Receptionist</strong>
-                                        <small>Answers every call, qualifies patients, and books to your EHR.</small>
-                                    </a>
-                                    <a href="#ai-receptionist-section">
-                                        <strong>Secure Web Chat</strong>
-                                        <small>On-brand messaging that converts visitors into consults.</small>
-                                    </a>
-                                    <a href="#ai-receptionist-section">
-                                        <strong>Warm Transfer Routing</strong>
-                                        <small>Send priority callers to your team with context intact.</small>
-                                    </a>
-                                </div>
-                                <div>
-                                    <p class="mega-label">Engagement Systems</p>
-                                    <a href="#client-success">
-                                        <strong>Follow-Up & Recall</strong>
-                                        <small>No-show recovery, chronic care reminders, and reactivation.</small>
-                                    </a>
-                                    <a href="#client-success">
-                                        <strong>Review & Reputation</strong>
-                                        <small>Ethical prompts that grow Google & Healthgrades proof.</small>
-                                    </a>
-                                    <a href="#results">
-                                        <strong>Lead Rescue Automations</strong>
-                                        <small>HIPAA-safe SMS + email sequences that revive dormant interest.</small>
-                                    </a>
-                                </div>
-                                <div>
-                                    <p class="mega-label">See It Live</p>
-                                    <a href="#ai-receptionist-section" class="mega-highlight">
-                                        <strong>Start the Demo</strong>
-                                        <small>Listen to real neurological + mental health use cases.</small>
-                                    </a>
-                                    <a href="#book-calendar" class="mega-highlight">
-                                        <strong>Clinical Blueprint Session</strong>
-                                        <small>Co-design workflows with our founder-led team.</small>
-                                    </a>
-                                    <a href="#ai-receptionist-section" class="mega-cta">Explore every capability</a>
-                                </div>
-                            </div>
+                        <div class="mega-panel simple-grid">
+                            <a href="#ai-receptionist-section"><strong>AI Front Desk</strong></a>
+                            <a href="#client-success"><strong>Full Funnel Behavior-Based Advertising & Automation</strong></a>
+                            <a href="#results"><strong>Answer Engine Optimization (AEO)</strong></a>
                         </div>
                     </li>
                     <li class="mega">
-                        <a href="#who-we-serve" class="nav-link-trigger">
-                            <span class="nav-link-title">Industries</span>
-                            <span class="nav-link-sub">Specialties we support</span>
+                        <a href="#who-we-serve" class="nav-link">
+                            Industries
                             <span class="dropdown-arrow">▼</span>
                         </a>
-                        <div class="mega-panel">
-                            <div class="mega-panel__intro">
-                                <div>
-                                    <p class="mega-label">Industries</p>
-                                    <h3>Precision messaging for regulated care</h3>
-                                    <p>Scripts vetted by behavioral scientists & compliance experts.</p>
-                                </div>
-                                <a href="/#who-we-serve" class="mega-panel__cta">Browse all specialties →</a>
+                        <div class="mega-panel industries-grid">
+                            <div>
+                                <p class="mega-label">Column One</p>
+                                <a href="/hipaa.html"><strong>Healthcare</strong><small>HIPAA-ready AI front desk for medical, dental, behavioral health, PT, and more.</small></a>
+                                <a href="#who-we-serve"><strong>Fitness & Wellness</strong><small>Gyms, yoga, studios, coaches, and wellness centers that live on bookings.</small></a>
+                                <a href="#who-we-serve"><strong>Home Services</strong><small>HVAC, plumbing, electrical, cleaning, and trades that can’t miss urgent calls.</small></a>
+                                <a href="#who-we-serve"><strong>Salons & Beauty</strong><small>Salons, spas, med spas, and studios that depend on rebooking and reviews.</small></a>
                             </div>
-                            <div class="mega-grid">
-                                <div>
-                                    <p class="mega-label">Neurology & Brain Health</p>
-                                    <a href="#who-we-serve">
-                                        <strong>Memory & Cognitive Clinics</strong>
-                                        <small>PHI-safe intake + caregiver comms.</small>
-                                    </a>
-                                    <a href="#who-we-serve">
-                                        <strong>Integrative Neurology</strong>
-                                        <small>Handle multi-modality care plans with ease.</small>
-                                    </a>
-                                </div>
-                                <div>
-                                    <p class="mega-label">Behavioral Health</p>
-                                    <a href="#who-we-serve">
-                                        <strong>Mental Health Practices</strong>
-                                        <small>Therapists, psychiatrists, and care teams at scale.</small>
-                                    </a>
-                                    <a href="#who-we-serve">
-                                        <strong>Coaching Programs</strong>
-                                        <small>High-touch accountability with automated nudges.</small>
-                                    </a>
-                                </div>
-                                <div>
-                                    <p class="mega-label">Other Services</p>
-                                    <a href="/#services">
-                                        <strong>Wellness & Rehab</strong>
-                                        <small>Hands-free scheduling + recall for PT/OT/Chiro.</small>
-                                    </a>
-                                    <a href="/#contact" class="mega-cta">Not listed? Let's chat</a>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="mega">
-                        <a href="#client-success" class="nav-link-trigger">
-                            <span class="nav-link-title">Resources</span>
-                            <span class="nav-link-sub">Proof & playbooks</span>
-                            <span class="dropdown-arrow">▼</span>
-                        </a>
-                        <div class="mega-panel">
-                            <div class="mega-panel__intro">
-                                <div>
-                                    <p class="mega-label">Resources</p>
-                                    <h3>Founder-led insights</h3>
-                                    <p>Case studies, compliance tips, and demo assets curated for providers.</p>
-                                </div>
-                                <a href="#ai-receptionist-section" class="mega-panel__cta">Watch the library →</a>
-                            </div>
-                            <div class="mega-grid">
-                                <div>
-                                    <p class="mega-label">Proof</p>
-                                    <a href="#client-success">
-                                        <strong>Client Wins</strong>
-                                        <small>Hear how practices increased consults & shows.</small>
-                                    </a>
-                                    <a href="#pricing">
-                                        <strong>Pricing FAQ</strong>
-                                        <small>Transparent plans + usage wallet explained.</small>
-                                    </a>
-                                </div>
-                                <div>
-                                    <p class="mega-label">Guides & Media</p>
-                                    <a href="#ai-receptionist-section">
-                                        <strong>Demo Library</strong>
-                                        <small>Call recordings, web chat transcripts, and video walkthroughs.</small>
-                                    </a>
-                                    <a href="#results">
-                                        <strong>Playbooks</strong>
-                                        <small>Scripts and nurture flows for each specialty.</small>
-                                    </a>
-                                </div>
-                                <div>
-                                    <p class="mega-label">Get help</p>
-                                    <a href="mailto:hello@actionpotential.ai">
-                                        <strong>Email Support</strong>
-                                        <small>Direct access to our founder-led team.</small>
-                                    </a>
-                                    <a href="#book-calendar" class="mega-cta">Book a working session</a>
-                                </div>
+                            <div>
+                                <p class="mega-label">Column Two</p>
+                                <a href="#who-we-serve"><strong>Restaurants & Hospitality</strong><small>Answer calls, manage reservations, events, and catering inquiries automatically.</small></a>
+                                <a href="#who-we-serve"><strong>Real Estate</strong><small>Capture buyer/seller leads, route calls, and book consultations 24/7.</small></a>
+                                <a href="#who-we-serve"><strong>Legal & Professional Services</strong><small>Law firms, accountants, and advisors who can’t afford missed consults.</small></a>
+                                <a href="#who-we-serve"><strong>Automotive</strong><small>Auto repair, detailing, tire shops, and body shops driven by phone and bookings.</small></a>
                             </div>
                         </div>
                     </li>
                     <li>
-                        <a href="#pricing" class="nav-link-trigger simple">
-                            <span class="nav-link-title">Pricing</span>
-                        </a>
+                        <a href="#book-calendar" class="nav-link">Get Free AI Audit & Customized Demo</a>
                     </li>
                     <li>
-                        <a href="#book-calendar" class="nav-link-trigger simple">
-                            <span class="nav-link-title">Book a Demo</span>
-                            <span class="nav-link-sub">Founder-led walkthrough</span>
-                        </a>
+                        <a href="https://app.actionpotential.ai/" class="nav-link" target="_blank" rel="noopener">Login</a>
                     </li>
                 </ul>
-                <div class="header-actions">
-                    <a href="https://app.actionpotential.ai/" class="log-in" target="_blank">Client Login</a>
-                    <a href="#book-calendar" class="get-started">Get Free AI Audit + Demo</a>
-                </div>
                 <div class="hamburger" onclick="toggleMobileMenu()">
                     <span></span>
                     <span></span>
@@ -3605,38 +3381,29 @@
             </div>
         </div>
         <ul class="mobile-nav-links">
-            <li><a href="/">Home</a></li>
             <li>
                 <p class="mobile-heading">Solutions</p>
                 <ul class="mobile-dropdown-menu">
-                    <li><a href="/#services">AI Phone Receptionist</a></li>
-                    <li><a href="/#services">AI Web Chat Concierge</a></li>
-                    <li><a href="/#services">Follow-Up & Retention</a></li>
-                    <li><a href="/#services">Review & Reputation</a></li>
-                    <li><a href="/#demo">Lead Rescue Automations</a></li>
+                    <li><a href="#ai-receptionist-section">AI Front Desk</a></li>
+                    <li><a href="#client-success">Full Funnel Behavior-Based Advertising & Automation</a></li>
+                    <li><a href="#results">Answer Engine Optimization (AEO)</a></li>
                 </ul>
             </li>
             <li>
                 <p class="mobile-heading">Industries</p>
                 <ul class="mobile-dropdown-menu">
-                    <li><a href="/hipaa.html">Healthcare (HIPAA)</a></li>
-                    <li><a href="/hipaa.html#ai-receptionist-section">Mental Health & Therapy</a></li>
-                    <li><a href="/#services">Home & Repair Services</a></li>
-                    <li><a href="/#services">Professional Services</a></li>
+                    <li><a href="/hipaa.html">Healthcare</a></li>
+                    <li><a href="#who-we-serve">Fitness & Wellness</a></li>
+                    <li><a href="#who-we-serve">Home Services</a></li>
+                    <li><a href="#who-we-serve">Salons & Beauty</a></li>
+                    <li><a href="#who-we-serve">Restaurants & Hospitality</a></li>
+                    <li><a href="#who-we-serve">Real Estate</a></li>
+                    <li><a href="#who-we-serve">Legal & Professional Services</a></li>
+                    <li><a href="#who-we-serve">Automotive</a></li>
                 </ul>
             </li>
-            <li>
-                <p class="mobile-heading">Resources</p>
-                <ul class="mobile-dropdown-menu">
-                    <li><a href="/#client-success">Client Wins</a></li>
-                    <li><a href="/#pricing">Pricing FAQs</a></li>
-                    <li><a href="/#demo">Demo Library</a></li>
-                    <li><a href="/#contact">Contact Support</a></li>
-                </ul>
-            </li>
-            <li><a href="/#pricing">Pricing</a></li>
-            <li><a href="/#demo">Demo</a></li>
-            <li><a href="/#contact">Contact</a></li>
+            <li><a href="#book-calendar">Get Free AI Audit & Customized Demo</a></li>
+            <li><a href="https://app.actionpotential.ai/" target="_blank" rel="noopener">Login</a></li>
         </ul>
         
         <div class="mobile-header-actions">

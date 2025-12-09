@@ -224,34 +224,18 @@
         .mega-panel {
             position: absolute;
             left: 50%;
-            top: calc(100% + 0.6rem);
-            transform: translate(-50%, 4px);
+            top: calc(100% + 0.35rem);
+            transform: translate(-50%, 0);
             background: rgba(255, 255, 255, 0.98);
             border-radius: 24px;
             border: 1px solid rgba(46, 166, 212, 0.15);
             box-shadow: 0 35px 65px rgba(15, 23, 42, 0.18);
             padding: 2rem;
             min-width: 880px;
-            max-height: 420px;
-            overflow-y: auto;
             opacity: 0;
             pointer-events: none;
-            transition: opacity 0.25s ease, transform 0.25s ease;
+            transition: opacity 0.22s ease, transform 0.22s ease;
             z-index: 1000;
-        }
-
-        .mega-panel::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .mega-panel::-webkit-scrollbar-track {
-            background: rgba(148, 163, 184, 0.15);
-            border-radius: 999px;
-        }
-
-        .mega-panel::-webkit-scrollbar-thumb {
-            background: rgba(46, 166, 212, 0.45);
-            border-radius: 999px;
         }
 
         .mega-panel.simple-grid {
@@ -274,10 +258,10 @@
         .mega-panel::before {
             content: '';
             position: absolute;
-            top: -40px;
-            left: 0;
-            right: 0;
-            height: 40px;
+            top: -48px;
+            left: -20px;
+            right: -20px;
+            height: 48px;
         }
 
         .industries-grid {

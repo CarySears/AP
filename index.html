@@ -17,6 +17,7 @@
             --brand-dark: #1B75BB;
             --mint: #79C5C7;
             --nav-logo-size: clamp(48px, 6vw, 64px);
+            --nav-logo-shift: calc(var(--nav-logo-size) * 0.33);
         }
 
         * {
@@ -160,6 +161,7 @@
             width: auto;
             display: block;
             transition: transform 0.3s ease;
+            transform: translateY(var(--nav-logo-shift));
         }
 
         .logo-image:hover {
@@ -189,7 +191,7 @@
             justify-content: center;
             gap: 0.3rem;
             padding: 0 0.85rem;
-            min-height: var(--nav-logo-size);
+            height: var(--nav-logo-size);
             border-radius: 999px;
             font-size: 0.95rem;
             font-weight: 600;
@@ -814,6 +816,10 @@
         }
 
         @media (max-width: 768px) {
+            :root {
+                --nav-logo-shift: 0px;
+            }
+
             header {
                 padding: 0.5rem 0;
             }

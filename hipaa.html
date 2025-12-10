@@ -418,13 +418,22 @@
         }
 
         .logo {
-            display: flex;
+            display: inline-flex;
             align-items: center;
+            gap: 0.75rem;
+            line-height: 1;
+        }
+
+        .logo a {
+            display: inline-flex;
+            align-items: center;
+            line-height: 1;
         }
 
         .logo-image {
-            height: 70px;
+            height: clamp(36px, 5vw, 44px);
             width: auto;
+            display: block;
             transition: transform 0.3s ease;
         }
 
@@ -435,10 +444,6 @@
         header {
             padding: 1rem 0 0.75rem;
             top: 0;
-        }
-
-        .logo-image {
-            height: 64px;
         }
 
         .hero {

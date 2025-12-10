@@ -339,7 +339,8 @@
         }
 
         .mega:hover .mega-panel,
-        .mega:focus-within .mega-panel {
+        .mega:focus-within .mega-panel,
+        .mega.is-open .mega-panel {
             opacity: 1;
             pointer-events: auto;
             transform: translate(-50%, 0);
@@ -1268,6 +1269,61 @@
                     }
                 });
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const megaItems = document.querySelectorAll('.nav-item.mega');
+            let activeMega = null;
+            let closeTimer;
+
+            const openMega = (item) => {
+                if (activeMega && activeMega !== item) {
+                    activeMega.classList.remove('is-open');
+                }
+                activeMega = item;
+                item.classList.add('is-open');
+            };
+
+            const scheduleClose = (item) => {
+                clearTimeout(closeTimer);
+                closeTimer = setTimeout(() => {
+                    item.classList.remove('is-open');
+                    if (activeMega === item) {
+                        activeMega = null;
+                    }
+                }, 220);
+            };
+
+            megaItems.forEach((item) => {
+                const panel = item.querySelector('.mega-panel');
+
+                item.addEventListener('mouseenter', () => {
+                    clearTimeout(closeTimer);
+                    openMega(item);
+                });
+
+                item.addEventListener('focusin', () => openMega(item));
+
+                item.addEventListener('mouseleave', () => scheduleClose(item));
+
+                item.addEventListener('focusout', (event) => {
+                    if (!item.contains(event.relatedTarget)) {
+                        scheduleClose(item);
+                    }
+                });
+
+                if (panel) {
+                    panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
+                    panel.addEventListener('mouseleave', () => scheduleClose(item));
+                }
+            });
+
+            document.addEventListener('keydown', (event) => {
+                if (event.key === 'Escape' && activeMega) {
+                    activeMega.classList.remove('is-open');
+                    activeMega = null;
+                }
+            });
         });
     </script>
 

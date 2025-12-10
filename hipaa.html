@@ -4992,16 +4992,37 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            const megaItems = document.querySelectorAll('.nav-item.mega');
-            let activeMega = null;
-            let closeTimer;
+            const megaItems = Array.from(document.querySelectorAll('.nav-item.mega'));
+            if (!megaItems.length) {
+                return;
+            }
 
-            const openMega = (item) => {
+            let activeMega = null;
+            let activeIndex = -1;
+            let closeTimer;
+            const closeDelay = 280;
+
+            const setActiveMega = (item) => {
+                if (!item) return;
                 if (activeMega && activeMega !== item) {
                     activeMega.classList.remove('is-open');
                 }
                 activeMega = item;
+                activeIndex = megaItems.indexOf(item);
+                if (activeIndex === -1) {
+                    activeIndex = 0;
+                }
                 item.classList.add('is-open');
+            };
+
+            const openMegaByIndex = (index) => {
+                if (!megaItems.length) return;
+                const target = megaItems[(index + megaItems.length) % megaItems.length];
+                setActiveMega(target);
+                const trigger = target.querySelector('.nav-link');
+                if (trigger) {
+                    trigger.focus({ preventScroll: true });
+                }
             };
 
             const scheduleClose = (item) => {
@@ -5010,19 +5031,49 @@
                     item.classList.remove('is-open');
                     if (activeMega === item) {
                         activeMega = null;
+                        activeIndex = -1;
                     }
-                }, 220);
+                }, closeDelay);
             };
 
-            megaItems.forEach((item) => {
+            const handlePanelWheel = (event, index) => {
+                if (megaItems.length < 2) {
+                    return;
+                }
+
+                const panel = event.currentTarget;
+                const isVertical = Math.abs(event.deltaY) >= Math.abs(event.deltaX);
+                const delta = isVertical ? event.deltaY : event.deltaX;
+
+                if (Math.abs(delta) < 10) {
+                    return;
+                }
+
+                if (isVertical && panel.scrollHeight > panel.clientHeight + 1) {
+                    const atTop = panel.scrollTop <= 0;
+                    const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+                    if ((delta < 0 && !atTop) || (delta > 0 && !atBottom)) {
+                        return;
+                    }
+                }
+
+                event.preventDefault();
+                clearTimeout(closeTimer);
+
+                const startIndex = activeIndex !== -1 ? activeIndex : index;
+                const direction = delta > 0 ? 1 : -1;
+                openMegaByIndex(startIndex + direction);
+            };
+
+            megaItems.forEach((item, index) => {
                 const panel = item.querySelector('.mega-panel');
 
                 item.addEventListener('mouseenter', () => {
                     clearTimeout(closeTimer);
-                    openMega(item);
+                    setActiveMega(item);
                 });
 
-                item.addEventListener('focusin', () => openMega(item));
+                item.addEventListener('focusin', () => setActiveMega(item));
 
                 item.addEventListener('mouseleave', () => scheduleClose(item));
 
@@ -5035,6 +5086,7 @@
                 if (panel) {
                     panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
                     panel.addEventListener('mouseleave', () => scheduleClose(item));
+                    panel.addEventListener('wheel', (event) => handlePanelWheel(event, index), { passive: false });
                 }
             });
 
@@ -5042,6 +5094,7 @@
                 if (event.key === 'Escape' && activeMega) {
                     activeMega.classList.remove('is-open');
                     activeMega = null;
+                    activeIndex = -1;
                 }
             });
         });

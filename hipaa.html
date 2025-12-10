@@ -5036,22 +5036,23 @@
                 }, closeDelay);
             };
 
-            const handlePanelWheel = (event, index) => {
+            const handleWheelSwitch = (event, fallbackIndex, scrollContext, allowVerticalScroll = false) => {
                 if (megaItems.length < 2) {
                     return;
                 }
 
-                const panel = event.currentTarget;
-                const isVertical = Math.abs(event.deltaY) >= Math.abs(event.deltaX);
-                const delta = isVertical ? event.deltaY : event.deltaX;
+                const absDeltaX = Math.abs(event.deltaX);
+                const absDeltaY = Math.abs(event.deltaY);
+                const useVertical = absDeltaY >= absDeltaX;
+                const delta = useVertical ? event.deltaY : event.deltaX;
 
-                if (Math.abs(delta) < 10) {
+                if (Math.abs(delta) < 8) {
                     return;
                 }
 
-                if (isVertical && panel.scrollHeight > panel.clientHeight + 1) {
-                    const atTop = panel.scrollTop <= 0;
-                    const atBottom = panel.scrollTop + panel.clientHeight >= panel.scrollHeight - 1;
+                if (useVertical && allowVerticalScroll && scrollContext && scrollContext.scrollHeight > scrollContext.clientHeight + 1) {
+                    const atTop = scrollContext.scrollTop <= 0;
+                    const atBottom = scrollContext.scrollTop + scrollContext.clientHeight >= scrollContext.scrollHeight - 1;
                     if ((delta < 0 && !atTop) || (delta > 0 && !atBottom)) {
                         return;
                     }
@@ -5060,7 +5061,7 @@
                 event.preventDefault();
                 clearTimeout(closeTimer);
 
-                const startIndex = activeIndex !== -1 ? activeIndex : index;
+                const startIndex = fallbackIndex !== undefined && fallbackIndex !== -1 ? fallbackIndex : (activeIndex !== -1 ? activeIndex : 0);
                 const direction = delta > 0 ? 1 : -1;
                 openMegaByIndex(startIndex + direction);
             };
@@ -5086,9 +5087,18 @@
                 if (panel) {
                     panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
                     panel.addEventListener('mouseleave', () => scheduleClose(item));
-                    panel.addEventListener('wheel', (event) => handlePanelWheel(event, index), { passive: false });
+                    panel.addEventListener('wheel', (event) => handleWheelSwitch(event, index, panel, true), { passive: false });
                 }
             });
+
+            const navBar = document.querySelector('nav');
+            if (navBar) {
+                navBar.addEventListener('wheel', (event) => {
+                    const hoveredItem = event.target.closest('.nav-item.mega');
+                    const hoveredIndex = hoveredItem ? megaItems.indexOf(hoveredItem) : activeIndex;
+                    handleWheelSwitch(event, hoveredIndex, navBar, false);
+                }, { passive: false });
+            }
 
             document.addEventListener('keydown', (event) => {
                 if (event.key === 'Escape' && activeMega) {

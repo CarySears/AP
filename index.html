@@ -1280,7 +1280,12 @@
             let activeMega = null;
             let activeIndex = -1;
             let closeTimer;
-            const closeDelay = 280;
+            const closeDelay = 420;
+
+            const isInsideMegaZone = (target) => {
+                if (!target) return false;
+                return Boolean(target.closest('header') || target.closest('.mega-panel'));
+            };
 
             const setActiveMega = (item) => {
                 if (!item) return;
@@ -1305,15 +1310,23 @@
                 }
             };
 
-            const scheduleClose = (item) => {
+            const requestClose = () => {
                 clearTimeout(closeTimer);
                 closeTimer = setTimeout(() => {
-                    item.classList.remove('is-open');
-                    if (activeMega === item) {
+                    if (activeMega) {
+                        activeMega.classList.remove('is-open');
                         activeMega = null;
-                        activeIndex = -1;
                     }
+                    activeIndex = -1;
                 }, closeDelay);
+            };
+
+            const handleLeave = (event) => {
+                if (isInsideMegaZone(event.relatedTarget)) {
+                    clearTimeout(closeTimer);
+                    return;
+                }
+                requestClose();
             };
 
             const handleWheelSwitch = (event, fallbackIndex, scrollContext, allowVerticalScroll = false) => {
@@ -1356,17 +1369,17 @@
 
                 item.addEventListener('focusin', () => setActiveMega(item));
 
-                item.addEventListener('mouseleave', () => scheduleClose(item));
+                item.addEventListener('mouseleave', handleLeave);
 
                 item.addEventListener('focusout', (event) => {
                     if (!item.contains(event.relatedTarget)) {
-                        scheduleClose(item);
+                        handleLeave(event);
                     }
                 });
 
                 if (panel) {
                     panel.addEventListener('mouseenter', () => clearTimeout(closeTimer));
-                    panel.addEventListener('mouseleave', () => scheduleClose(item));
+                    panel.addEventListener('mouseleave', handleLeave);
                     panel.addEventListener('wheel', (event) => handleWheelSwitch(event, index, panel, true), { passive: false });
                 }
             });

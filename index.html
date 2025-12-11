@@ -98,6 +98,117 @@
             75% { transform: translate(-25px, -15px) scale(1.02); }
         }
 
+        .cursor-follower {
+            position: fixed;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: radial-gradient(circle,
+                rgba(46, 166, 212, 0.15) 0%,
+                rgba(121, 197, 199, 0.1) 35%,
+                rgba(27, 117, 187, 0.05) 60%,
+                transparent 80%);
+            pointer-events: none;
+            z-index: 9999;
+            transform: translate(-50%, -50%);
+            transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            mix-blend-mode: screen;
+            filter: blur(0.5px);
+            display: none;
+            opacity: 0.85;
+            will-change: transform, left, top;
+        }
+
+        .cursor-dot {
+            position: fixed;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #2EA6D4;
+            pointer-events: none;
+            z-index: 10000;
+            transform: translate(-50%, -50%);
+            transition: all 0.08s ease-out;
+            display: none;
+            opacity: 0.85;
+            will-change: transform, left, top;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+            .cursor-follower,
+            .cursor-dot {
+                display: block;
+            }
+
+            body {
+                cursor: none;
+            }
+        }
+
+        body.cursor-hover .cursor-follower {
+            width: 64px;
+            height: 64px;
+            background: radial-gradient(circle,
+                rgba(255, 154, 86, 0.12) 0%,
+                rgba(181, 101, 167, 0.08) 30%,
+                rgba(46, 166, 212, 0.05) 60%,
+                transparent 85%);
+            filter: blur(0.8px);
+            opacity: 0.95;
+        }
+
+        body.cursor-hover .cursor-dot {
+            transform: translate(-50%, -50%) scale(1.25);
+            background: linear-gradient(135deg, #2EA6D4, #00A79D);
+        }
+
+        body.cursor-service .cursor-follower {
+            width: 72px;
+            height: 72px;
+            background: radial-gradient(circle,
+                rgba(46, 166, 212, 0.08) 0%,
+                rgba(27, 117, 187, 0.05) 40%,
+                transparent 85%);
+            border: 1px solid rgba(46, 166, 212, 0.15);
+            filter: blur(0.5px);
+        }
+
+        body.cursor-gradient .cursor-follower {
+            width: 56px;
+            height: 56px;
+            background: radial-gradient(circle,
+                rgba(46, 166, 212, 0.12) 0%,
+                rgba(121, 197, 199, 0.08) 30%,
+                rgba(255, 154, 86, 0.04) 60%,
+                transparent 85%);
+            animation: gentlePulse 3s ease-in-out infinite;
+            filter: blur(1px);
+        }
+
+        .cursor-follower.clicking {
+            transform: translate(-50%, -50%) scale(0.85);
+        }
+
+        .cursor-dot.clicking {
+            transform: translate(-50%, -50%) scale(0.6);
+        }
+
+        @keyframes gentlePulse {
+            0%, 100% { transform: scale(1); opacity: 0.85; }
+            50% { transform: scale(1.08); opacity: 1; }
+        }
+
+        @media (hover: none) and (pointer: coarse) {
+            .cursor-follower,
+            .cursor-dot {
+                display: none !important;
+            }
+
+            body {
+                cursor: auto !important;
+            }
+        }
+
         ::selection {
             background: rgba(46, 166, 212, 0.2);
             color: var(--ink);
@@ -894,6 +1005,9 @@
         <div class="orb orb4"></div>
     </div>
 
+    <div class="cursor-follower"></div>
+    <div class="cursor-dot"></div>
+
     <!-- Header -->
     <header>
         <div class="container">
@@ -1253,6 +1367,90 @@
                 orb.style.transform = `translateY(${scrolled * speed}px)`;
             });
         });
+
+        const cursorFollower = document.querySelector('.cursor-follower');
+        const cursorDot = document.querySelector('.cursor-dot');
+        let mouseX = 0;
+        let mouseY = 0;
+        let followerX = 0;
+        let followerY = 0;
+        let dotX = 0;
+        let dotY = 0;
+        const hasHoverCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+        if (cursorFollower && cursorDot && hasHoverCursor) {
+            document.addEventListener('mousemove', (event) => {
+                mouseX = event.clientX;
+                mouseY = event.clientY;
+            });
+
+            const animateCursor = () => {
+                followerX += (mouseX - followerX) * 0.06;
+                followerY += (mouseY - followerY) * 0.06;
+                cursorFollower.style.left = `${followerX}px`;
+                cursorFollower.style.top = `${followerY}px`;
+
+                dotX += (mouseX - dotX) * 0.2;
+                dotY += (mouseY - dotY) * 0.2;
+                cursorDot.style.left = `${dotX}px`;
+                cursorDot.style.top = `${dotY}px`;
+
+                requestAnimationFrame(animateCursor);
+            };
+            animateCursor();
+
+            const interactiveSelectors = [
+                'a',
+                'button',
+                '.btn-primary',
+                '.btn-secondary',
+                '.cta-link',
+                '.service-card',
+                '.demo-card',
+                '.pricing-card',
+                '.mega-panel a',
+                '.nav-link',
+                'input',
+                'textarea'
+            ];
+
+            document.querySelectorAll(interactiveSelectors.join(',')).forEach((element) => {
+                element.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+                element.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+            });
+
+            document.querySelectorAll('.service-card, .demo-card').forEach((card) => {
+                card.addEventListener('mouseenter', () => document.body.classList.add('cursor-service'));
+                card.addEventListener('mouseleave', () => document.body.classList.remove('cursor-service'));
+            });
+
+            document.querySelectorAll('.hero h1, .hero-subtitle, .highlight, .section-badge').forEach((textEl) => {
+                textEl.addEventListener('mouseenter', () => document.body.classList.add('cursor-gradient'));
+                textEl.addEventListener('mouseleave', () => document.body.classList.remove('cursor-gradient'));
+            });
+
+            document.addEventListener('mouseout', (event) => {
+                if (!event.relatedTarget) {
+                    cursorFollower.style.opacity = '0';
+                    cursorDot.style.opacity = '0';
+                }
+            });
+
+            document.addEventListener('mouseover', () => {
+                cursorFollower.style.opacity = '1';
+                cursorDot.style.opacity = '1';
+            });
+
+            document.addEventListener('mousedown', () => {
+                cursorFollower.classList.add('clicking');
+                cursorDot.classList.add('clicking');
+            });
+
+            document.addEventListener('mouseup', () => {
+                cursorFollower.classList.remove('clicking');
+                cursorDot.classList.remove('clicking');
+            });
+        }
 
         // Open LeadConnector chat when the Start Web Chat tile is clicked
         document.addEventListener('DOMContentLoaded', function() {

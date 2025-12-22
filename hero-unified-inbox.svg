@@ -73,7 +73,7 @@
     <path d="M146 358 h8 v10 h-8z" fill="#fff" opacity="0.9"/>
     <path d="M144 362 a10 10 0 0 1 20 0" fill="none" stroke="#fff" stroke-width="2" opacity="0.9"/>
     <text x="178" y="358" class="t">Phone call</text>
-    <text x="178" y="380" class="s">Hican you fit me in this week?</text>
+    <text x="178" y="380" class="s">&quot;Hi—can you fit me in this week?&quot;</text>
     <text x="410" y="358" class="mono">7:42pm</text>
   </g>
 
@@ -82,7 +82,7 @@
     <circle cx="150" cy="442" r="14" fill="url(#brandGrad)"/>
     <path d="M142 438 h16 v10 h-7 l-3 4 v-4 h-6z" fill="#fff" opacity="0.95"/>
     <text x="178" y="438" class="t">Web chat</text>
-    <text x="178" y="460" class="s">Do you take new clients?</text>
+    <text x="178" y="460" class="s">&quot;Do you take new clients?&quot;</text>
     <text x="410" y="438" class="mono">2:10pm</text>
   </g>
 
@@ -93,7 +93,7 @@
     <path d="M146 519 h8" stroke="#79C5C7" stroke-width="2" opacity="0.9"/>
     <path d="M146 523 h8" stroke="#79C5C7" stroke-width="2" opacity="0.9"/>
     <text x="178" y="518" class="t">SMS</text>
-    <text x="178" y="540" class="s">Can I reschedule my appointment?</text>
+    <text x="178" y="540" class="s">&quot;Can I reschedule my appointment?&quot;</text>
     <text x="410" y="518" class="mono">9:03am</text>
   </g>
 
@@ -103,7 +103,7 @@
     <path d="M144 596 a6 6 0 0 1 12 0 v12 h-12z" fill="#fff" opacity="0.95"/>
     <circle cx="150" cy="604" r="3" fill="#B565A7" opacity="0.85"/>
     <text x="178" y="598" class="t">Instagram DM</text>
-    <text x="178" y="620" class="s">How much for a consultation?</text>
+    <text x="178" y="620" class="s">&quot;How much for a consultation?&quot;</text>
     <text x="410" y="598" class="mono">5:26pm</text>
   </g>
 
@@ -112,7 +112,7 @@
     <circle cx="150" cy="682" r="14" fill="#1B75BB" opacity="0.95"/>
     <path d="M142 676 h16 v12 h-6 l-4 4 v-4 h-6z" fill="#fff" opacity="0.95"/>
     <text x="178" y="678" class="t">Facebook message</text>
-    <text x="178" y="700" class="s">Do you have availability tomorrow?</text>
+    <text x="178" y="700" class="s">&quot;Do you have availability tomorrow?&quot;</text>
     <text x="410" y="678" class="mono">11:18am</text>
   </g>
 
@@ -144,17 +144,17 @@
     <!-- Customer bubble -->
     <rect x="560" y="342" width="252" height="64" rx="18" fill="rgba(255,255,255,0.95)" stroke="rgba(15,23,42,0.08)"/>
     <text x="580" y="368" class="m">Customer</text>
-    <text x="580" y="390" class="s">I need to book this weekwhats open?</text>
+    <text x="580" y="390" class="s">&quot;I need to book this week—what's open?&quot;</text>
 
     <!-- AI bubble -->
     <rect x="588" y="424" width="272" height="82" rx="18" fill="rgba(46,166,212,0.10)" stroke="rgba(46,166,212,0.18)"/>
     <text x="608" y="450" class="m">AI Front Desk</text>
-    <text x="608" y="472" class="s">I can do Tue 24pm or Thu 911am.</text>
-    <text x="608" y="494" class="s">Which works best?</text>
+    <text x="608" y="472" class="s">&quot;I can do Tue 2–4pm or Thu 9–11am.&quot;</text>
+    <text x="608" y="494" class="s">&quot;Which works best?&quot;</text>
 
     <!-- Confirmation bubble -->
     <rect x="560" y="520" width="240" height="46" rx="16" fill="rgba(255,255,255,0.95)" stroke="rgba(15,23,42,0.08)"/>
-    <text x="580" y="549" class="s">Tuesday at 2:30 works.</text>
+    <text x="580" y="549" class="s">&quot;Tuesday at 2:30 works.&quot;</text>
   </g>
 
   <!-- Status chips -->
@@ -217,7 +217,7 @@
   <g>
     <rect x="950" y="570" width="330" height="160" rx="22" fill="rgba(240,249,255,0.9)" stroke="rgba(46,166,212,0.18)"/>
     <text x="975" y="604" class="k">Featured proof</text>
-    <text x="975" y="634" class="t">5 stars. Quick, friendly, and easy to book.</text>
+    <text x="975" y="634" class="t">&quot;5 stars. Quick, friendly, and easy to book.&quot;</text>
     <text x="975" y="658" class="s">Highlighted on your website & shared to social</text>
 
     <!-- Star row -->

@@ -559,11 +559,49 @@
         }
 
         .hero-content {
-            text-align: center;
-            max-width: 840px;
+            max-width: 1100px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .hero-copy {
+            text-align: left;
+        }
+
+        .hero-copy .rating {
+            justify-content: flex-start;
+            margin-top: 2rem;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-visual img {
+            width: 100%;
+            max-width: 520px;
+            height: auto;
+            border-radius: 22px;
+            box-shadow: 0 28px 70px rgba(15, 23, 42, 0.16);
+            border: 1px solid rgba(46, 166, 212, 0.18);
+            background: rgba(255, 255, 255, 0.7);
+        }
+
+        .hero-visual-note {
+            margin-top: 0.75rem;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 0.9rem;
         }
 
         .hero h1 {
@@ -945,6 +983,19 @@
                 padding: 120px 0 80px;
             }
 
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .hero-copy {
+                text-align: center;
+            }
+
+            .hero-copy .rating {
+                justify-content: center;
+            }
+
             .services-grid,
             .demo-grid,
             .pricing-grid {
@@ -1069,34 +1120,48 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <h1>
-                        Never Miss Another Customer Again
-                    </h1>
-                    <h2 style="font-size: 1.8rem; font-weight: 600; color: #2EA6D4; margin: 1.5rem 0; line-height: 1.4;">
-                        24/7 AI Front Desk for Service-Based Businesses
-                    </h2>
-                    <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem; line-height: 1.7;">
-                        While you're serving clients, our AI answers calls, books appointments, and follows up automatically. No missed opportunities, no voicemail tag, no hiring headaches.
-                    </p>
-                    
-                    <!-- CTA Button -->
-                    <div style="margin: 2rem 0;">
-                        <a href="#demo" class="btn-primary">
-                            See Your AI Front Desk in Action
-                        </a>
-                        <p style="margin-top: 0.75rem; color: #9ca3af; font-size: 0.9rem;">
-                            Watch demo or test live in 60 seconds
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <h1>
+                            Never Miss Another Customer Again
+                        </h1>
+                        <h2 style="font-size: 1.8rem; font-weight: 600; color: #2EA6D4; margin: 1.5rem 0; line-height: 1.4;">
+                            24/7 AI Front Desk for Service-Based Businesses
+                        </h2>
+                        <p style="font-size: 1.2rem; color: #6b7280; margin-bottom: 2rem; line-height: 1.7;">
+                            While you're serving clients, our AI answers calls, chats across channels, books appointments, and follows up automatically—plus it drives and showcases 5★ reviews.
                         </p>
+                        
+                        <!-- CTA Button -->
+                        <div style="margin: 2rem 0;">
+                            <a href="#demo" class="btn-primary">
+                                See Your AI Front Desk in Action
+                            </a>
+                            <p style="margin-top: 0.75rem; color: #9ca3af; font-size: 0.9rem;">
+                                Watch demo or test live in 60 seconds
+                            </p>
+                        </div>
+                        
+                        <!-- Badge Row -->
+                        <div class="rating">
+                            <span>🚀 Quick Setup</span>
+                            <span style="margin: 0 0.5rem;">•</span>
+                            <span>White-Glove Support</span>
+                            <span style="margin: 0 0.5rem;">•</span>
+                            <span>24/7 AI Coverage</span>
+                        </div>
                     </div>
-                    
-                    <!-- Badge Row -->
-                    <div class="rating" style="justify-content: center; margin-top: 2rem;">
-                        <span>🚀 Quick Setup</span>
-                        <span style="margin: 0 0.5rem;">•</span>
-                        <span>White-Glove Support</span>
-                        <span style="margin: 0 0.5rem;">•</span>
-                        <span>24/7 AI Coverage</span>
+
+                    <div class="hero-visual">
+                        <div style="width: 100%;">
+                            <img
+                                src="hero-unified-inbox.svg"
+                                alt="All channels routed to an AI front desk that books appointments, runs follow-ups, and automates reviews."
+                                loading="eager"
+                                decoding="async"
+                            >
+                            <div class="hero-visual-note">No CRM claims—just the outcomes owners care about.</div>
+                        </div>
                     </div>
                 </div>
             </div>

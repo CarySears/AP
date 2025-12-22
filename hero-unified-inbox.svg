@@ -1,0 +1,252 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Unified inbox, automated bookings, and reputation management</title>
+  <desc id="desc">Illustration showing incoming calls and messages routed to an AI front desk, resulting in booked appointments, follow-ups, and review automation.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#F8FBFF"/>
+      <stop offset="0.55" stop-color="#FFF8F3"/>
+      <stop offset="1" stop-color="#FFFBF9"/>
+    </linearGradient>
+
+    <linearGradient id="brandGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2EA6D4"/>
+      <stop offset="1" stop-color="#79C5C7"/>
+    </linearGradient>
+
+    <linearGradient id="warmGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FF9A56"/>
+      <stop offset="1" stop-color="#B565A7"/>
+    </linearGradient>
+
+    <filter id="shadowLg" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#0F172A" flood-opacity="0.14"/>
+    </filter>
+
+    <filter id="shadowSm" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.12"/>
+    </filter>
+
+    <style>
+      .h { font: 700 22px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill: #111827; }
+      .k { font: 600 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill: #6B7280; letter-spacing: 0.04em; text-transform: uppercase; }
+      .t { font: 600 16px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill: #111827; }
+      .s { font: 500 14px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill: #6B7280; }
+      .m { font: 600 13px -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif; fill: #111827; }
+      .mono { font: 600 12px ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace; fill: #374151; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="1400" height="900" rx="40" fill="url(#bg)"/>
+  <circle cx="150" cy="160" r="160" fill="#2EA6D4" opacity="0.08"/>
+  <circle cx="1260" cy="720" r="220" fill="#FF9A56" opacity="0.08"/>
+  <circle cx="780" cy="210" r="180" fill="#79C5C7" opacity="0.07"/>
+
+  <!-- Subtle grid -->
+  <g opacity="0.06">
+    <path d="M80 140 H1320" stroke="#0F172A" stroke-width="1"/>
+    <path d="M80 240 H1320" stroke="#0F172A" stroke-width="1"/>
+    <path d="M80 340 H1320" stroke="#0F172A" stroke-width="1"/>
+    <path d="M80 440 H1320" stroke="#0F172A" stroke-width="1"/>
+    <path d="M80 540 H1320" stroke="#0F172A" stroke-width="1"/>
+    <path d="M80 640 H1320" stroke="#0F172A" stroke-width="1"/>
+    <path d="M80 740 H1320" stroke="#0F172A" stroke-width="1"/>
+  </g>
+
+  <!-- Column cards -->
+  <!-- Left: Incoming -->
+  <g filter="url(#shadowLg)">
+    <rect x="90" y="160" width="390" height="600" rx="26" fill="rgba(255,255,255,0.92)" stroke="rgba(46,166,212,0.18)"/>
+  </g>
+  <text x="130" y="210" class="k">Incoming</text>
+  <text x="130" y="245" class="h">Calls & Messages</text>
+  <g>
+    <rect x="130" y="270" width="215" height="28" rx="14" fill="rgba(255,154,86,0.12)" stroke="rgba(255,154,86,0.20)"/>
+    <text x="145" y="290" class="m">After hours coverage</text>
+  </g>
+
+  <!-- Left list rows -->
+  <g>
+    <rect x="120" y="330" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="150" cy="362" r="14" fill="url(#warmGrad)"/>
+    <path d="M146 358 h8 v10 h-8z" fill="#fff" opacity="0.9"/>
+    <path d="M144 362 a10 10 0 0 1 20 0" fill="none" stroke="#fff" stroke-width="2" opacity="0.9"/>
+    <text x="178" y="358" class="t">Phone call</text>
+    <text x="178" y="380" class="s">Hican you fit me in this week?</text>
+    <text x="410" y="358" class="mono">7:42pm</text>
+  </g>
+
+  <g>
+    <rect x="120" y="410" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="150" cy="442" r="14" fill="url(#brandGrad)"/>
+    <path d="M142 438 h16 v10 h-7 l-3 4 v-4 h-6z" fill="#fff" opacity="0.95"/>
+    <text x="178" y="438" class="t">Web chat</text>
+    <text x="178" y="460" class="s">Do you take new clients?</text>
+    <text x="410" y="438" class="mono">2:10pm</text>
+  </g>
+
+  <g>
+    <rect x="120" y="490" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="150" cy="522" r="14" fill="#79C5C7"/>
+    <path d="M144 516 h12 v12 h-12z" fill="#fff" opacity="0.95"/>
+    <path d="M146 519 h8" stroke="#79C5C7" stroke-width="2" opacity="0.9"/>
+    <path d="M146 523 h8" stroke="#79C5C7" stroke-width="2" opacity="0.9"/>
+    <text x="178" y="518" class="t">SMS</text>
+    <text x="178" y="540" class="s">Can I reschedule my appointment?</text>
+    <text x="410" y="518" class="mono">9:03am</text>
+  </g>
+
+  <g>
+    <rect x="120" y="570" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="150" cy="602" r="14" fill="#B565A7"/>
+    <path d="M144 596 a6 6 0 0 1 12 0 v12 h-12z" fill="#fff" opacity="0.95"/>
+    <circle cx="150" cy="604" r="3" fill="#B565A7" opacity="0.85"/>
+    <text x="178" y="598" class="t">Instagram DM</text>
+    <text x="178" y="620" class="s">How much for a consultation?</text>
+    <text x="410" y="598" class="mono">5:26pm</text>
+  </g>
+
+  <g>
+    <rect x="120" y="650" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="150" cy="682" r="14" fill="#1B75BB" opacity="0.95"/>
+    <path d="M142 676 h16 v12 h-6 l-4 4 v-4 h-6z" fill="#fff" opacity="0.95"/>
+    <text x="178" y="678" class="t">Facebook message</text>
+    <text x="178" y="700" class="s">Do you have availability tomorrow?</text>
+    <text x="410" y="678" class="mono">11:18am</text>
+  </g>
+
+  <!-- Center: AI Front Desk -->
+  <g filter="url(#shadowLg)">
+    <rect x="505" y="110" width="390" height="700" rx="30" fill="rgba(255,255,255,0.94)" stroke="rgba(46,166,212,0.22)"/>
+  </g>
+
+  <!-- Center header -->
+  <g>
+    <rect x="540" y="145" width="320" height="56" rx="20" fill="rgba(46,166,212,0.08)" stroke="rgba(46,166,212,0.18)"/>
+    <circle cx="570" cy="173" r="12" fill="url(#brandGrad)"/>
+    <text x="592" y="176" class="t">ActionPotential.AI Front Desk</text>
+  </g>
+  <text x="540" y="232" class="k">All-in-one widget</text>
+
+  <!-- Tabs -->
+  <g filter="url(#shadowSm)">
+    <rect x="540" y="252" width="320" height="44" rx="22" fill="rgba(255,255,255,0.9)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="545" y="257" width="156" height="34" rx="17" fill="url(#brandGrad)"/>
+    <text x="600" y="279" class="m" fill="#fff">Voice</text>
+    <text x="740" y="279" class="m" fill="#6B7280">Text</text>
+  </g>
+
+  <!-- Conversation -->
+  <g>
+    <rect x="540" y="318" width="320" height="260" rx="22" fill="rgba(248,250,252,0.9)" stroke="rgba(15,23,42,0.08)"/>
+
+    <!-- Customer bubble -->
+    <rect x="560" y="342" width="252" height="64" rx="18" fill="rgba(255,255,255,0.95)" stroke="rgba(15,23,42,0.08)"/>
+    <text x="580" y="368" class="m">Customer</text>
+    <text x="580" y="390" class="s">I need to book this weekwhats open?</text>
+
+    <!-- AI bubble -->
+    <rect x="588" y="424" width="272" height="82" rx="18" fill="rgba(46,166,212,0.10)" stroke="rgba(46,166,212,0.18)"/>
+    <text x="608" y="450" class="m">AI Front Desk</text>
+    <text x="608" y="472" class="s">I can do Tue 24pm or Thu 911am.</text>
+    <text x="608" y="494" class="s">Which works best?</text>
+
+    <!-- Confirmation bubble -->
+    <rect x="560" y="520" width="240" height="46" rx="16" fill="rgba(255,255,255,0.95)" stroke="rgba(15,23,42,0.08)"/>
+    <text x="580" y="549" class="s">Tuesday at 2:30 works.</text>
+  </g>
+
+  <!-- Status chips -->
+  <g>
+    <rect x="540" y="594" width="154" height="34" rx="17" fill="rgba(16,185,129,0.10)" stroke="rgba(16,185,129,0.22)"/>
+    <text x="568" y="616" class="m" fill="#065F46">Booked</text>
+    <rect x="706" y="594" width="154" height="34" rx="17" fill="rgba(59,130,246,0.10)" stroke="rgba(59,130,246,0.20)"/>
+    <text x="728" y="616" class="m" fill="#1E3A8A">Follow-up sent</text>
+  </g>
+
+  <!-- Mini automation strip -->
+  <g filter="url(#shadowSm)">
+    <rect x="540" y="646" width="320" height="132" rx="22" fill="rgba(255,255,255,0.92)" stroke="rgba(15,23,42,0.08)"/>
+    <text x="565" y="680" class="k">Automation</text>
+
+    <circle cx="566" cy="714" r="10" fill="#2EA6D4" opacity="0.95"/>
+    <text x="585" y="719" class="s">Reminder scheduled (SMS + email)</text>
+
+    <circle cx="566" cy="744" r="10" fill="#FF9A56" opacity="0.95"/>
+    <text x="585" y="749" class="s">No-show recovery sequence ready</text>
+  </g>
+
+  <!-- Right: Outcomes -->
+  <g filter="url(#shadowLg)">
+    <rect x="920" y="160" width="390" height="600" rx="26" fill="rgba(255,255,255,0.92)" stroke="rgba(46,166,212,0.18)"/>
+  </g>
+  <text x="960" y="210" class="k">Outcomes</text>
+  <text x="960" y="245" class="h">Booked + Reviews</text>
+
+  <!-- Outcomes list -->
+  <g>
+    <rect x="950" y="290" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="980" cy="318" r="12" fill="rgba(16,185,129,0.95)"/>
+    <path d="M974 318 l4 4 l10 -10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1005" y="323" class="t">Appointment booked</text>
+  </g>
+
+  <g>
+    <rect x="950" y="360" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="980" cy="388" r="12" fill="rgba(59,130,246,0.95)"/>
+    <path d="M973 388 h14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <path d="M980 381 v14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+    <text x="1005" y="393" class="t">Follow-up running</text>
+  </g>
+
+  <g>
+    <rect x="950" y="430" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="980" cy="458" r="12" fill="url(#brandGrad)"/>
+    <path d="M972 458 l4 4 l12 -12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+    <text x="1005" y="463" class="t">Review request sent</text>
+  </g>
+
+  <g>
+    <rect x="950" y="500" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <circle cx="980" cy="528" r="12" fill="url(#warmGrad)"/>
+    <path d="M972 526 h16 v6 h-16z" fill="#fff" opacity="0.9"/>
+    <text x="1005" y="533" class="t">AI responses posted</text>
+  </g>
+
+  <g>
+    <rect x="950" y="570" width="330" height="160" rx="22" fill="rgba(240,249,255,0.9)" stroke="rgba(46,166,212,0.18)"/>
+    <text x="975" y="604" class="k">Featured proof</text>
+    <text x="975" y="634" class="t">5 stars. Quick, friendly, and easy to book.</text>
+    <text x="975" y="658" class="s">Highlighted on your website & shared to social</text>
+
+    <!-- Star row -->
+    <g transform="translate(975, 675)">
+      <path d="M12 0 l3.5 7.2 7.9 1.2 -5.7 5.6 1.4 8 -7.1 -3.7 -7.1 3.7 1.4 -8 -5.7 -5.6 7.9 -1.2z" fill="#F59E0B"/>
+      <g transform="translate(26,0)">
+        <path d="M12 0 l3.5 7.2 7.9 1.2 -5.7 5.6 1.4 8 -7.1 -3.7 -7.1 3.7 1.4 -8 -5.7 -5.6 7.9 -1.2z" fill="#F59E0B"/>
+      </g>
+      <g transform="translate(52,0)">
+        <path d="M12 0 l3.5 7.2 7.9 1.2 -5.7 5.6 1.4 8 -7.1 -3.7 -7.1 3.7 1.4 -8 -5.7 -5.6 7.9 -1.2z" fill="#F59E0B"/>
+      </g>
+      <g transform="translate(78,0)">
+        <path d="M12 0 l3.5 7.2 7.9 1.2 -5.7 5.6 1.4 8 -7.1 -3.7 -7.1 3.7 1.4 -8 -5.7 -5.6 7.9 -1.2z" fill="#F59E0B"/>
+      </g>
+      <g transform="translate(104,0)">
+        <path d="M12 0 l3.5 7.2 7.9 1.2 -5.7 5.6 1.4 8 -7.1 -3.7 -7.1 3.7 1.4 -8 -5.7 -5.6 7.9 -1.2z" fill="#F59E0B"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- Connector arrows -->
+  <g opacity="0.55">
+    <path d="M495 460 C525 460 520 460 540 460" stroke="url(#brandGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M520 444 l26 16 -26 16" fill="none" stroke="url(#brandGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <path d="M895 460 C925 460 920 460 940 460" stroke="url(#brandGrad)" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M920 444 l26 16 -26 16" fill="none" stroke="url(#brandGrad)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Footer microcopy -->
+  <text x="90" y="835" class="s">Accurate promises: shows outcomes without requiring a specific CRM integration.</text>
+</svg>

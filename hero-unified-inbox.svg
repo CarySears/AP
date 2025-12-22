@@ -60,7 +60,7 @@
     <rect x="90" y="160" width="390" height="600" rx="26" fill="#ffffff" fill-opacity="0.92" stroke="#2EA6D4" stroke-opacity="0.18"/>
   </g>
   <text x="130" y="210" class="k">Incoming</text>
-  <text x="130" y="245" class="h">Calls & Messages</text>
+  <text x="130" y="245" class="h">Calls &amp; Messages</text>
   <g>
     <rect x="130" y="270" width="215" height="28" rx="14" fill="#FF9A56" fill-opacity="0.12" stroke="#FF9A56" stroke-opacity="0.20"/>
     <text x="145" y="290" class="m">After hours coverage</text>
@@ -218,7 +218,7 @@
     <rect x="950" y="570" width="330" height="160" rx="22" fill="#F0F9FF" fill-opacity="0.9" stroke="#2EA6D4" stroke-opacity="0.18"/>
     <text x="975" y="604" class="k">Featured proof</text>
     <text x="975" y="634" class="t">&quot;5 stars. Quick, friendly, and easy to book.&quot;</text>
-    <text x="975" y="658" class="s">Highlighted on your website & shared to social</text>
+    <text x="975" y="658" class="s">Highlighted on your website &amp; shared to social</text>
 
     <!-- Star row -->
     <g transform="translate(975, 675)">

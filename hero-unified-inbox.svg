@@ -57,18 +57,18 @@
   <!-- Column cards -->
   <!-- Left: Incoming -->
   <g filter="url(#shadowLg)">
-    <rect x="90" y="160" width="390" height="600" rx="26" fill="rgba(255,255,255,0.92)" stroke="rgba(46,166,212,0.18)"/>
+    <rect x="90" y="160" width="390" height="600" rx="26" fill="#ffffff" fill-opacity="0.92" stroke="#2EA6D4" stroke-opacity="0.18"/>
   </g>
   <text x="130" y="210" class="k">Incoming</text>
   <text x="130" y="245" class="h">Calls & Messages</text>
   <g>
-    <rect x="130" y="270" width="215" height="28" rx="14" fill="rgba(255,154,86,0.12)" stroke="rgba(255,154,86,0.20)"/>
+    <rect x="130" y="270" width="215" height="28" rx="14" fill="#FF9A56" fill-opacity="0.12" stroke="#FF9A56" stroke-opacity="0.20"/>
     <text x="145" y="290" class="m">After hours coverage</text>
   </g>
 
   <!-- Left list rows -->
   <g>
-    <rect x="120" y="330" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="120" y="330" width="330" height="64" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="150" cy="362" r="14" fill="url(#warmGrad)"/>
     <path d="M146 358 h8 v10 h-8z" fill="#fff" opacity="0.9"/>
     <path d="M144 362 a10 10 0 0 1 20 0" fill="none" stroke="#fff" stroke-width="2" opacity="0.9"/>
@@ -78,7 +78,7 @@
   </g>
 
   <g>
-    <rect x="120" y="410" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="120" y="410" width="330" height="64" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="150" cy="442" r="14" fill="url(#brandGrad)"/>
     <path d="M142 438 h16 v10 h-7 l-3 4 v-4 h-6z" fill="#fff" opacity="0.95"/>
     <text x="178" y="438" class="t">Web chat</text>
@@ -87,7 +87,7 @@
   </g>
 
   <g>
-    <rect x="120" y="490" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="120" y="490" width="330" height="64" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="150" cy="522" r="14" fill="#79C5C7"/>
     <path d="M144 516 h12 v12 h-12z" fill="#fff" opacity="0.95"/>
     <path d="M146 519 h8" stroke="#79C5C7" stroke-width="2" opacity="0.9"/>
@@ -98,7 +98,7 @@
   </g>
 
   <g>
-    <rect x="120" y="570" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="120" y="570" width="330" height="64" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="150" cy="602" r="14" fill="#B565A7"/>
     <path d="M144 596 a6 6 0 0 1 12 0 v12 h-12z" fill="#fff" opacity="0.95"/>
     <circle cx="150" cy="604" r="3" fill="#B565A7" opacity="0.85"/>
@@ -108,7 +108,7 @@
   </g>
 
   <g>
-    <rect x="120" y="650" width="330" height="64" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="120" y="650" width="330" height="64" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="150" cy="682" r="14" fill="#1B75BB" opacity="0.95"/>
     <path d="M142 676 h16 v12 h-6 l-4 4 v-4 h-6z" fill="#fff" opacity="0.95"/>
     <text x="178" y="678" class="t">Facebook message</text>
@@ -118,12 +118,12 @@
 
   <!-- Center: AI Front Desk -->
   <g filter="url(#shadowLg)">
-    <rect x="505" y="110" width="390" height="700" rx="30" fill="rgba(255,255,255,0.94)" stroke="rgba(46,166,212,0.22)"/>
+    <rect x="505" y="110" width="390" height="700" rx="30" fill="#ffffff" fill-opacity="0.94" stroke="#2EA6D4" stroke-opacity="0.22"/>
   </g>
 
   <!-- Center header -->
   <g>
-    <rect x="540" y="145" width="320" height="56" rx="20" fill="rgba(46,166,212,0.08)" stroke="rgba(46,166,212,0.18)"/>
+    <rect x="540" y="145" width="320" height="56" rx="20" fill="#2EA6D4" fill-opacity="0.08" stroke="#2EA6D4" stroke-opacity="0.18"/>
     <circle cx="570" cy="173" r="12" fill="url(#brandGrad)"/>
     <text x="592" y="176" class="t">ActionPotential.AI Front Desk</text>
   </g>
@@ -131,7 +131,7 @@
 
   <!-- Tabs -->
   <g filter="url(#shadowSm)">
-    <rect x="540" y="252" width="320" height="44" rx="22" fill="rgba(255,255,255,0.9)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="540" y="252" width="320" height="44" rx="22" fill="#ffffff" fill-opacity="0.9" stroke="#0F172A" stroke-opacity="0.08"/>
     <rect x="545" y="257" width="156" height="34" rx="17" fill="url(#brandGrad)"/>
     <text x="600" y="279" class="m" fill="#fff">Voice</text>
     <text x="740" y="279" class="m" fill="#6B7280">Text</text>
@@ -139,35 +139,35 @@
 
   <!-- Conversation -->
   <g>
-    <rect x="540" y="318" width="320" height="260" rx="22" fill="rgba(248,250,252,0.9)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="540" y="318" width="320" height="260" rx="22" fill="#F8FAFC" fill-opacity="0.9" stroke="#0F172A" stroke-opacity="0.08"/>
 
     <!-- Customer bubble -->
-    <rect x="560" y="342" width="252" height="64" rx="18" fill="rgba(255,255,255,0.95)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="560" y="342" width="252" height="64" rx="18" fill="#ffffff" fill-opacity="0.95" stroke="#0F172A" stroke-opacity="0.08"/>
     <text x="580" y="368" class="m">Customer</text>
     <text x="580" y="390" class="s">&quot;I need to book this week—what's open?&quot;</text>
 
     <!-- AI bubble -->
-    <rect x="588" y="424" width="272" height="82" rx="18" fill="rgba(46,166,212,0.10)" stroke="rgba(46,166,212,0.18)"/>
+    <rect x="588" y="424" width="272" height="82" rx="18" fill="#2EA6D4" fill-opacity="0.10" stroke="#2EA6D4" stroke-opacity="0.18"/>
     <text x="608" y="450" class="m">AI Front Desk</text>
     <text x="608" y="472" class="s">&quot;I can do Tue 2–4pm or Thu 9–11am.&quot;</text>
     <text x="608" y="494" class="s">&quot;Which works best?&quot;</text>
 
     <!-- Confirmation bubble -->
-    <rect x="560" y="520" width="240" height="46" rx="16" fill="rgba(255,255,255,0.95)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="560" y="520" width="240" height="46" rx="16" fill="#ffffff" fill-opacity="0.95" stroke="#0F172A" stroke-opacity="0.08"/>
     <text x="580" y="549" class="s">&quot;Tuesday at 2:30 works.&quot;</text>
   </g>
 
   <!-- Status chips -->
   <g>
-    <rect x="540" y="594" width="154" height="34" rx="17" fill="rgba(16,185,129,0.10)" stroke="rgba(16,185,129,0.22)"/>
+    <rect x="540" y="594" width="154" height="34" rx="17" fill="#10B981" fill-opacity="0.10" stroke="#10B981" stroke-opacity="0.22"/>
     <text x="568" y="616" class="m" fill="#065F46">Booked</text>
-    <rect x="706" y="594" width="154" height="34" rx="17" fill="rgba(59,130,246,0.10)" stroke="rgba(59,130,246,0.20)"/>
+    <rect x="706" y="594" width="154" height="34" rx="17" fill="#3B82F6" fill-opacity="0.10" stroke="#3B82F6" stroke-opacity="0.20"/>
     <text x="728" y="616" class="m" fill="#1E3A8A">Follow-up sent</text>
   </g>
 
   <!-- Mini automation strip -->
   <g filter="url(#shadowSm)">
-    <rect x="540" y="646" width="320" height="132" rx="22" fill="rgba(255,255,255,0.92)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="540" y="646" width="320" height="132" rx="22" fill="#ffffff" fill-opacity="0.92" stroke="#0F172A" stroke-opacity="0.08"/>
     <text x="565" y="680" class="k">Automation</text>
 
     <circle cx="566" cy="714" r="10" fill="#2EA6D4" opacity="0.95"/>
@@ -179,43 +179,43 @@
 
   <!-- Right: Outcomes -->
   <g filter="url(#shadowLg)">
-    <rect x="920" y="160" width="390" height="600" rx="26" fill="rgba(255,255,255,0.92)" stroke="rgba(46,166,212,0.18)"/>
+    <rect x="920" y="160" width="390" height="600" rx="26" fill="#ffffff" fill-opacity="0.92" stroke="#2EA6D4" stroke-opacity="0.18"/>
   </g>
   <text x="960" y="210" class="k">Outcomes</text>
   <text x="960" y="245" class="h">Booked + Reviews</text>
 
   <!-- Outcomes list -->
   <g>
-    <rect x="950" y="290" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
-    <circle cx="980" cy="318" r="12" fill="rgba(16,185,129,0.95)"/>
+    <rect x="950" y="290" width="330" height="56" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
+    <circle cx="980" cy="318" r="12" fill="#10B981" fill-opacity="0.95"/>
     <path d="M974 318 l4 4 l10 -10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
     <text x="1005" y="323" class="t">Appointment booked</text>
   </g>
 
   <g>
-    <rect x="950" y="360" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
-    <circle cx="980" cy="388" r="12" fill="rgba(59,130,246,0.95)"/>
+    <rect x="950" y="360" width="330" height="56" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
+    <circle cx="980" cy="388" r="12" fill="#3B82F6" fill-opacity="0.95"/>
     <path d="M973 388 h14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
     <path d="M980 381 v14" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
     <text x="1005" y="393" class="t">Follow-up running</text>
   </g>
 
   <g>
-    <rect x="950" y="430" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="950" y="430" width="330" height="56" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="980" cy="458" r="12" fill="url(#brandGrad)"/>
     <path d="M972 458 l4 4 l12 -12" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
     <text x="1005" y="463" class="t">Review request sent</text>
   </g>
 
   <g>
-    <rect x="950" y="500" width="330" height="56" rx="18" fill="rgba(255,255,255,0.88)" stroke="rgba(15,23,42,0.08)"/>
+    <rect x="950" y="500" width="330" height="56" rx="18" fill="#ffffff" fill-opacity="0.88" stroke="#0F172A" stroke-opacity="0.08"/>
     <circle cx="980" cy="528" r="12" fill="url(#warmGrad)"/>
     <path d="M972 526 h16 v6 h-16z" fill="#fff" opacity="0.9"/>
     <text x="1005" y="533" class="t">AI responses posted</text>
   </g>
 
   <g>
-    <rect x="950" y="570" width="330" height="160" rx="22" fill="rgba(240,249,255,0.9)" stroke="rgba(46,166,212,0.18)"/>
+    <rect x="950" y="570" width="330" height="160" rx="22" fill="#F0F9FF" fill-opacity="0.9" stroke="#2EA6D4" stroke-opacity="0.18"/>
     <text x="975" y="604" class="k">Featured proof</text>
     <text x="975" y="634" class="t">&quot;5 stars. Quick, friendly, and easy to book.&quot;</text>
     <text x="975" y="658" class="s">Highlighted on your website & shared to social</text>

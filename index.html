@@ -1715,5 +1715,24 @@
         );
     </script>
     <!-- End Web Widget Script -->
+
+    <!-- LeadConnector Voice AI Widget (top-right) -->
+    <style>
+        /* Ensure LeadConnector widget sits top-right (not bottom-right). */
+        [id^="lccwp-chat-widget"],
+        .lcw-widget,
+        .lcw-bubble {
+            top: 20px !important;
+            right: 20px !important;
+            bottom: auto !important;
+            left: auto !important;
+            z-index: 10000 !important;
+        }
+    </style>
+    <script
+        src="https://beta.leadconnectorhq.com/loader.js"
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="692e35dacf45958002fa546c">
+    </script>
 </body>
 </html>

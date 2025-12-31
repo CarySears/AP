@@ -1517,7 +1517,7 @@
             });
         }
 
-        // Open chat widget when the Start Web Chat tile is clicked
+        // Open LeadConnector chat widget when the Start Web Chat tile is clicked
         document.addEventListener('DOMContentLoaded', function() {
             var chatTile = document.getElementById('start-web-chat-tile');
             if (chatTile) {
@@ -1528,15 +1528,9 @@
                         return;
                     }
 
-                    // Fallback: click common widget bubble/container elements (engagement widget, etc.)
+                    // Fallback: click common widget bubble/container elements
                     var bubble = document.querySelector(
                         [
-                            // Engagement widget container / likely clickable elements
-                            '#engagement-widget-container button',
-                            '#engagement-widget-container [role="button"]',
-                            '#engagement-widget-container a',
-                            '#engagement-widget-container',
-
                             // LeadConnector DOM fallbacks (if loaded but API isn't ready)
                             '[id^="lccwp-chat-widget"]',
                             '.lcw-widget',
@@ -1688,33 +1682,6 @@
             });
         });
     </script>
-
-    <!-- Engagement Widget Container -->
-    <div id="engagement-widget-container" style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;"></div>
-
-    <!-- Start Web Widget Script -->
-    <script>
-        window.engagementContextExtra = {
-            // Add your custom data here
-        };
-        (function (w, i, d, g, e, t) {
-            const s = w.createElement(i);
-            d.forEach(([k, v]) => s.setAttribute(k, v));
-            w.body.appendChild(s);
-        })(
-            document,
-            'script',
-            [['async', 1],
-                ['crossorigin', 1],
-                ['type', 'module'],
-                ['id', 'engagementWidget'],
-                ['src', 'https://cdn.chatwidgets.net/widget/livechat/bundle.js'],
-                ['data-env', '//graph.mycrmsupport.net'],
-                ['data-instance', 'aIlWxNpg5fzfUZ3i'],
-                ['data-container', '#engagement-widget-container']]
-        );
-    </script>
-    <!-- End Web Widget Script -->
 
     <!-- LeadConnector Voice AI Widget (top-right) -->
     <style>

@@ -1683,12 +1683,20 @@
         });
     </script>
 
-    <!-- LeadConnector Voice AI Widget (top-right) -->
+    <!-- LeadConnector Widgets -->
     <style>
-        /* Ensure LeadConnector widget sits top-right (not bottom-right). */
-        [id^="lccwp-chat-widget"],
-        .lcw-widget,
-        .lcw-bubble {
+        /*
+         * Keep the main chat widget bottom-right (default),
+         * but force the Voice AI widget to top-right.
+         *
+         * LeadConnector widget DOM can vary, so we target several likely hooks.
+         */
+        iframe[src*="692e35dacf45958002fa546c"],
+        iframe[data-src*="692e35dacf45958002fa546c"],
+        [data-widget-id="692e35dacf45958002fa546c"],
+        [data-chat-widget-id="692e35dacf45958002fa546c"],
+        [id*="692e35dacf45958002fa546c"] {
+            position: fixed !important;
             top: 20px !important;
             right: 20px !important;
             bottom: auto !important;
@@ -1696,6 +1704,15 @@
             z-index: 10000 !important;
         }
     </style>
+
+    <!-- Bottom-right chat widget (as it was) -->
+    <script
+        src="https://beta.leadconnectorhq.com/loader.js"
+        data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"
+        data-widget-id="692e35e1885ff875a3542ddb">
+    </script>
+
+    <!-- Top-right Voice AI widget (as it was) -->
     <script
         src="https://beta.leadconnectorhq.com/loader.js"
         data-resources-url="https://beta.leadconnectorhq.com/chat-widget/loader.js"

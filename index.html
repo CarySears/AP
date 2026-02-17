@@ -802,68 +802,6 @@
             background: linear-gradient(135deg, #fffbf9 0%, #ffffff 60%, #fffbf9 100%);
         }
 
-        .pricing-grid {
-            max-width: 900px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 1.75rem;
-        }
-
-        .pricing-card {
-            background: var(--glass);
-            padding: 2.25rem;
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.7);
-            text-align: center;
-            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
-        }
-
-        .pricing-card.featured {
-            border: 2px solid var(--brand);
-            box-shadow: 0 35px 60px rgba(46, 166, 212, 0.2);
-            position: relative;
-        }
-
-        .pricing-card.featured::before {
-            content: "Most Popular";
-            position: absolute;
-            top: -14px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: var(--brand);
-            color: white;
-            padding: 0.35rem 1.25rem;
-            border-radius: 999px;
-            font-size: 0.85rem;
-            letter-spacing: 0.02em;
-        }
-
-        .pricing-price {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: var(--brand);
-            margin: 1rem 0;
-        }
-
-        .pricing-list {
-            text-align: left;
-            margin: 1.5rem 0;
-        }
-
-        .pricing-list p {
-            color: var(--ink);
-            margin-bottom: 0.75rem;
-        }
-
-        .pricing-footnote {
-            text-align: center;
-            margin-top: 2rem;
-            color: var(--muted);
-            font-style: italic;
-            font-size: 0.9rem;
-        }
-
         .cta-panel {
             max-width: 860px;
             margin: 0 auto;
@@ -997,8 +935,7 @@
             }
 
             .services-grid,
-            .demo-grid,
-            .pricing-grid {
+            .demo-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -1109,7 +1046,7 @@
                         <span class="spacer" aria-hidden="true"></span>
                     </li>
                     <li>
-                        <a href="/#book-demo" class="nav-link cta-link">Get Free AI Audit & Customized Demo</a>
+                        <a href="/#book-demo" class="nav-link cta-link">Get a Free AI Audit and customized Demo</a>
                     </li>
                 </ul>
             </nav>
@@ -1291,56 +1228,9 @@
                 
                 <div class="service-card">
                     <div class="service-icon">💰</div>
-                    <h3>Transparent Pricing</h3>
-                    <p>Predictable monthly costs. No hidden fees, no per-call charges, no surprises on your bill.</p>
+                    <h3>Transparent Value</h3>
+                    <p>Clear expectations, straightforward setup, and support that keeps your team moving.</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" style="padding: 80px 0; background: #ffffff;">
-        <div class="container">
-            <div class="section-header">
-                <h2>Simple, Predictable <span class="highlight">Pricing</span></h2>
-                <p>Choose the level of automation that fits your business</p>
-            </div>
-            
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                    <!-- AI Essentials -->
-                    <div style="background: linear-gradient(145deg, #ffffff 0%, #f8fbff 100%); border: 2px solid #e2e8f0; border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);">
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">AI Essentials</h3>
-                        <p style="font-size: 1.5rem; font-weight: 600; color: #2EA6D4; margin-bottom: 1.5rem;">$299/mo</p>
-                        <div style="text-align: left; margin-bottom: 1.5rem;">
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ AI Phone Receptionist</p>
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ Appointment Booking</p>
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ Basic SMS Notifications</p>
-                        </div>
-                        <a href="#book-demo" class="btn-secondary" style="width: 100%; display: block; text-align: center;">Get Started</a>
-                    </div>
-
-                    <!-- AI Pro Suite -->
-                    <div style="background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%); border: 2px solid #2EA6D4; border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 8px 32px rgba(46, 166, 212, 0.15); position: relative;">
-                        <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #2EA6D4; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600;">
-                            Most Popular
-                        </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 700; color: #1f2937; margin-bottom: 0.5rem;">AI Pro Suite</h3>
-                        <p style="font-size: 1.5rem; font-weight: 600; color: #2EA6D4; margin-bottom: 1.5rem;">$499/mo</p>
-                        <div style="text-align: left; margin-bottom: 1.5rem;">
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ Everything in Essentials</p>
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ AI Web Chat</p>
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ Full Engagement Automation</p>
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ Review Management</p>
-                            <p style="color: #374151; line-height: 1.6; margin-bottom: 1rem;">✓ Local SEO Optimization</p>
-                        </div>
-                        <a href="#book-demo" class="btn-primary" style="width: 100%; display: block; text-align: center;">Get Started</a>
-                    </div>
-                </div>
-                
-                <p style="text-align: center; color: #6b7280; font-size: 0.9rem; margin-top: 2rem; font-style: italic;">
-                    Plus carrier fees at cost. Most businesses spend $40-120/month in usage.
-                </p>
             </div>
         </div>
     </section>
@@ -1386,7 +1276,7 @@
                 <div class="footer-section">
                     <h3>Company</h3>
                     <a href="#demo">Demo</a>
-                    <a href="#pricing">Pricing</a>
+                    <a href="#services">Solutions</a>
                     <a href="hipaa.html">Healthcare Solutions</a>
                     <a href="#book-demo">Get Started</a>
                 </div>
@@ -1472,7 +1362,6 @@
                 '.cta-link',
                 '.service-card',
                 '.demo-card',
-                '.pricing-card',
                 '.mega-panel a',
                 '.nav-link',
                 'input',
